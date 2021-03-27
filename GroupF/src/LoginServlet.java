@@ -5,6 +5,8 @@
 ////////////////////////////////////////////////////////////////////////////////////
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.sql.SQLException;
+
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -69,6 +71,38 @@ public class LoginServlet extends HttpServlet
         // Get the name and password from the request
         String name     = request.getParameter("name");
         String password = request.getParameter("password");
+        
+        /*String bdd = "web";
+        String login = "root";
+        String mdp = "";
+
+        try 
+        {
+             
+        Connexion connexion = new Connexion(bdd,login,mdp);
+          
+        if (connexion.authentication(name, password) == false) 
+        {
+            //diplay error message on the html page and not in the console so System.out.println is not the solution 
+        	//System.out.println("Invalid username/password");
+            request.getRequestDispatcher("index.html").include(request, response);
+        } 
+        else 
+        {          
+        	//create an http session for example
+        }
+        
+        }
+        catch (ClassNotFoundException ex)
+        {
+           
+        } catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}*/
+             
+             
+        
         
         // Check is there a valid name and password. Return of 0 means user not found, 1 means guest access, 2 means admin access 
         int credential_flag = checkCredentials(name, password);
