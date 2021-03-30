@@ -1,49 +1,42 @@
-* {
-    margin: 0;
-    padding: 0;
-}
-
 h1{
-	font-size:50px;
+    color: #BDD7EE;
+    text-align: center;
+    text-shadow: 3px 2px 2px black;
+    letter-spacing: 1px;
+    position : absolute;
+    top : 250px;
+    left : 200px;
+    font-size: 50px;
+    margin: 0px;
+    padding: 0px;
+    border-radius: 10px;
+    
 }
 
 body{
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     font-size: 22px;
-    background-color: lightgray;
-    
+    background-image: url(https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80);
+    background-size: 110%;
+    margin: 2px;
+    padding: 2px;
 }
 
-li {
-	
-	list-style: none;
-}
-
-a {
-	text-decoration: none;
-	color: black;
-}
-
-nav{
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    min-height: 8vh;
-    position: fixed;
-    width: 100%;
-    top: 0;
-    z-index: 1;
-	color: #BDD7EE;
-	
+.para1{
     border-width: 0px;
-    background-color: white;
-    margin-bottom: 3vh;
-    
     border-style: solid;
-    border-radius: 0px;
-    border-color: black;
+    border-radius: 10px;
     box-shadow: 0px 0px 5px 2px #848484;
-
+    padding: 6px;
+    margin: 7px;
+    background-color: white;
+    text-align: left;
+    height: 75px;
+    width : 440px;
+    position : absolute;
+    top : 350px;
+    left: 190px;
+    font-size: 25px;
 }
 
 form{
@@ -51,192 +44,110 @@ form{
     border-style: solid;
     border-radius: 10px;
     padding: 10px;
-    box-shadow: 0px 0px 5px 3px #848484;
+    margin: 2px;
+   	box-shadow: 0px 0px 5px 2px #848484;
     background-color: white;
     text-align: center;
-    height: auto;
-    width : 250px;
-    position:relative;
-    
+    height: 300px;
+    width : 400px;
+    position : absolute;
+    top : 200px;
+    left: 750px;
     font-size: 25px;
 }
 
-fieldset{
-    margin: 10px;
-    padding: 10px;
+ul{
+    list-style: none;
+    margin: 0px;
+    padding: 0px;
+    text-align: center;
 }
 
-fieldset:hover{
-	box-shadow: 0px 0px 5px #444;
-	
-}
-
-legend{
-	font-weight:bold;
-}
-
-.amount{
-	border-width: 1px;
-    border-style: solid;
-    border-radius: 10px;
-    color: #006E36;
-    border-color: black;
-    font-weight: bold;
-}
-
-#profil{
-	text-align: center; 
+.button1, .button2 {
+    height: auto;
+    width: 100px;
+    text-align: center; 
     border-width: 0px;
-    text-decoration: none;
-    border-radius: 10px;
-	font-size: 18px;
-    color:black;
-    font-weight: bold;
-    padding: 10px 15px;
-    height: 43.6px;
-    width: auto;
-    min-width:100px;
     
-    flex-basis: 20%;
+    border-radius: 10px;
 
+    padding: 6px;
+    padding-left: 50px;
+    padding-right: 50px;
+    
+    position :relative;
+    
+    margin: auto;
+    margin-bottom: 3vh;
 }
 
-#profil:hover{
-    background-color: #BDD7EE;
-    cursor: pointer;
+.button1{
+    background-color:rgb(80, 80, 255);
 }
 
-.title{
-	flex-basis:50%;
-	text-align: center;
+.button2{
+    background-color: lime;
 }
 
-.logoDiv{
-	flex-basis: 10%;
-	align-items: center;
-	padding: 10px;
-}
-
-.logo{
-	
-	height: 60px;
-}
-
-.navlinks a:hover {
-    background: #BDD7EE;
+.button1:hover {
+    background-color:lightskyblue;
     color: black;
+   box-shadow: 0px 0px 5px 2px #848484;
+    cursor: pointer;
   }
 
-.navlinks{
-    display: flex;
-    justify-content: space-around;
-    width: 60%;
-}
-
-.navlinks a{
-    text-decoration: none;
-    font-weight: bold;
-    letter-spacing: 1px;
+.button2:hover{
+    background-color:lightgreen;
     color: black;
-    
-}
-
-.burger div {
-
-    width: 25px;
-    height: 3px;
-    margin:5px;
-    background-color: black;
-    flex-basis: 10%;
-}
-
-.burger{
+    box-shadow: 0px 0px 5px 2px #848484;
     cursor: pointer;
 }
 
-@media screen {
+.button1 a, .button2 a{
+    text-decoration: none;
+    font-weight: bold;
+    color: white;
+
+}
+
+.inputbox{
+    height: 30px;
+    font-family: inherit;
+    font-size: 25px;
+    margin: 5px;
+
+}
+
+input[type="submit"]{
     
+    font-size: 22px;
+    border-width: 0px;
+    font-size: 22px;
+    border-radius: 10px;
+    border-color: #959A9C;
+   
+    background-color:rgb(80, 80, 255);;
+    color:white;
+    font-weight: bold;
+
+    margin: auto;
+    margin-bottom: 3vh;
     
-    .navlinks {
-        position: fixed;
-        left: 0px;
-        height: 92vh;
-        top: 12vh;
-        background-color: white;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        width: 20%;
-        transform: translateX(-110%);
-        transition: transform 0.5s ease-in;
-
-
-        border-width: 0px;
-    background-color: white;
-
+    position :relative;
     
-    border-style: solid;
-    border-color: black;
-    box-shadow: 0px 6px 5px 2px #848484;
+    height: 45.6px;
+    width: 200px;
 
-    }
+    padding: 6px;
+    padding-left: 50px;
+    padding-right: 50px;
     
-    .navlinks li {
-        opacity: 0;
-    }
+
+}
+
+input[type="submit"]:hover{
     
-    .burger {
-        display: block;
-        cursor: pointer;
-    }
-}
-
-.nav-active {
-        transform: translateX(0%);
-}
-
-@keyframes navLinkFade {
-    from {
-        opacity: 0;
-        transform: translateX(50px);
-    }
-    to {
-        opacity: 1;
-        transform: translateX(0);
-    }
-}
-
-.toggle .line1 {
-    transform: rotate(-45deg) translate(-5px, 6px);
-}
-
-.toggle .line2 {
-    opacity: 0;
-}
-
-.toggle .line3 {
-    transform: rotate(45deg) translate(-5px, -6px);
-}
-
-
-
-
-.operations{
-	
-	padding-top:10px;
-	text-align: justify;
-	
-	
-}
-
-.historyValue{
-	text-align: justify;
-	
-}
-
-.content{
-	padding-top: 15vh;
-	display: flex;
-	align-items: flex-start;
-	justify-content: space-evenly;
+    background-color:lightskyblue;
+    box-shadow: 0px 0px 5px 2px #848484;
+    cursor: pointer
 }

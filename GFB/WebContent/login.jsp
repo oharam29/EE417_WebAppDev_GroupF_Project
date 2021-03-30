@@ -3,15 +3,15 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Welcome to CoffeeBook</title>
+    <title>Welcome to GFB</title>
         <meta charset="utf-8"/>
         <link rel="stylesheet" href ="login_style.css"/>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 </head>
 <body>
 
-    <h1>CoffeeBook</h1>
-    <p class = "para1"> With CoffeeBook, share and learn about your love for coffee with anyone.</p>
+    <h1>General Finance Bank</h1>
+    <p class = "para1"> With GFB, your savings are your income.</p>
 
     <form name = "loginForm" method="post" action = "loginAction">
         <p class = "para2">
@@ -28,7 +28,7 @@
             <li class ="button2"><a href="signup_page.jsp ">Sign-up</a></li>
         </ul>
             <!-- <li class ="button1"><a href="main_page.jsp">Connect</a></li> -->
-        
+        	<a href="passwordForget.jsp">Forgot password ?</a>
     </form>
     
 </body>
