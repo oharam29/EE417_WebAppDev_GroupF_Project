@@ -8,6 +8,7 @@
         <link rel="stylesheet" href ="accountPage_style.css"/>
     </head>
 <body>
+
 	<div class = navbox>
 	<nav>
 	<ul class = "navlinks">
@@ -46,11 +47,11 @@
 			
 				<div class="amount"> + 207.64€ </div>			<!-- Replace with ${balance} -->
 			
-	
 			<ul class = "operations">
-				<li><a href = "transactions.jsp">Transaction</a></li>
+				<li><a href = "transfers.jsp">Transfers</a></li>
 				<li><a href = "bills.jsp">Bills</a></li>
-				<li><a href = "loan.jsp">Loan</a></li>
+				<li><a href = "standingOrders.jsp">Standing Orders</a></li>
+				<li><a href = "loans.jsp">Loans</a></li>
 				<li><a href = "details.jsp">Details</a></li>
 				<li><a href = "limits.jsp">Limits</a></li>
 			</ul>
