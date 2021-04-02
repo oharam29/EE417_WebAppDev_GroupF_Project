@@ -25,7 +25,7 @@
     	<ul>
             <li><input type="submit" value="Connect"></li>
         
-            <li class ="button2"><a href="signup_page.jsp ">Sign-up</a></li>
+            <li class ="button2"><a href="registerPage.jsp ">Sign-up</a></li>
         </ul>
             <!-- <li class ="button1"><a href="main_page.jsp">Connect</a></li> -->
         	<a href="passwordForget.jsp">Forgot password ?</a>
