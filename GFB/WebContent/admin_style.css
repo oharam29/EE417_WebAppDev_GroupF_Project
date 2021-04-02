@@ -1,0 +1,83 @@
+.container{
+	display: block;
+	text-align:center;
+}
+
+
+thead{
+	height: 30px;
+	width: 600px;
+	background-color:gray;
+	
+}
+
+.table-fixed{
+	text-align:center;
+	font-size:15px;
+	width:600px;
+	color:black;
+	cellspacing:0px;
+	cellpadding:0px;
+	margin-left: 30%;
+	margin-right: 30%;
+    margin-top: 10rem;
+    border-width:1px;
+    border-color:black;
+}
+
+tbody{
+	height:100px;
+	width: 600px;
+	overflow:auto;
+	overflow-x:hidden;
+	background-color:white;
+}
+
+.table-fixed .col {
+    width: 25%;
+}
+
+/*
+.table-fixed {
+    margin-left: 25rem;
+    margin-top: 10rem;
+}
+
+.table-fixed thead,
+.table-fixed thead>th {
+    background: #4d7275;
+    color: #fff;
+}
+
+.table-fixed tbody tr td {
+    background: #fff;
+}
+
+.table-fixed>thead>tr>th {
+    border: 0 !important;
+}
+
+.table-fixed>tbody>tr>td:last-child {
+    border-right: 0;
+}
+
+.table-fixed tbody td,
+.table-fixed thead>tr>th {
+    float: left;
+    font-size: 14px;
+    padding-left: 20px !important;
+}
+
+.table-fixed .col {
+    width: 25%;
+}
+
+.table-fixed tbody {
+    display: block;
+    height: 400px;
+    overflow-y: auto;
+}
+
+.table-fixed tr {
+    display: block;
+}*/

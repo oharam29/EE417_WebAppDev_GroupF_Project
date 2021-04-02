@@ -6,6 +6,8 @@
         <title>GFB: Account Page</title>
         <meta charset="utf-8"/>
         <link rel="stylesheet" href ="accountPage_style.css"/>
+        <link rel="stylesheet" href ="navbar.css"/>
+        <link rel="stylesheet" href ="general.css"/>
     </head>
 <body>
 
@@ -27,7 +29,7 @@
                 </li>
                     
                 <li>
-                    <a href="index.jsp">Disconnect</a>
+                    <a href="login.jsp">Disconnect</a>
                 </li>
             </ul>
             <div class = "burger">
@@ -37,7 +39,7 @@
             </div>
 		<div class = "logoDiv"><img class="logo" src = "images/tempLogo.png"/></div>
 		<h1 class = "title">General Finance Bank</h1>
-		<button type = "button" id="profil" >Welcome Mr. Mark</button>			<!--  replace Mr. Mark by ${name} -->
+		<div id = "profil"><a href="signup_page.jsp ">Welcome Mr. Mark</a></div>	<!--  replace Mr. Mark by ${name} -->
 	</nav>
 	</div>
 	<div class = "content">
