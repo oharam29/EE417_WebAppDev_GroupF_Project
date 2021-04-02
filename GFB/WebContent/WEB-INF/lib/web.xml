@@ -1,35 +1,77 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd" id="WebApp_ID" version="3.0">
-  <display-name>GFB</display-name>
-
-  <welcome-file-list>
-    <welcome-file>accountPage.jsp</welcome-file>
-  </welcome-file-list>
-  
-  
-<servlet>
-<description/>
-<display-name>LoginServlet</display-name>
-<servlet-name>LoginServlet</servlet-name>
-<servlet-class>LoginServlet</servlet-class>
-</servlet>
-
-
-<servlet-mapping>
-<servlet-name>LoginServlet</servlet-name>
-<url-pattern>/LoginServlet</url-pattern>
-</servlet-mapping>
-
-<servlet>
-<description/>
-<display-name>LogoutServlet</display-name>
-<servlet-name>LogoutServlet</servlet-name>
-<servlet-class>LogoutServlet</servlet-class>
-</servlet>
-
-
-<servlet-mapping>
-	<servlet-name>LogoutServlet</servlet-name>
-	<url-pattern>/LogoutServlet</url-pattern>
-</servlet-mapping>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd" id="WebApp_ID" version="4.0">
+  <display-name>Assignment4</display-name>
+<welcome-file-list>
+    <welcome-file>index.html</welcome-file>
+</welcome-file-list>
+  <servlet>
+    <description></description>
+    <display-name>DeleteUserServlet</display-name>
+    <servlet-name>DeleteUserServlet</servlet-name>
+    <servlet-class>DeleteUserServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>DeleteUserServlet</servlet-name>
+    <url-pattern>/DeleteUserServlet</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>DepositToServlet</display-name>
+    <servlet-name>DepositToServlet</servlet-name>
+    <servlet-class>DepositToServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>DepositToServlet</servlet-name>
+    <url-pattern>/DepositToServlet</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>LoginServlet</display-name>
+    <servlet-name>LoginServlet</servlet-name>
+    <servlet-class>LoginServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>LoginServlet</servlet-name>
+    <url-pattern>/LoginServlet</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>LogoutServlet</display-name>
+    <servlet-name>LogoutServlet</servlet-name>
+    <servlet-class>LogoutServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>LogoutServlet</servlet-name>
+    <url-pattern>/LogoutServlet</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>SetMaxWithdrawlServlet</display-name>
+    <servlet-name>SetMaxWithdrawlServlet</servlet-name>
+    <servlet-class>SetMaxWithdrawlServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>SetMaxWithdrawlServlet</servlet-name>
+    <url-pattern>/SetMaxWithdrawlServlet</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>SetOverdraftServlet</display-name>
+    <servlet-name>SetOverdraftServlet</servlet-name>
+    <servlet-class>SetOverdraftServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>SetOverdraftServlet</servlet-name>
+    <url-pattern>/SetOverdraftServlet</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>WithdrawFromServlet</display-name>
+    <servlet-name>WithdrawFromServlet</servlet-name>
+    <servlet-class>WithdrawFromServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>WithdrawFromServlet</servlet-name>
+    <url-pattern>/WithdrawFromServlet</url-pattern>
+  </servlet-mapping>
 </web-app>
