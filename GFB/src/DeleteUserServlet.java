@@ -4,6 +4,7 @@
 // Author      : Ciaran McCormac
 // StudentId   : 87198584 
 // Version     : 1.0  -  30March21  -  Initial version
+//               1.1  -  03April21  -  Changed field names to match new SQL setup file
 //////////////////////////////////////////////////////////////////////////////////////////////////////
 
 import java.io.IOException;
@@ -26,7 +27,7 @@ public class DeleteUserServlet extends HttpServlet
         String contextPath = request.getContextPath();
 
         System.out.println("DeleteUserServlet doPost served, path=" + contextPath);
-        
+
         // Setup the database parameters
         String sURL = "jdbc:mysql://localhost:3306/gfb_database";
         String sUsername = "root";
@@ -51,7 +52,7 @@ public class DeleteUserServlet extends HttpServlet
             databaseConnection.statement.executeUpdate(sqlStatement1);
         } catch (SQLException e) { e.printStackTrace(); }
         // SQL statement to delete the user from the transaction table
-        String sqlStatement2 = "DELETE FROM transactions WHERE id = \"" + id +"\"";
+        String sqlStatement2 = "DELETE FROM transaction WHERE id = \"" + id +"\"";
         System.out.println("sqlStatement2 : " + sqlStatement2);
         // Execute
         try

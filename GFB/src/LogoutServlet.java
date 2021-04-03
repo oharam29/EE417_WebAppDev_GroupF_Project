@@ -4,6 +4,7 @@
 // Author      : Ciaran McCormac
 // StudentId   : 87198584 
 // Version     : 1.0  -  30March21  -  Initial version
+//               1.1  -  03April21  -  Changed field names to match new SQL setup file
 //////////////////////////////////////////////////////////////////////////////////////////////////////
 
 import java.io.IOException;

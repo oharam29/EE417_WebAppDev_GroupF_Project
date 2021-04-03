@@ -4,6 +4,7 @@
 // Author      : Ciaran McCormac
 // StudentId   : 87198584 
 // Version     : 1.0  -  30March21  -  Initial version
+//               1.1  -  03April21  -  Changed field names to match new SQL setup file
 //////////////////////////////////////////////////////////////////////////////////////////////////////
 
 import java.io.IOException;
@@ -48,7 +49,7 @@ public class LoginServlet extends HttpServlet
             if (lCredentials != 0)                                                      // Non-zero credentials means user was found
             {
                 System.out.println("Login Success");
-                   request.getSession().setAttribute("id", lId);                           // Set the http session id          (for table cross-reference / key)
+                request.getSession().setAttribute("id", lId);                           // Set the http session id          (for table cross-reference / key)
                 request.getSession().setAttribute("credentials", lCredentials);         // Set the http session credentials (for conditional menus)
                 request.getRequestDispatcher("landing.jsp").include(request, response); // Jump to the landing page
             }
@@ -57,7 +58,7 @@ public class LoginServlet extends HttpServlet
                 System.out.println("Login Failure");
                 request.getRequestDispatcher("index.html").include(request, response);  // False means failed credential check, reenter details
             }
-        } catch (Exception e) {    e.printStackTrace(); }
+        } catch (Exception e) { e.printStackTrace(); }
     }
 
     

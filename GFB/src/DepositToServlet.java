@@ -4,6 +4,7 @@
 // Author      : Ciaran McCormac
 // StudentId   : 87198584 
 // Version     : 1.0  -  30March21  -  Initial version
+//               1.1  -  03April21  -  Changed field names to match new SQL setup file
 //////////////////////////////////////////////////////////////////////////////////////////////////////
 
 import java.io.IOException;
@@ -48,12 +49,12 @@ public class DepositToServlet extends HttpServlet
         // Read balance
         String sqlStatement1 = "SELECT * FROM customer WHERE id = \"" + id + "\"";
         System.out.println("sqlStatement : " + sqlStatement1);
-        int balance = 0;
+        double balance = 0;
         try
         {
             ResultSet resultSet1 = databaseConnection.statement.executeQuery(sqlStatement1);
             if (resultSet1.next() == true)                      // Any query result means valid
-                balance = resultSet1.getInt("balance");
+                balance = resultSet1.getDouble("balance");
         } catch (SQLException e) { e.printStackTrace(); }
         
         // Update the balance with the amount and execute
