@@ -11,7 +11,7 @@
     </style>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <link rel="stylesheet" href ="registerPage_style.css"/>
-<title>GFB: Additional Informaiton Status</title>
+<title>GFB: Additional Information Status</title>
 </head>
 <body>
 	<ul>

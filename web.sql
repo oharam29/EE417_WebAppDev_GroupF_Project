@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1:3306
--- Généré le : ven. 26 mars 2021 à 10:52
+-- Généré le : sam. 03 avr. 2021 à 09:21
 -- Version du serveur :  5.7.31
 -- Version de PHP : 7.3.21
 
@@ -29,29 +29,36 @@ SET time_zone = "+00:00";
 
 DROP TABLE IF EXISTS `customer`;
 CREATE TABLE IF NOT EXISTS `customer` (
-  `id` varchar(45) NOT NULL,
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `lname` varchar(45) DEFAULT NULL,
   `mail` varchar(45) DEFAULT NULL,
-  `password` varchar(64) DEFAULT NULL,
-  `name` varchar(45) DEFAULT NULL,
+  `dateBirth` varchar(45) DEFAULT NULL,
   `phone` varchar(45) DEFAULT NULL,
-  `address` varchar(45) DEFAULT NULL,
-  `balance` double NOT NULL,
+  `address` varchar(64) DEFAULT NULL,
+  `addInfo` varchar(64) DEFAULT NULL,
+  `nationality` varchar(45) DEFAULT NULL,
+  `cityBirth` varchar(45) DEFAULT NULL,
+  `countryBirth` varchar(45) DEFAULT NULL,
+  `gender` varchar(45) DEFAULT NULL,
+  `employmentStatus` varchar(64) DEFAULT NULL,
+  `password` varchar(45) DEFAULT NULL,
+  `balance` double DEFAULT NULL,
   `status` tinyint(4) DEFAULT NULL,
   PRIMARY KEY (`id`),
-  UNIQUE KEY `id` (`id`),
-  UNIQUE KEY `mail` (`mail`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+  UNIQUE KEY `mail` (`mail`),
+  UNIQUE KEY `phone` (`phone`)
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8;
 
 --
 -- Déchargement des données de la table `customer`
 --
 
-INSERT INTO `customer` (`id`, `mail`, `password`, `name`, `phone`, `address`, `balance`, `status`) VALUES
-('C00001', 'a@mail.dcu.ie', 'test', 'Dupont', '0102030405', 'address1', 1000, 1),
-('C00002', 'b@mail.dcu.ie', 'test2', 'Jones', '0203040506', 'address2', 2000, 2),
-('C00003', 'c@mail.dcu.ie', 'test3', 'Adams', '0304050607', 'address3', 10000, 2),
-('C00004', 'd@mail.dcu.ie', 'test4', 'Smith', '0101010101', 'address4', 20000, 1),
-('C00005', 'a', 'a', 'a', 'a', 'a', 100000, 1);
+INSERT INTO `customer` (`id`, `lname`, `mail`, `dateBirth`, `phone`, `address`, `addInfo`, `nationality`, `cityBirth`, `countryBirth`, `gender`, `employmentStatus`, `password`, `balance`, `status`) VALUES
+(1, 'Dupont', 'a@mail.dcu.ie', '01-01-1980', '0102030405', '75006 Paris France', '.', 'French', 'Lyon', 'France', 'male', 'Self-employed or freelance', 'test1', 1000, 1),
+(2, 'Jones', 'b@mail.dcu.ie', '02-02-1985', '0203040506', '85000 New-York USA', '..', 'American', 'Washington', 'USA', 'female', 'Student', 'test2', 2000, 2),
+(3, 'Adams', 'c@mail.dcu.ie', '03-03-1990', '0304050607', '95003 Dublin Ireland', '...', 'Irish', 'Cork', 'Ireland', 'male', 'Retired or homemaker', 'test3', 10000, 2),
+(4, 'Smith', 'd@mail.dcu.ie', '04-04-1995', '0101010101', '62230 Shanghai China', '....', 'Chinese', 'Shenzhen', 'China', 'female', 'Unemployed', 'test4', 20000, 1),
+(5, 'Brown', 'e@mail.dcu.ie', '05-05-2000', '0202020202', '55089 Jakarta Indonesia', '......', 'Indonesian', 'Denpasar', 'Indonesia', 'male', 'Student', 'test5', 100000, 1);
 
 -- --------------------------------------------------------
 
@@ -62,10 +69,10 @@ INSERT INTO `customer` (`id`, `mail`, `password`, `name`, `phone`, `address`, `b
 DROP TABLE IF EXISTS `transaction`;
 CREATE TABLE IF NOT EXISTS `transaction` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
-  `customerID` varchar(45) DEFAULT NULL,
-  `recipientID` varchar(45) DEFAULT NULL,
-  `amount` double NOT NULL,
-  `date` date DEFAULT NULL,
+  `customerID` int(11) DEFAULT NULL,
+  `amount` double DEFAULT NULL,
+  `date` varchar(45) DEFAULT NULL,
+  `comment` varchar(45) DEFAULT NULL,
   PRIMARY KEY (`id`) USING BTREE,
   KEY `fk_transaction_customerid_idx` (`customerID`)
 ) ENGINE=MyISAM AUTO_INCREMENT=6 DEFAULT CHARSET=latin1;
@@ -74,12 +81,12 @@ CREATE TABLE IF NOT EXISTS `transaction` (
 -- Déchargement des données de la table `transaction`
 --
 
-INSERT INTO `transaction` (`id`, `customerID`, `recipientID`, `amount`, `date`) VALUES
-(1, 'C00001', 'C00005', 100, '2021-03-26'),
-(2, 'C00002', 'C12345', 200, '2021-03-26'),
-(3, 'C00003', 'C00341', 300, '2021-03-26'),
-(4, 'C00004', 'C00012', 400, '2021-03-26'),
-(5, 'C00005', 'C00894', 500, '2021-03-26');
+INSERT INTO `transaction` (`id`, `customerID`, `amount`, `date`, `comment`) VALUES
+(1, 2, 100, '03-04-2021', 'Food'),
+(2, 4, -200, '02-04-2021', 'Movie'),
+(3, 5, 300, '01-04-2021', 'Bar'),
+(4, 1, -400, '04-04-2021', 'Bus'),
+(5, 3, 500, '05-04-2021', 'Swimming pool');
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
