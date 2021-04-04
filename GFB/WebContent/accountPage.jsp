@@ -5,9 +5,11 @@
     <head>
         <title>GFB: Account Page</title>
         <meta charset="utf-8"/>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
         <link rel="stylesheet" href ="css/accountPage_style.css"/>
         <link rel="stylesheet" href ="css/navbar.css"/>
         <link rel="stylesheet" href ="css/general.css"/>
+        <link rel="stylesheet" href="css/modal.css">
     </head>
 <body>
 
@@ -25,7 +27,7 @@
                     <a href="#none">Messages</a>
                 </li>
                 <li>
-                    <a href="#settings">Settings</a>
+                    <a href="admin_pages/adminPage.jsp">Go Admin</a>
                 </li>
                     
                 <li>
@@ -38,7 +40,7 @@
                 <div class = "line3"></div>
             </div>
 		<div class = "logoDiv"><img class="logo" src = "images/tempLogo.png"/></div>
-		<h1 class = "title">General Finance Bank</h1>
+		<h1 class = "title">Group F Bank</h1>
 		<div id = "profil"><a href="signup_page.jsp ">Welcome Mr. Mark</a></div>	<!--  replace Mr. Mark by ${name} -->
 	</nav>
 	</div>
@@ -48,15 +50,20 @@
 		<legend>Balance</legend>
 			
 				<div class="amount"> + 207.64€ </div>			<!-- Replace with ${balance} -->
-			
-			<ul class = "operations">
-				<li><a href = "transfers.jsp">Transfers</a></li>
-				<li><a href = "bills.jsp">Bills</a></li>
-				<li><a href = "standingOrders.jsp">Standing Orders</a></li>
-				<li><a href = "loans.jsp">Loans</a></li>
-				<li><a href = "details.jsp">Details</a></li>
-				<li><a href = "limits.jsp">Limits</a></li>
-			</ul>
+		
+				<input type = "button" class = "transfer" value = "Transfer" onclick = "writeForm('transfer')">
+				</br>
+				<input type = "button" class = "bills" value = "Bills" onclick = "writeForm('bills')" >
+				</br>
+				<input type = "button" class = "standingOrders" value = "Standing Orders" onclick = "writeForm('standingOrders')">
+				</br>
+				<input type = "button" class = "overdraft" value = "Overdraft" onclick = "writeForm('overdraft')">
+				</br>
+				<input type = "button" class = "loans" value = "Loans" onclick = "writeForm('loans')">
+				</br>
+				<input type = "button" class = "details.jsp" value = "Details" onclick = "writeForm('details.jsp')">
+				</br>
+		
 	</fieldset>
 	</form>
 	
@@ -75,6 +82,74 @@
 			</ul>
 	</fieldset>
 	</form>
+	
+	<script>
+	var modal = document.getElementById("myModal");
+	function writeForm(action){
+		
+    	modal.style.display = "block";
+    	switch(action)
+    	{
+    	case "transfer":
+    		document.getElementById("modal-title").innerHTML = `Transfer Money to account`;
+    		document.getElementById("outputmodal").innerHTML = `<form name = "transferForm" method="post" action = "transfer">
+    			<label>Entert the amount you want to transfer and the account number:</label>
+    	        </br>
+    	        	<input type = "text" placeholder = "Amount">
+    	        	<input type = "text" placeholder = "Account Number">
+    	        	</br>
+    	            <input type="submit" value ="Send"/>
+    	        </br>
+    		</form>`;
+    		break;
+    	case "bills":
+    		document.getElementById("modal-title").innerHTML = `Manage Bills`;
+    		document.getElementById("outputmodal").innerHTML = `Manage your bills here`;
+    		break;
+    	case "standingOrders":
+    		document.getElementById("modal-title").innerHTML = `Standing Orders`;
+    		document.getElementById("outputmodal").innerHTML = `Here are the standing orders`;
+    		break;
+    	case "overdraft":
+    		document.getElementById("modal-title").innerHTML = `See Overdraft`;
+    		document.getElementById("outputmodal").innerHTML = `your overdraft max is :`;
+    		break;
+    	case "loans":
+    		document.getElementById("modal-title").innerHTML = `Setting Loans`;
+    		document.getElementById("outputmodal").innerHTML = `so you want a loan uh ?`;
+    		break;
+    	case "details":
+    		document.getElementById("modal-title").innerHTML = `Seing details`;
+    		document.getElementById("outputmodal").innerHTML = `you see details`;
+    		break;
+    		
+    	default:
+    		document.getElementById("modal-title").innerHTML = `That is the default sir	`;
+    		document.getElementById("outputmodal").innerHTML = `hello`;
+    		break;
+    	}
+	
+    };</script>
+	
+	<div id="myModal" class="modal">
+
+    <!-- Modal content -->
+    <div class="modal-content">
+      <div class="modal-header">
+        <span class="close" id = "closecross">&times;</span>
+        <h2 id = "modal-title">Your info</h2>
+      </div>
+      <div class="modal-body">
+        <p id = "outputmodal"></p>
+      </div>
+      <div class="modal-footer">
+        <h3>   </h3>
+      </div>
+    </div>
+  
+  </div>
+	
+	
 	</div>
 	<script src = "app.js"></script>
 	

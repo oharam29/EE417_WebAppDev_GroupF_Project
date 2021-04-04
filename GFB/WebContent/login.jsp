@@ -10,7 +10,7 @@
 </head>
 <body>
 
-    <h1>General Finance Bank</h1>
+    <h1>Group F Bank</h1>
     <p class = "para1"> With GFB, your savings are your income.</p>
 
     <form name = "loginForm" method="post" action = "loginAction">

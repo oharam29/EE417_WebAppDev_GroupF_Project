@@ -22,10 +22,10 @@
                 </li>
                     
                 <li>
-                    <a href="#none">Messages</a>
+                    <a href="../accountPage.jsp">Leave admin</a>
                 </li>
                 <li>
-                    <a href="adminUser.jsp">Settings</a>
+                    <a href="adminUser.jsp">Admin User</a>
                 </li>
                     
                 <li>
@@ -38,7 +38,7 @@
                 <div class = "line3"></div>
             </div>
 		<div class = "logoDiv"><img class="logo" src = "../images/tempLogo.png"/></div>
-		<h1 class = "title">General Finance Bank</h1>
+		<h1 class = "title">Group F Bank</h1>
 		<div id = "profil"><a href="signup_page.jsp ">Welcome Admin</a></div>	<!--  replace Mr. Mark by ${name} -->
 	</nav>
 	</div>
@@ -134,7 +134,7 @@
 	
 	
 	</div>
-	<script src = "app.js"></script>
+	<script src = "../app.js"></script>
 	
 </body>
 </html>
