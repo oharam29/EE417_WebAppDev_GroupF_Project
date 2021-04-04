@@ -5,7 +5,7 @@
 <head>
     <title>Welcome to GFB</title>
         <meta charset="utf-8"/>
-        <link rel="stylesheet" href ="login_style.css"/>
+        <link rel="stylesheet" href ="css/login_style.css"/>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 </head>
 <body>
@@ -25,7 +25,7 @@
     	<ul>
             <li><input type="submit" value="Connect"></li>
         
-            <li class ="button2"><a href="registerPage.jsp ">Sign-up</a></li>
+            <li class ="button2"><a href="register_pages/registerPage.jsp ">Sign-up</a></li>
         </ul>
             <!-- <li class ="button1"><a href="main_page.jsp">Connect</a></li> -->
         	<a href="passwordForget.jsp">Forgot password ?</a>

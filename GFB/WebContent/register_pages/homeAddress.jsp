@@ -10,7 +10,7 @@
         }
     </style>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<link rel="stylesheet" href ="registerPage_style.css"/>
+<link rel="stylesheet" href ="../css/registerPage_style.css"/>
 <title>GFB: Home Address</title>
 </head>
 <body>

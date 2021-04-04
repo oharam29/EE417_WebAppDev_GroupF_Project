@@ -4,7 +4,7 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
- <link rel="stylesheet" href ="registerPage_style.css"/>
+ <link rel="stylesheet" href ="../css/registerPage_style.css"/>
 <title>GFB: Register Page</title>
 </head>
 <body>

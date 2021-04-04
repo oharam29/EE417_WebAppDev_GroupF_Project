@@ -5,9 +5,9 @@
     <head>
         <title>GFB: Admin User Page</title>
         <meta charset="utf-8"/>
-    	<link rel="stylesheet" href="adminUser_style.css">
-    	<link rel="stylesheet" href ="navbar.css"/>
-        <link rel="stylesheet" href ="general.css"/>
+    	<link rel="stylesheet" href="../css/adminUser_style.css">
+    	<link rel="stylesheet" href ="../css/navbar.css"/>
+        <link rel="stylesheet" href ="../css/general.css"/>
     	
     </head>
 <body>

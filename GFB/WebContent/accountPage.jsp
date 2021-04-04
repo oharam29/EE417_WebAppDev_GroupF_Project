@@ -5,9 +5,9 @@
     <head>
         <title>GFB: Account Page</title>
         <meta charset="utf-8"/>
-        <link rel="stylesheet" href ="accountPage_style.css"/>
-        <link rel="stylesheet" href ="navbar.css"/>
-        <link rel="stylesheet" href ="general.css"/>
+        <link rel="stylesheet" href ="css/accountPage_style.css"/>
+        <link rel="stylesheet" href ="css/navbar.css"/>
+        <link rel="stylesheet" href ="css/general.css"/>
     </head>
 <body>
 

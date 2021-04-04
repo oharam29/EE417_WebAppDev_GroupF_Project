@@ -10,8 +10,8 @@
         }
     </style>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<link rel="stylesheet" href ="registerPage_style.css"/>
-<title>GFB: Additional Information</title>
+<link rel="stylesheet" href ="../css/registerPage_style.css"/>
+<title>GFB: Additional Information Status</title>
 </head>
 <body>
 	<ul>
@@ -40,24 +40,22 @@
         	<a href="createAccount.jsp">Create Account</a>
         </li>
         </ul>
-    </div>
+        </div>
 	
-	<div class="content">
+	<div class = "content">
 		<h2>Additional Information</h2>
-		<p>Please tell us your nationality and place of birth.</p>
-		<p>Nationality (Country) <input type="text"></p> <!-- as shown on passport -->
-		<p>City of Birth <input type="text"></p>
-		<p>Country of Birth <input type="text"></p>
-		<p>What is your legal gender? You can only select one of these two options.</p>
-		<!-- Only can select one of these two options -->
-		<p>
-			<input type="radio" name="type1">Female</p>
-		<p>
-			<input type="radio" name="type1">Male</p>
+		<p>what is your main employment status?</p>
+		<select name="status">
+			<option value="one" selected>Employed (full-time or part-time) </option>	
+			<option value="two" >Self-employed or freelance</option>
+			<option value="three" >Student</option>	
+			<option value="four" >Retired or homemaker</option>	
+			<option value="four" >Unemployed</option>
+		</select>
 	</div>
 	
-	<input id = "btnBack" type = "button" value = "Back" onclick ="window.location='homeAddress.jsp'">
-	<input id = "btnContinue" type = "button" value = "Continue" onclick ="window.location='additionalInformationStatus.jsp'">
+	<input id = "btnBack" type = "button" value = "Back" onclick ="window.location='additionalInformation.jsp'">
+	<input id = "btnContinue" type = "button" value = "Continue" onclick ="window.location='createPassword.jsp'">
 	
 </body>
 </html>

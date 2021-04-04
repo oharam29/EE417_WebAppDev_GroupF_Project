@@ -10,8 +10,8 @@
         }
     </style>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<link rel="stylesheet" href ="registerPage_style.css"/>
-<title>GFB: Create Account</title>
+<link rel="stylesheet" href ="../css/registerPage_style.css"/>
+<title>GFB: Additional Information</title>
 </head>
 <body>
 	<ul>
@@ -40,30 +40,24 @@
         	<a href="createAccount.jsp">Create Account</a>
         </li>
         </ul>
-        </div>
-	
-	<div class = "content">
-		<h2>Create Account</h2>
-		<p>To create your GFB account, please agree to the Terms & Conditions.</p>
-    	<label>
-    		<input type="checkbox">Terms & Conditions
-    	</label><br/>
-        <label>
-    		<input type="checkbox">Privacy Policy
-    	</label><br/>
-        <label>
-    		<input type="checkbox">Contact Visibility
-    	</label><br/>
-        <label>
-    		<input type="checkbox">Product Updates
-    	</label><br/>
-        <label>
-    		<input type="checkbox">Marketing Partners
-    	</label><br/>
     </div>
-    
-	<input id = "btnBack" type = "button" value = "Back" onclick ="window.location='createPassword.jsp'">
-	<input id = "btnContinue" type = "button" value = "Finish" onclick ="window.location='#'">
+	
+	<div class="content">
+		<h2>Additional Information</h2>
+		<p>Please tell us your nationality and place of birth.</p>
+		<p>Nationality (Country) <input type="text"></p> <!-- as shown on passport -->
+		<p>City of Birth <input type="text"></p>
+		<p>Country of Birth <input type="text"></p>
+		<p>What is your legal gender? You can only select one of these two options.</p>
+		<!-- Only can select one of these two options -->
+		<p>
+			<input type="radio" name="type1">Female</p>
+		<p>
+			<input type="radio" name="type1">Male</p>
+	</div>
+	
+	<input id = "btnBack" type = "button" value = "Back" onclick ="window.location='homeAddress.jsp'">
+	<input id = "btnContinue" type = "button" value = "Continue" onclick ="window.location='additionalInformationStatus.jsp'">
 	
 </body>
 </html>

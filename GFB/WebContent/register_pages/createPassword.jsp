@@ -10,7 +10,7 @@
         }
     </style>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<link rel="stylesheet" href ="registerPage_style.css"/>
+<link rel="stylesheet" href ="../css/registerPage_style.css"/>
 <!-- create password eye link -->
 <link href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.css" rel="stylesheet">
 <title>GFB: Create Password</title>
