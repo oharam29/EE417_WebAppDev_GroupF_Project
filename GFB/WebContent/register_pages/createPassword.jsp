@@ -10,7 +10,7 @@
         }
     </style>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<link rel="stylesheet" href ="../css/registerPage_style.css"/>
+<link rel="stylesheet" href ="registerPage_style.css"/>
 <!-- create password eye link -->
 <link href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.css" rel="stylesheet">
 <title>GFB: Create Password</title>
@@ -47,8 +47,12 @@
 	<div class = "content">
 		<h2>Create Password</h2>
 		<p>Please enter your password</p>
- 		<input type="password" id="pwd" placeholder="Create your password"/>
-            <i class="fa fa-eye" onclick="showhide()" id="eye"></i>
+		
+		<form name="form" id="form" class="form"  method="POST" action="RegistrationServlet">
+ 			<input type="password" id="pwd" name="password" placeholder="Create your password"/>
+            	<i class="fa fa-eye" onclick="showhide()" id="eye"></i>
+            <input id = "btnContinue" type="submit" value="Submit">
+        </form>
 
 		<!-- javascript about enter a password -->
         <script type="text/javascript">

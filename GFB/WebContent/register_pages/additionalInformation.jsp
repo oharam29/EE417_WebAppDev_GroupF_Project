@@ -10,7 +10,7 @@
         }
     </style>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<link rel="stylesheet" href ="../css/registerPage_style.css"/>
+<link rel="stylesheet" href ="registerPage_style.css"/>
 <title>GFB: Additional Information</title>
 </head>
 <body>
@@ -45,15 +45,18 @@
 	<div class="content">
 		<h2>Additional Information</h2>
 		<p>Please tell us your nationality and place of birth.</p>
-		<p>Nationality (Country) <input type="text"></p> <!-- as shown on passport -->
-		<p>City of Birth <input type="text"></p>
-		<p>Country of Birth <input type="text"></p>
-		<p>What is your legal gender? You can only select one of these two options.</p>
-		<!-- Only can select one of these two options -->
-		<p>
-			<input type="radio" name="type1">Female</p>
-		<p>
-			<input type="radio" name="type1">Male</p>
+		<form name="form" id="form" class="form"  method="POST" action="RegistrationServlet">
+			<p>Nationality (Country) <input type="text" name="nationality" required></p> <!-- as shown on passport -->
+			<p>City of Birth <input type="text" name="cityBirth" required></p>
+			<p>Country of Birth <input type="text" name="countryBirth" required></p>
+			<p>What is your legal gender? You can only select one of these two options.</p>
+			<!-- Only can select one of these two options -->
+			<p>
+				<input type="radio" name="type1">Female</p>
+			<p>
+				<input type="radio" name="type1">Male</p>
+			<input id = "btnContinue" type="submit" value="Submit">
+		</form>
 	</div>
 	
 	<input id = "btnBack" type = "button" value = "Back" onclick ="window.location='homeAddress.jsp'">

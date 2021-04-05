@@ -10,7 +10,7 @@
         }
     </style>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<link rel="stylesheet" href ="../css/registerPage_style.css"/>
+<link rel="stylesheet" href ="registerPage_style.css"/>
 <title>GFB: Mobile Phone Number</title>
 </head>
 
@@ -48,7 +48,10 @@
 		<p>We'll need it later to pair your smartphone to your account.<br/>
 	   	   This keeps your account safe.</p>
 	
-		<p>Mobile Number <input type="text"></p>
+	<form name="form" id="form" class="form"  method="POST" action="RegistrationServlet">
+		<p>Mobile Number <input type="text" name="phone" required></p>
+		<input id = "btnContinue" type="submit" value="Submit">
+	</form>
 	</div>
 	<input id = "btnBack" type = "button" value = "Back" onclick ="window.location='registerPage.jsp'">
 	<input id = "btnContinue" type = "button" value = "Continue" onclick ="window.location='homeAddress.jsp'">
