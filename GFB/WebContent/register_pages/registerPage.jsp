@@ -56,7 +56,7 @@
 	</div>
 	
 	<input id = "btnBack" type = "button" value = "Back" onclick ="window.location='registerPage.jsp'">
-	<input id = "btnContinue" type = "button" value = "Continue" onclick ="window.location='mobilePhoneNumber.jsp'">
+	<!-- <input id = "btnContinue" type = "button" value = "Continue" onclick ="window.location='mobilePhoneNumber.jsp'"> -->
 <script>
 function checks()
 {
@@ -65,7 +65,7 @@ function checks()
 	var email = document.getElementById("mail").value;
 	var DoB = document.getElementById("dateBirth").value;
 	var digits =  /^\d+$/;
-	var DoB_test = /(((0|1)[0-9]|2[0-9]|3[0-1])\/(0[1-9]|1[0-2])\/((19|20)\d\d))$/; <!-- Makes ure the format is DD/MM/YYYY -->
+	var DoB_test = /(((0|1)[0-9]|2[0-9]|3[0-1])\/(0[1-9]|1[0-2])\/((19|20)\d\d))$/; <!-- Makes sure the format is DD/MM/YYYY -->
 	
 	if (fname == "" || fname == " "|| digits.test(fname) == true) <!-- checks that the name contains no digits -->
 	{
@@ -82,11 +82,15 @@ function checks()
 		alert("please enter a valid email address");
 		return false;
 	}
-	if (DoB == "" || DoB == " "|| DoB_test.test(DoB) == false) <!-- checks that the name contains no digits -->
+	if (DoB == "" || DoB == " "|| DoB_test.test(DoB) == false) <!-- checks that the DoB foolows the correct regex -->
 	{
        alert("Date of birth must contain no letters, must not be blank and must be in the form: DD/MM/YYYY");
 	   return false;
 	}
+	document.getElementById('fname').disabled = true;
+	document.getElementById('lname').disabled = true;
+	document.getElementById('mail').disabled = true;
+	document.getElementById('dateBirth').disabled = true;
 	return true;
 }
 </script>

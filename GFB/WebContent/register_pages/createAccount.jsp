@@ -45,25 +45,41 @@
 	<div class = "content">
 		<h2>Create Account</h2>
 		<p>To create your GFB account, please agree to the Terms & Conditions.</p>
+		<form name="form" id="form" class="form"   onsubmit="return checks()" method="POST" action="../login.jsp">
     	<label>
-    		<input type="checkbox">Terms & Conditions
+    		<input type="checkbox" id = "TC">Terms & Conditions
     	</label><br/>
         <label>
-    		<input type="checkbox">Privacy Policy
+    		<input type="checkbox" id = "PP">Privacy Policy
     	</label><br/>
         <label>
-    		<input type="checkbox">Contact Visibility
+    		<input type="checkbox" id = "CV">Contact Visibility
     	</label><br/>
         <label>
-    		<input type="checkbox">Product Updates
+    		<input type="checkbox" id = "PU">Product Updates
     	</label><br/>
         <label>
-    		<input type="checkbox">Marketing Partners
+    		<input type="checkbox" id = "MP">Marketing Partners
     	</label><br/>
+    	<input id = "btnContinue" type="submit" value="Submit">
+    	</form>
     </div>
     
 	<input id = "btnBack" type = "button" value = "Back" onclick ="window.location='createPassword.jsp'">
-	<input id = "btnContinue" type = "button" value = "Finish" onclick ="window.location='#'">
-	
+<!--   <input id = "btnContinue" type = "button" value = "Finish" onclick ="window.location='#'">
+ -->	
+ 
+ <script>
+ function checks()
+ {
+	 if (document.getElementById('TC').checked == false || document.getElementById('PP').checked == false || document.getElementById('CV').checked == false ||document.getElementById('PU').checked == false || document.getElementById('MP').checked == false) 
+	 {
+		 alert('Please accept all of the Terms and conditions');
+		 return false;
+	 }
+	 return true;
+ }
+ 
+ </script>
 </body>
 </html>

@@ -10,6 +10,15 @@
         <link rel="stylesheet" href ="css/navbar.css"/>
         <link rel="stylesheet" href ="css/general.css"/>
         <link rel="stylesheet" href="css/modal.css">
+        
+        <style>
+        .AnimationHeader {text-align: center;font-size: 50px;font-weight: 500;font-color: #003300;}
+        .AnimationHeader .letter {display: inline-block;line-height: 3px;font-color: #003300;}
+        .AnimationHeader .line2 { bottom: 0; }
+        .AnimationHeader .wrap-text { position: relative;display: inline-block;padding-top: 2px; padding-bottom: 10px; padding-right: 2px;}
+        .AnimationHeader .line {background-color: #99ccff; position: absolute;left: 0; width: 100%; height: 5px;background-color: #99ccff;}
+        .AnimationHeader .line1 { top: 2; }
+        </style>
     </head>
 <body>
 
@@ -41,7 +50,7 @@
             </div>
 		<div class = "logoDiv"><img class="logo" src = "images/tempLogo.png"/></div>
 		<h1 class = "title">Group F Bank</h1>
-		<div id = "profil"><a href="signup_page.jsp ">Welcome Mr. Mark</a></div>	<!--  replace Mr. Mark by ${name} -->
+		<div id = "profil"><a href="signup_page.jsp ">Welcome User </a></div><div id = "getId"></div>	<!--  replace Mr. Mark by ${name} -->
 	</nav>
 	</div>
 	<div class = "content">
@@ -151,7 +160,37 @@
 	
 	
 	</div>
+	
+	<br /><br /><br /><br /><br />
+	<h1 class="AnimationHeader">
+        <span class="wrap-text">
+    		<span class="line line1"></span>
+    		 <span class="letters">GFB: Fluent in finance.</span>
+    		 <span class="line line2"></span>
+ 			</span>
+      </h1>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
+	
 	<script src = "app.js"></script>
 	
+	<script>
+		var id = '{id}';
+		localStorage.setItem("id", id);
+		document.getElementById("getId").innerHTML = id;
+	</script>
+	
+	<script>
+	var wrap_text = document.querySelector('.AnimationHeader .letters');
+	wrap_text.innerHTML = wrap_text.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
+	anime.timeline({loop: true})
+	  .add({
+	    targets: '.AnimationHeader .letter',
+	    scale: [0.5,1],
+	    opacity: [0,1],
+	    easing: "easeOutExpo",
+	    duration: 5000,
+	    delay: (el, n) => 125 * (n+1)
+	  });
+	</script>
 </body>
 </html>
