@@ -6,5 +6,6 @@
 </head>
 <body>
 	This is a main page!
+	<a href="./login.jsp">Login</a>
 </body>
 </html>

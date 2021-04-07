@@ -15,7 +15,7 @@
     <p class = "para1"> GFB: Fluent in Finance.</p>
       <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
 
-    <form name = "loginForm" method="post" action = "loginAction">
+    <form name = "loginForm" method="post" action = "LoginServlet">
         <p class = "para2">
             
             <input class="inputbox" type="text" name = "uname" id="uname" placeholder="Username" autofocus required/>

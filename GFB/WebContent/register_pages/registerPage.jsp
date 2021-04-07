@@ -11,7 +11,7 @@
 
 	<ul>
 		<li>
-        	<a href="index.jsp"><img class="logo" src = "images/logo.jpg"/></a>
+        	<a href="../index.jsp"><img class="logo" src = "images/logo.jpg"/></a>
         </li>
      </ul>
         <div class = "navBar">
