@@ -6,11 +6,14 @@
 // Version     : 1.0  -  30March21  -  Initial version
 //               1.1  -  03April21  -  Changed field names to match new SQL setup file
 //               1.2  -  08April21  -  Modified to update the transaction table
+//               1.3  -  08April21  -  Added live time update
 //////////////////////////////////////////////////////////////////////////////////////////////////////
 
 import java.io.IOException;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -67,7 +70,10 @@ public class DepositToServlet extends HttpServlet
         } catch (SQLException e) { e.printStackTrace(); }
 
         // Add it to the transaction table
-        String sqlStatement3 = "INSERT INTO transaction (amount, date, comment) VALUES (" + Integer.parseInt(amount) + ", '03-04-2021', 'Deposit')";
+        SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss.SSS");
+        Date now = new Date();
+        String strDate = sdf.format(now);
+        String sqlStatement3 = "INSERT INTO transaction (amount, date, comment) VALUES (" + Integer.parseInt(amount) + ", '" + strDate + "', 'Deposit')";
         System.out.println("sqlStatement : " + sqlStatement3);
         try
         {
