@@ -47,7 +47,7 @@
 		<h2>Create Password</h2>
 		<p>Please enter your password</p>
 		
-		<form name="form" id="form" class="form"  onsubmit="return checks()" method="POST" action="RegistrationServlet">
+		<form name="form" id="form" class="form"  onsubmit="return checks()" method="POST" action="../RegistrationServlet">
  			<input type="password" id="pwd" name="password" onkeydown="keydownFunction()">
             <input id = "btnContinue" type="submit" value="Submit">
         </form>
@@ -83,7 +83,6 @@
         		return false;
         	}    
     	}
-    	document.getElementById("pwd").disabled = true;
     	return true;
     	</script>
 	

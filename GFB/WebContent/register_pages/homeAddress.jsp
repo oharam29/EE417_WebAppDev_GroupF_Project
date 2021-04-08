@@ -48,7 +48,7 @@
 	       send cards to residential addresses.</p>
 	 
 		<!-- use my location -->
-		<form name="form" id="form" class="form"  onsubmit="return checks()" method="POST" action="RegistrationServlet">
+		<form name="form" id="form" class="form"  onsubmit="return checks()" method="POST" action="../RegistrationServlet">
 			<p>House Number(Type 0 if N/A) <input type="text" name = "houseNum" id = "houseNum" required> Street Name <input type="text" name = "streetName" id = "streetName" required></p>
 		
 			<p>		
@@ -120,12 +120,6 @@
        		alert("AdditionalInformation must be filled out. PLease type N/A or 0 if you have no additional Information to add!");
 	   		return false;
 		}
-		document.getElementById('houseNum').disabled = true;
-		document.getElementById('streetName').disabled = true;
-		document.getElementById('address1').disabled = true;
-		document.getElementById('address2').disabled = true;
-		document.getElementById('address3').disabled = true;
-		document.getElementById('additionalInformation').disabled = true;
 		return true;  
 	}
 	</script>

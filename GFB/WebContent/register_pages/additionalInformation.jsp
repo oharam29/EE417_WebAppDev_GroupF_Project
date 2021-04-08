@@ -45,16 +45,16 @@
 	<div class="content">
 		<h2>Additional Information</h2>
 		<p>Please tell us your nationality and place of birth.</p>
-		<form name="form" id="form" class="form"   onsubmit="return checks()" method="POST" action="RegistrationServlet">
+		<form name="form" id="form" class="form"   onsubmit="return checks()" method="POST" action="../RegistrationServlet">
 			<p>Nationality (Country) <input type="text" name="nationality" id="nationality" required></p> <!-- as shown on passport -->
 			<p>City of Birth <input type="text" name="cityBirth" id="cityBirth"required></p>
 			<p>Country of Birth <input type="text" name="countryBirth"  id="countryBirth" required></p>
 			<p>What is your legal gender? You can only select one of these two options.</p>
 			<!-- Only can select one of these two options -->
 			<p>
-				<input type="radio" name="gender" id = "gender" >Female</p>
+				<input type="radio" name="gender" id = "gender" value="Female">Female</p>
 			<p>
-				<input type="radio" name="gender" id = "gender1">Male</p>
+				<input type="radio" name="gender" id = "gender1" value="Male">Male</p>
 			<input id = "btnContinue" type="submit" value="Submit">
 		</form>
 	</div>
@@ -93,10 +93,6 @@
 			alert('Please select one of the options');
 			return false;
 		} 
-		document.getElementById('nationality').disabled = true;
-		document.getElementById('cityBirth').disabled = true;
-		document.getElementById('countryBirth').disabled = true;
-		document.getElementById('gender').disabled = true;
 		return true;  
 	}
 	</script>

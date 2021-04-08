@@ -48,7 +48,7 @@
 		<p>We'll need it later to pair your smartphone to your account.<br/>
 	   	   This keeps your account safe.</p>
 	
-	<form name="form" id="form" class="form"  method="POST" onsubmit="return checks()" action="RegistrationServlet">
+	<form name="form" id="form" class="form"  method="POST" onsubmit="return checks()" action="../RegistrationServlet">
 		<p>Mobile Number <input type="text" name="phone"  id="phone" required></p>
 		<input id = "btnContinue" type="submit" value="Submit">
 	</form>
@@ -66,7 +66,7 @@
 	       alert("Phone number must be filled out and contain no letters!");
 		   return false;
 		}
-		document.getElementById('phone').disabled = true;
+
 		return true;
 	}
 	</script>

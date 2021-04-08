@@ -45,7 +45,7 @@
 	<div class = "content">
 		<h2>Additional Information</h2>
 		<p>what is your main employment status?</p>
-		<form name="form" id="form" class="form" method="POST" action="RegistrationServlet">
+		<form name="form" id="form" class="form" method="POST" action="../RegistrationServlet">
 	   		<select name="employmentStatus">
 				<option value="one" selected>Employed (full-time or part-time) </option>	
 				<option value="two" >Self-employed or freelance</option>
