@@ -29,7 +29,7 @@ public class RegistrationServlet extends HttpServlet {
         // Setup the database parameters
         String JDBCUrl = "jdbc:mysql://localhost:3306/gfb_database";
         String username = "root";
-        String password = "19991217Clsl31A"; //insert your root password between "" 
+        String password = ""; //insert your root password between "" 
 
         try {
             System.out.println("\nConnecting to the SSD Database......");
@@ -66,11 +66,10 @@ public class RegistrationServlet extends HttpServlet {
         String spassword = request.getParameter("password");
         double balance =  0.0;
         int status = 2;
-        //String status = request.getParameter("status");
         
 	     if  (phone == null && address1 == null && nationality == null && spassword == null && employmentStatus == null) {
-	    	 try {/*CREATION DATABASE*/
-				 /* insert variables set above in the database*/
+	    	 try {/*CREATION OF THE DATABASE*/
+				 /* insert variables set above in a new line in the database*/
 				  PreparedStatement pstmt = con.prepareStatement("INSERT INTO gfb_database.customer(ID,lname,mail,dateBirth,phone,address,addInfo,nationality,cityBirth,countryBirth,gender,employmentStatus,password,balance,status) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)");
 						  pstmt.clearParameters();       // Clears any previous parameters
 						  pstmt.setString(1, ID);
@@ -90,11 +89,13 @@ public class RegistrationServlet extends HttpServlet {
 						  pstmt.setInt(15, status);
 						  pstmt.executeUpdate();
 						  
-						  /*HTTP session*/
+						  /*mail registration in HTTPsession*/
 						  HttpSession session=request.getSession();
 						  session.setAttribute("mail",mail);
 							
 						  System.out.println("successfully updated");
+						  
+						  /*opening the next page*/
 						  response.sendRedirect("/GFB/register_pages/mobilePhoneNumber.jsp");
 		
 	    	 }
@@ -120,8 +121,9 @@ public class RegistrationServlet extends HttpServlet {
 		         }
 	    	 }
 	     }else if (address1 == null && nationality == null && spassword == null && employmentStatus == null) { 
-	    	 /*update the data in the data base with the data from the form on page mobilePhoneNumber.jsp*/
+	    	 /*update the data in the database with the data from the form on page mobilePhoneNumber.jsp*/
 	    	 try {
+	    		/*retrieve the mail previously saved in the HTTPsession*/
 	    		HttpSession session=request.getSession(false);
 	 			mail=(String)session.getAttribute("mail");
 	 			System.out.print("mail:" + mail);
@@ -132,6 +134,8 @@ public class RegistrationServlet extends HttpServlet {
 				pstmt.executeUpdate();
 				
 				System.out.println("Database updated successfully ");
+				
+				/*opening the next page*/
 				response.sendRedirect("/GFB/register_pages/homeAddress.jsp");
 				
 	    	 } catch (SQLException e) {
@@ -156,12 +160,14 @@ public class RegistrationServlet extends HttpServlet {
 		         }
 	    	 }
 	     }else if (nationality == null && spassword == null && employmentStatus == null) {
-	    	 /*update the data in the data base with the data from the form on page homeAddress.jsp*/
+	    	 /*update the data in the database with the data from the form on page homeAddress.jsp*/
 	    	 try {
+	    		/*retrieve the mail previously saved in the HTTPsession*/
 	    		HttpSession session=request.getSession(false);
 	 			mail=(String)session.getAttribute("mail");
 	 			System.out.print("mail:" + mail);
 	    		
+	 			/**/
 	 			PreparedStatement pstmt = con.prepareStatement("update gfb_database.customer set address=? where mail=?");
 	    		pstmt.setString(1, houseNum +" "+ streetName + " " + address1 + " " + address2 + " " + address3);
 				pstmt.setString(2, mail);
@@ -173,6 +179,8 @@ public class RegistrationServlet extends HttpServlet {
 				pstmt.executeUpdate();
 				
 				System.out.println("Database updated successfully ");
+				
+				/*opening the next page*/
 				response.sendRedirect("/GFB/register_pages/additionalInformation.jsp");
 				
 	    	 } catch (SQLException e) {
@@ -197,8 +205,9 @@ public class RegistrationServlet extends HttpServlet {
 		         }
 	    	 }
 	     }else if (spassword == null && employmentStatus == null) {
-	    	 /*update the data in the data base with the data from the form on page additionalInformation.jsp*/
+	    	 /*update the data in the database with the data from the form on page additionalInformation.jsp*/
 	    	 try {
+	    		/*retrieve the mail previously saved in the HTTPsession*/ 
 	    		HttpSession session=request.getSession(false);
 	 			mail=(String)session.getAttribute("mail");
 	 			System.out.print("mail:" + mail);
@@ -229,6 +238,8 @@ public class RegistrationServlet extends HttpServlet {
 				pstmt.executeUpdate();
 				
 				System.out.println("Database updated successfully ");
+				
+				/*opening the next page*/
 				response.sendRedirect("/GFB/register_pages/additionalInformationStatus.jsp");
 				
 	    	 } catch (SQLException e) {
@@ -254,8 +265,9 @@ public class RegistrationServlet extends HttpServlet {
 	    	 }
 	     }
 	     else if (spassword == null) {
-	    	 /*update the data in the data base with the data from the form on page additionalInformationStatus.jsp*/
+	    	 /*update the data in the database with the data from the form on page additionalInformationStatus.jsp*/
 	    	 try {
+	    		/*retrieve the mail previously saved in the HTTPsession*/
 	    		HttpSession session=request.getSession(false);
 	 			mail=(String)session.getAttribute("mail");
 	 			System.out.print("mail:" + mail);
@@ -266,6 +278,8 @@ public class RegistrationServlet extends HttpServlet {
 				pstmt.executeUpdate();
 				
 				System.out.println("Database updated successfully ");
+				
+				/*opening the next page*/
 				response.sendRedirect("/GFB/register_pages/createPassword.jsp");
 				
 	    	 } catch (SQLException e) {
@@ -294,8 +308,9 @@ public class RegistrationServlet extends HttpServlet {
 	     
 	     
 	     else {
-	    	 /*update the data in the data base with the data from the form on page createPassword.jsp*/
+	    	 /*update the data in the database with the data from the form on page createPassword.jsp*/
 	    	 try {
+	    		/*retrieve the mail previously saved in the HTTPsession*/
 	    		HttpSession session=request.getSession(false);
 	 			mail=(String)session.getAttribute("mail");
 	 			System.out.print("mail:" + mail);
@@ -306,6 +321,8 @@ public class RegistrationServlet extends HttpServlet {
 				pstmt.executeUpdate();
 	 			
 				System.out.println("Database updated successfully ");
+				
+				/*opening the next page*/
 				response.sendRedirect("/GFB/register_pages/createAccount.jsp");
 				
 	    	 } catch (SQLException e) {
