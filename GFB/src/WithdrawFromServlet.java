@@ -5,6 +5,7 @@
 // StudentId   : 87198584 
 // Version     : 1.0  -  30March21  -  Initial version
 //               1.1  -  03April21  -  Changed field names to match new SQL setup file
+//               1.2  -  08April21  -  Modified to update the transaction table
 //////////////////////////////////////////////////////////////////////////////////////////////////////
 
 import java.io.IOException;
@@ -63,6 +64,14 @@ public class WithdrawFromServlet extends HttpServlet
         try
         {
             databaseConnection.statement.executeUpdate(sqlStatement2);
+        } catch (SQLException e) { e.printStackTrace(); }
+        
+        // Add it to the transaction table
+        String sqlStatement3 = "INSERT INTO transaction (amount, date, comment) VALUES (" + Integer.parseInt(amount) + ", '03-04-2021', 'Withdrawl')";
+        System.out.println("sqlStatement : " + sqlStatement3);
+        try
+        {
+            databaseConnection.statement.executeUpdate(sqlStatement3);
         } catch (SQLException e) { e.printStackTrace(); }
     }
 
