@@ -36,7 +36,7 @@
                     <a href="#none">Messages</a>
                 </li>
                 <li>
-                    <a href="admin_pages/adminPage.jsp">Go Admin</a>
+                    <a href="../admin_pages/adminPage.jsp">Go Admin</a>
                 </li>
                     
                 <li>

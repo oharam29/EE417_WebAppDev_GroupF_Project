@@ -12,7 +12,8 @@
 <body>
 
     <h1>Group F Bank</h1>
-    <p class = "para1"> GFB: Fluent in Finance.</p>
+    <p class = "para1"> GFB: Fluent in Finance. Need more information about us? <a href="./index.jsp">Click Here!</a></p>
+    
       <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
 
     <form name = "loginForm" method="post" action = "LoginServlet">
@@ -25,7 +26,7 @@
         
         </p>
     	<ul>
-            <li><input type="submit" value="Connect"></li>
+            <li><input type="submit" value="Login"></li>
         
             <li class ="button2"><a href="register_pages/registerPage.jsp ">Sign-up</a></li>
         </ul>

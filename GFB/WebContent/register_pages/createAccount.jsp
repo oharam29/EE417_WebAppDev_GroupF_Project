@@ -45,7 +45,7 @@
 	<div class = "content">
 		<h2>Create Account</h2>
 		<p>To create your GFB account, please agree to the Terms & Conditions.</p>
-		<form name="form" id="form" class="form"   onsubmit="return checks()" method="POST" action="../login.jsp">
+		<form name="form" id="form" class="form"   onsubmit="return checks()" method="POST" action="../accountPage.jsp">
     	<label>
     		<input type="checkbox" id = "TC">Terms & Conditions
     	</label><br/>
