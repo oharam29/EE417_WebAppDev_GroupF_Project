@@ -16,7 +16,7 @@
 <body>
 	<ul>
 		<li>
-        	<a href="index.jsp"><img class="logo" src = "images/logo.jpg"/></a>
+        	<a href="../index.jsp"><img class="logo" src = "images/logo.jpg"/></a>
         </li>
     </ul>
     <div class = "navBar">
@@ -45,17 +45,19 @@
 	<div class = "content">
 		<h2>Additional Information</h2>
 		<p>what is your main employment status?</p>
-		<select name="status">
-			<option value="one" selected>Employed (full-time or part-time) </option>	
-			<option value="two" >Self-employed or freelance</option>
-			<option value="three" >Student</option>	
-			<option value="four" >Retired or homemaker</option>	
-			<option value="four" >Unemployed</option>
-		</select>
+		<form name="form" id="form" class="form" method="POST" action="RegistrationServlet">
+	   		<select name="employmentStatus">
+				<option value="one" selected>Employed (full-time or part-time) </option>	
+				<option value="two" >Self-employed or freelance</option>
+				<option value="three" >Student</option>	
+				<option value="four" >Retired or homemaker</option>	
+				<option value="five" >Unemployed</option>
+			</select>
+			<input id = "btnContinue" type="submit" value="Submit">
+		</form>
 	</div>
 	
 	<input id = "btnBack" type = "button" value = "Back" onclick ="window.location='additionalInformation.jsp'">
-	<input id = "btnContinue" type = "button" value = "Continue" onclick ="window.location='createPassword.jsp'">
-	
+	<!-- <input id = "btnContinue" type = "button" value = "Continue" onclick ="window.location='createPassword.jsp'"> -->
 </body>
 </html>

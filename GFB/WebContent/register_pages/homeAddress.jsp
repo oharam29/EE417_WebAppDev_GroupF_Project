@@ -10,13 +10,13 @@
         }
     </style>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<link rel="stylesheet" href ="registerPage_style.css"/>
+<link rel="stylesheet" href ="../css/registerPage_style.css"/>
 <title>GFB: Home Address</title>
 </head>
 <body>
 	<ul>
 		<li>
-        	<a href="index.jsp"><img class="logo" src = "images/logo.jpg"/></a>
+        	<a href="../index.jsp"><img class="logo" src = "images/logo.jpg"/></a>
         </li>
      </ul>
         <div class = "navBar">
@@ -48,25 +48,25 @@
 	       send cards to residential addresses.</p>
 	 
 		<!-- use my location -->
-		<form name="form" id="form" class="form"  method="POST" action="RegistrationServlet">
-			<p>House Number <input type="text" name = "houseNum" required> Street Name <input type="text" name = "streetName" required></p>
+		<form name="form" id="form" class="form"  onsubmit="return checks()" method="POST" action="RegistrationServlet">
+			<p>House Number(Type 0 if N/A) <input type="text" name = "houseNum" id = "houseNum" required> Street Name <input type="text" name = "streetName" id = "streetName" required></p>
 		
 			<p>		
 				<!-- When mouse focus on date, it will disappear, when it leave, it display again  -->
-				<input name="address1" id = "address" type="text" value="Postcode" 
+				<input name="address1" id = "address1" type="text"  value = "PostCode"
 				onfocus="this.value=''" 
 				onblur="if(this.value==''){this.value='Postcode'}" required>
 				
-				<input name="addresse2" id = "address" type="text" value="City" 
+				<input name="addresse2" id = "address2" type="text" value = "City"
 				onfocus="this.value=''" 
 				onblur="if(this.value==''){this.value='City'}" required>		
 			
-				<input name="address3" id = "address" type="text" value="Country" 
+				<input name="address3" id = "address3" type="text" value = "Country"
 				onfocus="this.value=''" 
 				onblur="if(this.value==''){this.value='Country'}" required>	
 			</p>
 			<p>
-				<input name = "addInfo" id = "additionalInformation" type="text" value="Additional Information" 
+				<input name = "addInfo" id = "additionalInformation" type="text" value = "AdditionalInformation"
 				onfocus="this.value=''" 
 				onblur="if(this.value==''){this.value='Additional Information'}" required>		
 			</p>
@@ -75,7 +75,59 @@
 	</div>
 	
 	<input id = "btnBack" type = "button" value = "Back" onclick ="window.location='mobilePhoneNumber.jsp'">
-	<input id = "btnContinue" type = "button" value = "Continue" onclick ="window.location='additionalInformation.jsp'">
+	<!-- <input id = "btnContinue" type = "button" value = "Continue" onclick ="window.location='additionalInformation.jsp'"> -->
 	
+	
+	<script>
+	function checks()
+	{
+		var HouseNumber = document.getElementById("houseNum").value;
+		 var StreetName = document.getElementById("streetName").value;
+		 var PostCode = document.getElementById("address1").value;
+		 var City = document.getElementById("address2").value;
+		 var Country = document.getElementById("address3").value;
+		 var AddInfo = document.getElementById("additionalInformation").value;
+		var digits =  /^\d+$/; 
+		var number = /\d/;
+	
+		if (HouseNumber == "" || HouseNumber == " " || digits.test(HouseNumber) == false) <!-- checks that the House Number contains no letters -->
+		{
+       		alert("House Number must be filled out and contain no letters!");
+	   		return false;
+		}
+		 if (StreetName == "" || StreetName == " "|| number.test(StreetName) == true) <!-- checks that the street name contains no digits -->
+		{
+       		alert("Street Name must be filled out and contain no numbers!");
+	   		return false;
+		}
+	 	if (PostCode == "" || PostCode == " "  || PostCode == "PostCode") 
+		{
+       		alert("Post Code must be filled out!");
+	   		return false;
+		}
+		if (City == "" || City == " "|| number.test(City) == true || City == "City") <!-- checks that City contains no digits -->
+		{
+       		alert("City must be filled out and contain no numbers!");
+	   		return false;
+		}
+		if (Country == "" || Country == " "|| number.test(Country) == true || Country == "Country") <!-- checks that Country contains no digits -->
+		{
+       		alert("Country must be filled out and contain no numbers!");
+	   		return false;
+		}
+		if (AddInfo == "" || AddInfo == " "|| AddInfo == "AdditionalInformation") 
+		{
+       		alert("AdditionalInformation must be filled out. PLease type N/A or 0 if you have no additional Information to add!");
+	   		return false;
+		}
+		document.getElementById('houseNum').disabled = true;
+		document.getElementById('streetName').disabled = true;
+		document.getElementById('address1').disabled = true;
+		document.getElementById('address2').disabled = true;
+		document.getElementById('address3').disabled = true;
+		document.getElementById('additionalInformation').disabled = true;
+		return true;  
+	}
+	</script>
 </body>
 </html>
