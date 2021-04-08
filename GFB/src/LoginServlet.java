@@ -31,7 +31,7 @@ public class LoginServlet extends HttpServlet
         System.out.println("LoginServlet doPost served, path=" + contextPath);
         
         // Setup the database parameters
-        String sURL = "jdbc:mysql://localhost:3306/ca4_database";
+        String sURL = "jdbc:mysql://localhost:3306/gfb_database";
         String sUsername = "root";
         String sPassword = "3525";
 
