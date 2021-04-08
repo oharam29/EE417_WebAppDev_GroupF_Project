@@ -1,7 +1,6 @@
 
 
 import java.io.IOException;
-import java.io.PrintWriter;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
@@ -26,12 +25,11 @@ public class RegistrationServlet extends HttpServlet {
 		Connection con = null;
         Statement stmt = null;
         ResultSet rs = null;
-        PrintWriter out = response.getWriter();
         
         // Setup the database parameters
         String JDBCUrl = "jdbc:mysql://localhost:3306/gfb_database";
         String username = "root";
-        String password = ""; //insert your root password between "" 
+        String password = "19991217Clsl31A"; //insert your root password between "" 
 
         try {
             System.out.println("\nConnecting to the SSD Database......");
@@ -48,8 +46,6 @@ public class RegistrationServlet extends HttpServlet {
         }   
         
         /*save the html form data in variables*/
-        //String spassword = "*";
-        //String ID = request.getParameter("ID");
         String ID = null;
         String fname = request.getParameter("fname");
         String lname = request.getParameter("lname");
@@ -72,7 +68,7 @@ public class RegistrationServlet extends HttpServlet {
         int status = 2;
         //String status = request.getParameter("status");
         
-	     if  (phone == null && address1 == null && nationality == null && spassword == null) {
+	     if  (phone == null && address1 == null && nationality == null && spassword == null && employmentStatus == null) {
 	    	 try {/*CREATION DATABASE*/
 				 /* insert variables set above in the database*/
 				  PreparedStatement pstmt = con.prepareStatement("INSERT INTO gfb_database.customer(ID,lname,mail,dateBirth,phone,address,addInfo,nationality,cityBirth,countryBirth,gender,employmentStatus,password,balance,status) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)");
@@ -99,7 +95,7 @@ public class RegistrationServlet extends HttpServlet {
 						  session.setAttribute("mail",mail);
 							
 						  System.out.println("successfully updated");
-						  response.sendRedirect("/GFB/mobilePhoneNumber.jsp");
+						  response.sendRedirect("/GFB/register_pages/mobilePhoneNumber.jsp");
 		
 	    	 }
 	    	 catch (SQLException e) {
@@ -123,7 +119,7 @@ public class RegistrationServlet extends HttpServlet {
 			         System.out.println("An error occurred while closing down connection/statement"); 
 		         }
 	    	 }
-	     }else if (address1 == null && nationality == null && spassword == null) { 
+	     }else if (address1 == null && nationality == null && spassword == null && employmentStatus == null) { 
 	    	 /*update the data in the data base with the data from the form on page mobilePhoneNumber.jsp*/
 	    	 try {
 	    		HttpSession session=request.getSession(false);
@@ -136,7 +132,7 @@ public class RegistrationServlet extends HttpServlet {
 				pstmt.executeUpdate();
 				
 				System.out.println("Database updated successfully ");
-				response.sendRedirect("/GFB/homeAddress.jsp");
+				response.sendRedirect("/GFB/register_pages/homeAddress.jsp");
 				
 	    	 } catch (SQLException e) {
 	    		 /*message displayed if an error has occurred during the Statement/ResultSet phase*/
@@ -159,7 +155,7 @@ public class RegistrationServlet extends HttpServlet {
 			         System.out.println("An error occurred while closing down connection/statement"); 
 		         }
 	    	 }
-	     }else if (nationality == null && spassword == null) {
+	     }else if (nationality == null && spassword == null && employmentStatus == null) {
 	    	 /*update the data in the data base with the data from the form on page homeAddress.jsp*/
 	    	 try {
 	    		HttpSession session=request.getSession(false);
@@ -177,7 +173,7 @@ public class RegistrationServlet extends HttpServlet {
 				pstmt.executeUpdate();
 				
 				System.out.println("Database updated successfully ");
-				response.sendRedirect("/GFB/additionalInformation.jsp");
+				response.sendRedirect("/GFB/register_pages/additionalInformation.jsp");
 				
 	    	 } catch (SQLException e) {
 	    		 /*message displayed if an error has occurred during the Statement/ResultSet phase*/
@@ -200,7 +196,7 @@ public class RegistrationServlet extends HttpServlet {
 			         System.out.println("An error occurred while closing down connection/statement"); 
 		         }
 	    	 }
-	     }else if (spassword == null) {
+	     }else if (spassword == null && employmentStatus == null) {
 	    	 /*update the data in the data base with the data from the form on page additionalInformation.jsp*/
 	    	 try {
 	    		HttpSession session=request.getSession(false);
@@ -233,7 +229,7 @@ public class RegistrationServlet extends HttpServlet {
 				pstmt.executeUpdate();
 				
 				System.out.println("Database updated successfully ");
-				response.sendRedirect("/GFB/createPassword.jsp");
+				response.sendRedirect("/GFB/register_pages/additionalInformationStatus.jsp");
 				
 	    	 } catch (SQLException e) {
 	    		 /*message displayed if an error has occurred during the Statement/ResultSet phase*/
@@ -256,7 +252,48 @@ public class RegistrationServlet extends HttpServlet {
 			         System.out.println("An error occurred while closing down connection/statement"); 
 		         }
 	    	 }
-	     }else {
+	     }
+	     else if (spassword == null) {
+	    	 /*update the data in the data base with the data from the form on page additionalInformationStatus.jsp*/
+	    	 try {
+	    		HttpSession session=request.getSession(false);
+	 			mail=(String)session.getAttribute("mail");
+	 			System.out.print("mail:" + mail);
+	    		
+	 			PreparedStatement pstmt = con.prepareStatement("update gfb_database.customer set employmentStatus=? where mail=?");
+	    		pstmt.setString(1, employmentStatus);
+				pstmt.setString(2, mail);
+				pstmt.executeUpdate();
+				
+				System.out.println("Database updated successfully ");
+				response.sendRedirect("/GFB/register_pages/createPassword.jsp");
+				
+	    	 } catch (SQLException e) {
+	    		 /*message displayed if an error has occurred during the Statement/ResultSet phase*/
+	    		 System.out.println("\nAn error has occurred during the Statement/ResultSet phase.  Please check the syntax and study the Exception details!");
+	    		 while (e != null) {
+	    			 System.out.println(e.getMessage());
+	    			 e = e.getNextException();
+			     }
+	    		 System.exit(0);
+	    	 }
+		     
+		
+	    	 finally {
+	    		 try {    
+			         if (rs != null) rs.close();
+			         if (stmt != null) stmt.close();
+			         if (con != null) con.close();
+			     }
+			     catch (Exception ex) {
+			         System.out.println("An error occurred while closing down connection/statement"); 
+		         }
+	    	 }
+	     }
+	     
+	     
+	     
+	     else {
 	    	 /*update the data in the data base with the data from the form on page createPassword.jsp*/
 	    	 try {
 	    		HttpSession session=request.getSession(false);
@@ -269,7 +306,7 @@ public class RegistrationServlet extends HttpServlet {
 				pstmt.executeUpdate();
 	 			
 				System.out.println("Database updated successfully ");
-				response.sendRedirect("/GFB/createAccount.jsp");
+				response.sendRedirect("/GFB/register_pages/createAccount.jsp");
 				
 	    	 } catch (SQLException e) {
 	    		 /*message displayed if an error has occurred during the Statement/ResultSet phase*/
