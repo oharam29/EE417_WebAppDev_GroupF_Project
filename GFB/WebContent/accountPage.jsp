@@ -174,7 +174,7 @@
 	<script src = "app.js"></script>
 	
 	<script>
-		var id = '{id}';
+		var id = '${id}';
 		localStorage.setItem("id", id);
 		document.getElementById("getId").innerHTML = id;
 	</script>
