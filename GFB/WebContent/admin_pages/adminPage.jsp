@@ -25,11 +25,11 @@
                     <a href="../accountPage.jsp">Leave admin</a>
                 </li>
                 <li>
-                    <a href="adminUser.jsp">Admin User</a>
+                    <a href="../admin_pages/adminUser.jsp">Admin User</a>
                 </li>
                     
                 <li>
-                    <a href="login.jsp">Disconnect</a>
+                    <a href="../login.jsp">Disconnect</a>
                 </li>
             </ul>
             <div class = "burger">

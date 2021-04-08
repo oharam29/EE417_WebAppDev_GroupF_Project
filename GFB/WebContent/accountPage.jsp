@@ -36,11 +36,11 @@
                     <a href="#none">Messages</a>
                 </li>
                 <li>
-                    <a href="../admin_pages/adminPage.jsp">Go Admin</a>
+                    <a href="./admin_pages/adminPage.jsp">Go Admin</a>
                 </li>
                     
                 <li>
-                    <a href="login.jsp">Disconnect</a>
+                    <a href="../login.jsp">Disconnect</a>
                 </li>
             </ul>
             <div class = "burger">

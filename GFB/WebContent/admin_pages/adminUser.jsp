@@ -18,7 +18,7 @@
 	<nav>
 	<ul class = "navlinks">
                 <li>
-                    <a href="adminPage.jsp">Home</a>
+                    <a href="../admin_pages/adminPage.jsp">Home</a>
                 </li>
                 <li>
                     <a href="#none">News</a>
@@ -28,11 +28,11 @@
                     <a href="../accountPage.jsp">Leave Admin</a>
                 </li>
                 <li>
-                    <a href="adminPage.jsp">Back to users</a>
+                    <a href="../admin_pages/adminUser.jsp">Admin User</a>
                 </li>
                     
                 <li>
-                    <a href="login.jsp">Disconnect</a>
+                    <a href="../login.jsp">Disconnect</a>
                 </li>
             </ul>
             <div class = "burger">
