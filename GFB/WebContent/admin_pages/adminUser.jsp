@@ -80,7 +80,7 @@
     		document.getElementById("outputmodal").innerHTML = `<form name = "depositForm" method="post" action = "simulateDeposit">
     			<label for="amount">Enter the amount to deposit: </label>
     	        </br>
-    	            <input type="text" name = "amount"  placeholder="Amount"/>
+    	            <input class = "inputbox" type="text" name = "amount"  placeholder="Amount"/>
     	            <input type="submit" value ="Deposit"/>
     	        </br>
     		</form>`;
@@ -90,7 +90,7 @@
     		document.getElementById("outputmodal").innerHTML = `<form name = "withdrawForm" method="post" action = "simulateWithdraw">
     			<label for="amount">Enter the amount to withdraw: </label>
     	        </br>
-    	            <input type="text" name = "amount"  placeholder="Amount"/>
+    	            <input class = "inputbox" type="text" name = "amount"  placeholder="Amount"/>
     	            <input type="submit" value ="Withdraw"/>
     	        </br>
     		</form>`;
@@ -100,7 +100,7 @@
     		document.getElementById("outputmodal").innerHTML = `<form name = "overdraftForm" method="post" action = "setOverdraft">
 			<label>Enter the new max Overdraft: </label>
 	        </br>
-	            <input type="text" name = "amount"  placeholder="Overdraft"/>
+	            <input class = "inputbox" type="text" name = "amount"  placeholder="Overdraft"/>
 	            <input type="submit" value ="Set"/>
 	        </br>
 		</form>`;
@@ -110,7 +110,7 @@
     		document.getElementById("outputmodal").innerHTML = `<form name = "limitsForm" method="post" action = "setLimits">
 			<label>Enter the new monthly payement limit: </label>
 	        </br>
-	            <input type="text" name = "amount"  placeholder="Amount"/>
+	            <input class = "inputbox" type="text" name = "amount"  placeholder="Amount"/>
 	            <input type="submit" value ="Set"/>
 	        </br>
 		</form>`;

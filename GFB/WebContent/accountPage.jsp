@@ -95,8 +95,8 @@
     		document.getElementById("outputmodal").innerHTML = `<form name = "transferForm" method="post" action = "transfer">
     			<label>Entert the amount you want to transfer and the account number:</label>
     	        </br>
-    	        	<input type = "text" placeholder = "Amount">
-    	        	<input type = "text" placeholder = "Account Number">
+    	        	<input class = "inputbox" type = "text" placeholder = "Amount">
+    	        	<input class = "inputbox" type = "text" placeholder = "Account Number">
     	        	</br>
     	            <input type="submit" value ="Send"/>
     	        </br>
