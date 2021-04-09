@@ -101,11 +101,11 @@
     	{
     	case "transfer":
     		document.getElementById("modal-title").innerHTML = `Transfer Money to account`;
-    		document.getElementById("outputmodal").innerHTML = `<form name = "transferForm" method="post" action = "transfer">
+    		document.getElementById("outputmodal").innerHTML = `<form name = "transferForm" method="post" onsubmit="return checks()" action = "transfer">
     			<label>Entert the amount you want to transfer and the account number:</label>
     	        </br>
-    	        	<input type = "text" placeholder = "Amount">
-    	        	<input type = "text" placeholder = "Account Number">
+    	        <input type = "text" placeholder = "Amount" id = "Amount" >
+	        	<input type = "text" placeholder = "Account Number" id = "ACN">
     	        	</br>
     	            <input type="submit" value ="Send"/>
     	        </br>
@@ -139,6 +139,28 @@
     	}
 	
     };</script>
+    
+     <script>
+    	function checks()
+    	{
+    		var Amount = document.getElementById("Amount").value;
+    		var ACN = document.getElementById("ACN").value;
+    		var digits =  /^\d+$/;
+    		
+    		if(Amount == " " || Amount == ""|| digits.test(Amount) == false)
+    		{
+    			alert('Amount must be a specified numerical amount with NO letters.');
+    			return false;
+    		}
+    		if( ACN == null || ACN == " " || ACN == ""|| digits.test(ACN) == false)
+			{
+				alert('Account Number must be a specified Account number with NO letters.');
+				return false;
+			}
+    		return true;
+    	}
+    </script>
+    
 	
 	<div id="myModal" class="modal">
 
