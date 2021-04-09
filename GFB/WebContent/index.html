@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>GFB: Home Page</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1"charset="utf-8"/>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <link rel="stylesheet" href ="./css/navbar.css"/>
+        <link rel="stylesheet" href ="./css/index_style.css"/> 
+</head>
+<body>
+	
+	<div class = navbox>
+	<nav>
+	<ul class = "navlinks">
+                <li>
+                    <a href="./login.jsp">Login</a>
+                </li>
+                <li>
+                    <a href="./register_pages/registerPage.jsp">Sign up</a>
+                </li>
+            </ul>
+            <div class = "burger">
+                <div class = "line1"></div>
+                <div class = "line2"></div>
+                <div class = "line3"></div>
+            </div>
+		<div class = "logoDiv"><img class="logo" src = "images/logo.png"/></div>
+		<h1 class = "title_heading" >Group F Bank</h1>
+	</nav>
+	</div>
+	
+<br /><br /><br /><br /><br />
+	
+	<h1 class="AnimationHeader">
+        <span class="wrap-text">
+    		<span class="line line1"></span>
+    		 <span class="letters">Welcome to GFB: Fluent in Finance.</span>
+    		 <span class="line line2"></span>
+ 			</span>
+      </h1>
+      
+      <br /><br /><br /><br /><br />
+      
+     	<p class = "para1"> Welcome to GFB. If you have an account, please log in or if you would like to become a member, please sign up!</p>
+     	
+<br /><br /><br /><br /><br />
+
+<div class="slideshow_slides">
+
+<div class="mySlides fading">
+  <img class = "img1" src="https://images.unsplash.com/photo-1459257831348-f0cdd359235f?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&dl=fabian-blank-pElSkGRA2NU-unsplash.jpg" style="width:100%">
+  	<div class = "caption">
+  		<div class="caption_text">Save Money.</div>
+    </div>
+</div>
+
+<div class="mySlides fading">
+  <img class = "img1" src="https://images.unsplash.com/photo-1579227114347-15d08fc37cae?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&dl=jinyun-xBuu23uxarU-unsplash.jpg" style="width:100%">
+ 	<div class = "caption">
+  		<div class="caption_text">Earn interest.</div>
+  	</div>
+</div>
+
+<div class="mySlides fading">
+  <img class = "img1" src="https://images.unsplash.com/photo-1609220136736-443140cffec6?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&dl=nathan-dumlao-Wr3comVZJxU-unsplash.jpg" style="width:100%">
+ 	<div class = "caption">
+  		<div class="caption_text">Fuel your future.</div>
+ 	</div>
+</div>
+
+</div>
+<br>
+
+<div style="text-align:center">
+  <span class="square"></span> 
+  <span class="square"></span> 
+  <span class="square"></span> 
+</div>
+<br /><br /><br /><br /><br />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
+	<script src = "app.js"></script>
+	
+	
+<script>
+	var wrap_text = document.querySelector('.AnimationHeader .letters');
+	wrap_text.innerHTML = wrap_text.textContent.replace(/\S/g, "<span class='letter'>$&</span>"); //replaces the letters with spaces so there is no text showing
+	anime.timeline({loop: true})
+	  .add({
+	    targets: '.AnimationHeader .letter',
+	    scale: [0,1],
+	    opacity: [0,1], // sets the characters to be invisible and then gradually make them visible (opacity from 0->1)
+	    easing: "easeOutExpo", //eases out the letters
+	    duration: 5000, // sets the transition time to be 5000ms -> 5 seconds
+	    delay: (el, n) => 125 * (n+1) // allows the characters to ripple in using the (n+1) to select each letter
+	  });
+	
+	</script>
+	
+	<script>
+var index = 0;
+showSlides();
+
+function showSlides() {
+  var slideshowslides = document.getElementsByClassName("mySlides");
+  var squares = document.getElementsByClassName("square");
+  for (var i = 0; i < slideshowslides.length; i++) {
+	  slideshowslides[i].style.display = "none";  // hides the current slide
+  }
+  index++;
+  if (index > slideshowslides.length) {index = 1}   // go back to the first slide 
+  for (i = 0; i < squares.length; i++) {
+	  squares[i].className = squares[i].className.replace(" .active_slides", ""); //replace the active slide with the new incoming slide.
+  }
+  slideshowslides[index-1].style.display = "block";  // display the slide
+  squares[index-1].className += " .active_slides";
+  setTimeout(showSlides, 5000); // Wait 5 seconds for the next slide to ease in
+}
+</script>
+	
+	</body>
+</html>
