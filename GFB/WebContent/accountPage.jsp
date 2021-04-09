@@ -50,7 +50,7 @@
             </div>
 		<div class = "logoDiv"><img class="logo" src = "images/tempLogo.png"/></div>
 		<h1 class = "title">Group F Bank</h1>
-		<div id = "profil"><a href="signup_page.jsp ">Welcome User </a></div><div id = "getId"></div>	<!--  replace Mr. Mark by ${name} -->
+		<div id = "profil"><a href="signup_page.jsp ">Welcome ID</a><div id = "getId"></div></div><!--  replace Mr. Mark by ${name} -->
 	</nav>
 	</div>
 	<div class = "content">
@@ -58,7 +58,7 @@
 	<fieldset>
 		<legend>Balance</legend>
 			
-				<div class="amount"> + 207.64€ </div>			<!-- Replace with ${balance} -->
+				<div class="amount"><div id = "getBalance"></div>euro</div>			<!-- Replace with ${balance} -->
 		
 				<input type = "button" class = "transfer" value = "Transfer" onclick = "writeForm('transfer')">
 				</br>
@@ -174,9 +174,15 @@
 	<script src = "app.js"></script>
 	
 	<script>
-		var id = '${id}';
-		localStorage.setItem("id", id);
-		document.getElementById("getId").innerHTML = id;
+	var id = '${id}';
+	localStorage.setItem("id", id);
+	document.getElementById("getId").innerHTML = id;
+	</script>
+	
+	<script>
+	var balance1 = '${balance}';
+	localStorage.setItem("balance", balance);
+	document.getElementById("getBalance").innerHTML = balance1;
 	</script>
 	
 	<script>
