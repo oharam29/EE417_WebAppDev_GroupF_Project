@@ -5,9 +5,9 @@
     <head>
         <title>GFB: Admin Page</title>
         <meta charset="utf-8"/>
-    	<link rel="stylesheet" href="../css/admin_style.css">
-    	<link rel="stylesheet" href ="../css/navbar.css"/>
-        <link rel="stylesheet" href ="../css/general.css"/>
+    	<link rel="stylesheet" href="/GFB/css/admin_style.css">
+    	<link rel="stylesheet" href ="/GFB/css/navbar.css"/>
+        <link rel="stylesheet" href ="/GFB/css/general.css"/>
     </head>
 <body>
 
@@ -37,7 +37,7 @@
                 <div class = "line2"></div>
                 <div class = "line3"></div>
             </div>
-		<div class = "logoDiv"><img class="logo" src = "../images/tempLogo.png"/></div>
+		<div class = "logoDiv"><img class="logo" src = "/GFB/images/tempLogo.png"/></div>
 		<h1 class = "title">Group F Bank</h1>
 		<div id = "profil"><a href="signup_page.jsp ">Welcome Admin</a></div>	<!--  replace Mr. Mark by ${name} -->
 	</nav>

@@ -35,16 +35,16 @@ public class LoginServlet extends HttpServlet
         System.out.println("LoginServlet doPost served, path=" + contextPath);
         
         // Setup the database parameters
-        String sURL = "jdbc:mysql://localhost:3306/gfb_database";
+        String sURL = "jdbc:mysql://localhost/gfb_database";
         String sUsername = "root";
-        String sPassword = "3525";
+        String sPassword = "1234";
 
         try
         {
             // Connect to the database
             DatabaseConnection databaseConnection = new DatabaseConnection(sURL, sUsername, sPassword); 
 
-            String lName = request.getParameter("lname");                                   // Retrieve the form data
+            String lName = request.getParameter("uname");                                   // Retrieve the form data
             String lPass = request.getParameter("password");
 
             int[] ret_vals = databaseConnection.authenticate(lName, lPass);                 // Authenticate. If valid, returns the id and credentials (credentials=0 => User not found)
@@ -56,7 +56,7 @@ public class LoginServlet extends HttpServlet
                 System.out.println("Login Failure");
                 request.getSession().setAttribute("id", 0);                                 // Blank the userId
                 request.getSession().setAttribute("credentials", 0);                        // Blank the credentials
-                request.getRequestDispatcher("login.jsp").include(request, response);       // Back to login page
+                request.getRequestDispatcher("login.jsp").forward(request, response);       // Back to login page
                 return;
             }
 
@@ -77,7 +77,7 @@ public class LoginServlet extends HttpServlet
                 request.getSession().setAttribute("id", lId);                               // Set the id
                 request.getSession().setAttribute("credentials", 1);                        // Set the credentials
                 request.getSession().setAttribute("balance", lBalance);                     // Set the balance
-                request.getRequestDispatcher("accountPage.jsp").include(request, response); // Jump to the account page
+                request.getRequestDispatcher("accountPage.jsp").forward(request, response); // Jump to the account page
             }
             else                                                                            // Admin user
             {
@@ -85,7 +85,7 @@ public class LoginServlet extends HttpServlet
                 request.getSession().setAttribute("id", lId);                               // Set the id
                 request.getSession().setAttribute("credentials", 2);                        // Set the credentials
                 request.getSession().setAttribute("balance", lBalance);                     // Set the balance
-                request.getRequestDispatcher("adminPage.jsp").include(request, response);   // Jump to the admin page
+                request.getRequestDispatcher("/admin_pages/adminPage.jsp").forward(request, response);   // Jump to the admin page
             }
         } catch (Exception e) { e.printStackTrace(); }
     }
