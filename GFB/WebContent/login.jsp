@@ -26,9 +26,9 @@
         
         </p>
     	<ul>
-            <li><input type="submit" value="Login"></li>
+            <li><input id='loginbtn' type="submit" value="Login"></li>
         
-            <li class ="button2"><a href="register_pages/registerPage.jsp ">Sign-up</a></li>
+            <li id='signupbtn' class ="button2"><a href="register_pages/registerPage.jsp ">Sign-up</a></li>
         </ul>
             <!-- <li class ="button1"><a href="main_page.jsp">Connect</a></li> -->
         	<a href="passwordForget.jsp">Forgot password ?</a>
