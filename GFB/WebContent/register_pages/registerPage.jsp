@@ -41,7 +41,7 @@
 		<h2> Personal Information</h2>
 		<p>To get started, tell us about yourself.</p>
 		
-		<form name="form" id="form" class="form" onsubmit="return checks()" method="POST" action="RegistrationServlet">
+		<form name="form" id="form" class="form" onsubmit="return checks()" method="POST" action="/GFB/RegistrationServlet">
 			<p>First Name <input type="text" name="fname" id="fname" required> Last Name <input type="text" name="lname" id="lname" required></p>
 			<p>Email Address <input type="text" name="mail" id="mail" required></p>
 			<p>

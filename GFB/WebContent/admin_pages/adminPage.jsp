@@ -1,5 +1,10 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+    <%@page import="java.sql.DriverManager"%>
+<%@page import="java.sql.ResultSet"%>
+<%@page import="java.sql.Statement"%>
+<%@page import="java.sql.Connection"%>
+<%@page import ="java.sql.SQLException" %>
 <!DOCTYPE html>
 <html>
     <head>
@@ -8,6 +13,8 @@
     	<link rel="stylesheet" href="/GFB/css/admin_style.css">
     	<link rel="stylesheet" href ="/GFB/css/navbar.css"/>
         <link rel="stylesheet" href ="/GFB/css/general.css"/>
+                <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        
     </head>
 <body>
 
@@ -37,95 +44,77 @@
                 <div class = "line2"></div>
                 <div class = "line3"></div>
             </div>
-		<div class = "logoDiv"><img class="logo" src = "/GFB/images/tempLogo.png"/></div>
-		<h1 class = "title">Group F Bank</h1>
-		<div id = "profil"><a href="signup_page.jsp ">Welcome Admin</a></div>	<!--  replace Mr. Mark by ${name} -->
+		<div class = "logoDiv"><img class="logo" src = "/GFB/images/logo.jpg"/></div>
+		<h1 class = "title">Group F Bank</h1><p id='txt'>Welcome Admin</p>
+		<div id = "profil"><form method="post" action='LogoutServlet'>Logout</form></div>	<!--  replace Mr. Mark by ${name} -->
 	</nav>
 	</div>
 	<div class = "container">
 		<div class="row">
-            <table class="table-fixed">
+            <table class='table-fixed'>
                 <thead>
                     <tr>
-                        <th class="col">Full Name</th>
-                        <th class="col">Age</th>
-                        <th class="col">Job Title</th>
-                        <th class="col">Location</th>
+						<th class="col">ID</th>
+						<th class="col">Last Name</th>
+						<th class="col">Email</th>
+						<th class="col">DOB</th>
+						<th class="col">Phone Number</th>
+						<th class="col">Address</th>
+						<th class="col">Addition Info</th>
+						<th class="col">Nationality</th>
+						<th class="col">City Of Birth</th>
+						<th class="col">Country Of Birth</th>
+						<th class="col">Gender</th>
+						<th class="col">Employment</th>
+						<th class="col">Password</th>
+						<th class="col">Balance</th>
+						<th class="col">Account Level</th>
                     </tr>
                 </thead>
                 <tbody>
-                    <tr>
-                        <td class="col">Varun Thakur</td>
-                        <td class="col">30</td>
-                        <td class="col">DevOps Engineer</td>
-                        <td class="col">India</td>
-                    </tr>
-                    <tr>
-                        <td class="col">Olive Yu</td>
-                        <td class="col">29</td>
-                        <td class="col">UI Developer</td>
-                        <td class="col">United Kingdom</td>
-                    </tr>
-                    <tr>
-                        <td class="col">Sam Buca</td>
-                        <td class="col">35</td>
-                        <td class="col">SQL Developer</td>
-                        <td class="col">United States</td>
-                    </tr>
-                    <tr>
-                        <td class="col">Tom Ollie</td>
-                        <td class="col">27</td>
-                        <td class="col">IT Programmer</td>
-                        <td class="col">Italy</td>
-                    </tr>
-                    <tr>
-                        <td class="col">Ray Cyst</td>
-                        <td class="col">37</td>
-                        <td class="col">Network Administrator</td>
-                        <td class="col">France</td>
-                    </tr>
-                    <tr>
-                        <td class="col">Helen Highwater</td>
-                        <td class="col">28</td>
-                        <td class="col">Technical Specialist</td>
-                        <td class="col">Brasil</td>
-                    </tr>
-                    <tr>
-                        <td class="col">Caire Innet</td>
-                        <td class="col">26</td>
-                        <td class="col">Security Analyst</td>
-                        <td class="col">South Africa</td>
-                    </tr>
-                    <tr>
-                        <td class="col">Val Adictorian</td>
-                        <td class="col">24</td>
-                        <td class="col">Data Entry</td>
-                        <td class="col">Netherlands</td>
-                    </tr>
-                    <tr>
-                        <td class="col">Cooke Edoh</td>
-                        <td class="col">33</td>
-                        <td class="col">IT Manager</td>
-                        <td class="col">Canada</td>
-                    </tr>
-                    <tr>
-                        <td class="col">Rick Shaw</td>
-                        <td class="col">25</td>
-                        <td class="col">Cloud Architect</td>
-                        <td class="col">Norway</td>
-                    </tr>
-                    <tr>
-                        <td class="col">Rick Shaw</td>
-                        <td class="col">25</td>
-                        <td class="col">Cloud Architect</td>
-                        <td class="col">Norway</td>
-                    </tr>
-                    <tr>
-                        <td class="col">Cooke Edoh</td>
-                        <td class="col">33</td>
-                        <td class="col">IT Manager</td>
-                        <td class="col">Canada</td>
-                    </tr>
+					<%
+        			String dbURL = "jdbc:mysql://localhost/gfb_database";
+        			String dbUsername = "root";
+        			String dbPassword = "1234";
+    				Connection connection; 
+    				Statement statement; 
+    				ResultSet query_res;
+    	
+        			try
+        			{
+    					Class.forName("com.mysql.cj.jdbc.Driver");                               // Load up the driver
+    					connection = DriverManager.getConnection(dbURL, dbUsername, dbPassword); // Connect
+    					statement  = connection.createStatement(ResultSet.TYPE_SCROLL_SENSITIVE, ResultSet.CONCUR_READ_ONLY);
+    					String query = "SELECT * FROM customer";
+    					query_res = statement.executeQuery(query);
+						while(query_res.next()){
+					%>	
+						<tr>
+							<td><%=query_res.getString("id") %></td>
+							<td><%=query_res.getString("lname") %></td>
+							<td><%=query_res.getString("mail") %></td>
+							<td><%=query_res.getString("dateBirth") %></td>
+							<td><%=query_res.getString("phone") %></td>
+							<td><%=query_res.getString("address") %></td>
+							<td><%=query_res.getString("addInfo") %></td>
+							<td><%=query_res.getString("nationality") %></td>
+							<td><%=query_res.getString("cityBirth") %></td>
+							<td><%=query_res.getString("countryBirth") %></td>
+							<td><%=query_res.getString("gender") %></td>
+							<td><%=query_res.getString("employmentStatus") %></td>
+							<td><%=query_res.getString("password") %></td>
+							<td><%=query_res.getString("balance") %></td>
+							<td><%=query_res.getString("status") %></td>
+						</tr>
+					<%
+						}
+						connection.close();
+					} 
+        			catch (Exception e) 
+        			{
+					e.printStackTrace();
+					}
+					%>
 
                 </tbody>
             </table>

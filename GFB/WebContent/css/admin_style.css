@@ -5,16 +5,19 @@
 
 
 thead{
-	height: 30px;
-	width: 600px;
-	background-color:gray;
+	padding-top: 12px;
+  	padding-bottom: 12px;
+  	text-align: left;
+  	background-color: #4CAF50;
+  	color: white;
+	
 	
 }
 
 .table-fixed{
 	text-align:center;
 	font-size:15px;
-	width:600px;
+	width:800px;
 	color:black;
 	cellspacing:0px;
 	cellpadding:0px;
@@ -26,13 +29,14 @@ thead{
 }
 
 tbody{
-	height:100px;
-	width: 600px;
+	height:1500px;
+	width: 800px;
 	overflow:auto;
 	overflow-x:hidden;
 	background-color:white;
 }
 
-.table-fixed .col {
-    width: 25%;
+
+#txt {
+	color:black;
 }

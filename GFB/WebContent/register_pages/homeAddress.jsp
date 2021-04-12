@@ -48,7 +48,7 @@
 	       send cards to residential addresses.</p>
 	 
 		<!-- use my location -->
-		<form name="form" id="form" class="form"  onsubmit="return checks()" method="POST" action="../RegistrationServlet">
+		<form name="form" id="form" class="form"  onsubmit="return checks()" method="POST" action="/GFB/RegistrationServlet">
 			<p>House Number(Type 0 if N/A) <input type="text" name = "houseNum" id = "houseNum" required> Street Name <input type="text" name = "streetName" id = "streetName" required></p>
 		
 			<p>		
