@@ -47,7 +47,7 @@
 		<h2>Create Password</h2>
 		<p>Please enter your password</p>
 		
-		<form name="form" id="form" class="form"  onsubmit="return checks()" method="POST" action="/GFB/RegistrationServlet">
+		<form name="form" id="form" class="form"  onsubmit="return checks()" method="POST"  action="/GFB/RegistrationServlet">
  			<input type="password" id="pwd" name="password" onkeydown="keydownFunction()">
             <input id = "btnContinue" type="submit" value="Submit">
         </form>

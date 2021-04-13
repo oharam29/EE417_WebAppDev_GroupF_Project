@@ -45,7 +45,7 @@
 	<div class="content">
 		<h2>Additional Information</h2>
 		<p>Please tell us your nationality and place of birth.</p>
-		<form name="form" id="form" class="form"   onsubmit="return checks()" method="POST" action="/GFB/RegistrationServlet">
+		<form name="form" id="form" class="form"   onsubmit="return checks()" method="POST"  action="/GFB/RegistrationServlet">
 			<p>Nationality (Country) <input type="text" name="nationality" id="nationality" required></p> <!-- as shown on passport -->
 			<p>City of Birth <input type="text" name="cityBirth" id="cityBirth"required></p>
 			<p>Country of Birth <input type="text" name="countryBirth"  id="countryBirth" required></p>
