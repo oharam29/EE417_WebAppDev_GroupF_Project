@@ -5,38 +5,59 @@
 
 
 thead{
+<<<<<<< HEAD
 	padding-top: 12px;
   	padding-bottom: 12px;
   	text-align: left;
   	background-color: #4CAF50;
   	color: white;
 	
+=======
+	height: 30px;
+	width: 60%;
+	background-color:gray;
+>>>>>>> branch 'main' of https://github.com/oharam29/EE417_WebAppDev_GroupF_Project
 	
 }
 
 .table-fixed{
 	text-align:center;
 	font-size:15px;
+<<<<<<< HEAD
 	width:800px;
+=======
+	width:60%;
+>>>>>>> branch 'main' of https://github.com/oharam29/EE417_WebAppDev_GroupF_Project
 	color:black;
 	cellspacing:0px;
 	cellpadding:0px;
-	margin-left: 30%;
-	margin-right: 30%;
+	margin-left: 20%;
+	margin-right: 20%;
     margin-top: 10rem;
     border-width:1px;
     border-color:black;
 }
 
 tbody{
+<<<<<<< HEAD
 	height:1500px;
 	width: 800px;
+=======
+	height:100px;
+	width: 60%;
+>>>>>>> branch 'main' of https://github.com/oharam29/EE417_WebAppDev_GroupF_Project
 	overflow:auto;
 	overflow-x:hidden;
 	background-color:white;
 }
 
+<<<<<<< HEAD
 
 #txt {
 	color:black;
 }
+=======
+.table-fixed .col {
+    width: 14%;
+}
+>>>>>>> branch 'main' of https://github.com/oharam29/EE417_WebAppDev_GroupF_Project

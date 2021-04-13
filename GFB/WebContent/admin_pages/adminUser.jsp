@@ -40,7 +40,7 @@
                 <div class = "line2"></div>
                 <div class = "line3"></div>
             </div>
-		<div class = "logoDiv"><img class="logo" src = "../images/tempLogo.png"/></div>
+		<div class = "logoDiv"><img class="logo" src = "../images/logo.jpg"/></div>
 		<h1 class = "title">Group F Bank</h1>
 		<div id = "profil"><a href="signup_page.jsp ">Welcome Admin</a></div>	<!--  replace Mr. Mark by ${name} -->
 	</nav>
@@ -70,6 +70,8 @@
     		document.getElementById("outputmodal").innerHTML = `<form name = "deleteForm" method="post" action = "deleteConfirm">
     			<label>Are you sure you want to delete this user ?</label>
     	        </br>
+    	        	<input class = "inputbox" type="text" name = "ID"  placeholder="User ID"/>
+    	        	<br>
     	            <input type="submit" value ="Yes"/>
     	            <input type="button" value = "No"/>
     	        </br>
@@ -80,7 +82,12 @@
     		document.getElementById("outputmodal").innerHTML = `<form name = "depositForm" method="post" action = "simulateDeposit">
     			<label for="amount">Enter the amount to deposit: </label>
     	        </br>
-    	            <input type="text" name = "amount"  placeholder="Amount"/>
+    	        <input class = "inputbox" type="text" name = "ID"  placeholder="User ID"/>
+    	        	<br>
+    	            <input class = "inputbox" type="text" name = "amount"  placeholder="Amount"/>
+    	            	<br>
+    	            	<input class = "note" type="text" name = "note"  placeholder="Add a note (Optionnal)"/>
+            	        	<br>
     	            <input type="submit" value ="Deposit"/>
     	        </br>
     		</form>`;
@@ -90,7 +97,12 @@
     		document.getElementById("outputmodal").innerHTML = `<form name = "withdrawForm" method="post" action = "simulateWithdraw">
     			<label for="amount">Enter the amount to withdraw: </label>
     	        </br>
-    	            <input type="text" name = "amount"  placeholder="Amount"/>
+    	        <input class = "inputbox" type="text" name = "ID"  placeholder="User ID"/>
+    	        	<br>
+    	            <input class = "inputbox" type="text" name = "amount"  placeholder="Amount"/>
+    	            	<br>
+    	            	<input class = "note" type="text" name = "note"  placeholder="Add a note (Optionnal)"/>
+            	        	<br>
     	            <input type="submit" value ="Withdraw"/>
     	        </br>
     		</form>`;
@@ -100,7 +112,10 @@
     		document.getElementById("outputmodal").innerHTML = `<form name = "overdraftForm" method="post" action = "setOverdraft">
 			<label>Enter the new max Overdraft: </label>
 	        </br>
-	            <input type="text" name = "amount"  placeholder="Overdraft"/>
+	        <input class = "inputbox" type="text" name = "ID"  placeholder="User ID"/>
+	        	<br>
+	            <input class = "inputbox" type="text" name = "amount"  placeholder="Overdraft"/>
+	            <br>
 	            <input type="submit" value ="Set"/>
 	        </br>
 		</form>`;
@@ -110,7 +125,10 @@
     		document.getElementById("outputmodal").innerHTML = `<form name = "limitsForm" method="post" action = "setLimits">
 			<label>Enter the new monthly payement limit: </label>
 	        </br>
-	            <input type="text" name = "amount"  placeholder="Amount"/>
+	        <input class = "inputbox" type="text" name = "ID"  placeholder="User ID"/>
+	        	<br>
+	            <input class = "inputbox" type="text" name = "amount"  placeholder="Amount"/>
+	            	<br>
 	            <input type="submit" value ="Set"/>
 	        </br>
 		</form>`;
