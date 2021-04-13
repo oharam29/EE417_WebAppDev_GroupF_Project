@@ -37,7 +37,7 @@
                 <div class = "line2"></div>
                 <div class = "line3"></div>
             </div>
-		<div class = "logoDiv"><img class="logo" src = "../images/tempLogo.png"/></div>
+		<div class = "logoDiv"><img class="logo" src = "../images/logo.jpg"/></div>
 		<h1 class = "title">Group F Bank</h1>
 		<div id = "profil"><a href="signup_page.jsp ">Welcome Admin</a></div>	<!--  replace Mr. Mark by ${name} -->
 	</nav>
@@ -47,84 +47,124 @@
             <table class="table-fixed">
                 <thead>
                     <tr>
-                        <th class="col">Full Name</th>
-                        <th class="col">Age</th>
-                        <th class="col">Job Title</th>
-                        <th class="col">Location</th>
+                    	<th class="col">ID</th>
+                        <th class="col">Name</th>
+                        <th class="col">Mail</th>
+                        <th class="col">Phone</th>
+                        <th class="col">Address</th>
+                        <th class="col">Balance</th>
+                        <th class="col">Password</th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr>
-                        <td class="col">Varun Thakur</td>
-                        <td class="col">30</td>
-                        <td class="col">DevOps Engineer</td>
-                        <td class="col">India</td>
+                        <td class="col">0001</td>
+                        <td class="col">Mark</td>
+                        <td class="col">mark@mail</td>
+                        <td class="col">+33707070707</td>
+                        <td class="col">37 quai de Grenelle</td>
+                        <td class="col">2789,65</td>
+                        <td class="col">password</td>
+                        
                     </tr>
                     <tr>
-                        <td class="col">Olive Yu</td>
-                        <td class="col">29</td>
-                        <td class="col">UI Developer</td>
-                        <td class="col">United Kingdom</td>
+                        <td class="col">0001</td>
+                        <td class="col">Mark</td>
+                        <td class="col">mark@mail</td>
+                        <td class="col">+33707070707</td>
+                        <td class="col">37 quai de Grenelle</td>
+                        <td class="col">2789,65</td>
+                        <td class="col">password</td>
                     </tr>
                     <tr>
-                        <td class="col">Sam Buca</td>
-                        <td class="col">35</td>
-                        <td class="col">SQL Developer</td>
-                        <td class="col">United States</td>
+                        <td class="col">0001</td>
+                        <td class="col">Mark</td>
+                        <td class="col">mark@mail</td>
+                        <td class="col">+33707070707</td>
+                        <td class="col">37 quai de Grenelle</td>
+                        <td class="col">2789,65</td>
+                        <td class="col">password</td>
                     </tr>
                     <tr>
-                        <td class="col">Tom Ollie</td>
-                        <td class="col">27</td>
-                        <td class="col">IT Programmer</td>
-                        <td class="col">Italy</td>
+                        <td class="col">0001</td>
+                        <td class="col">Mark</td>
+                        <td class="col">mark@mail</td>
+                        <td class="col">+33707070707</td>
+                        <td class="col">37 quai de Grenelle</td>
+                        <td class="col">2789,65</td>
+                        <td class="col">password</td>
                     </tr>
                     <tr>
-                        <td class="col">Ray Cyst</td>
-                        <td class="col">37</td>
-                        <td class="col">Network Administrator</td>
-                        <td class="col">France</td>
+                        <td class="col">0001</td>
+                        <td class="col">Mark</td>
+                        <td class="col">mark@mail</td>
+                        <td class="col">+33707070707</td>
+                        <td class="col">37 quai de Grenelle</td>
+                        <td class="col">2789,65</td>
+                        <td class="col">password</td>
                     </tr>
                     <tr>
-                        <td class="col">Helen Highwater</td>
-                        <td class="col">28</td>
-                        <td class="col">Technical Specialist</td>
-                        <td class="col">Brasil</td>
+                        <td class="col">0001</td>
+                        <td class="col">Mark</td>
+                        <td class="col">mark@mail</td>
+                        <td class="col">+33707070707</td>
+                        <td class="col">37 quai de Grenelle</td>
+                        <td class="col">2789,65</td>
+                        <td class="col">password</td>
                     </tr>
                     <tr>
-                        <td class="col">Caire Innet</td>
-                        <td class="col">26</td>
-                        <td class="col">Security Analyst</td>
-                        <td class="col">South Africa</td>
+                        <td class="col">0001</td>
+                        <td class="col">Mark</td>
+                        <td class="col">mark@mail</td>
+                        <td class="col">+33707070707</td>
+                        <td class="col">37 quai de Grenelle</td>
+                        <td class="col">2789,65</td>
+                        <td class="col">password</td>
                     </tr>
                     <tr>
-                        <td class="col">Val Adictorian</td>
-                        <td class="col">24</td>
-                        <td class="col">Data Entry</td>
-                        <td class="col">Netherlands</td>
+                        <td class="col">0001</td>
+                        <td class="col">Mark</td>
+                        <td class="col">mark@mail</td>
+                        <td class="col">+33707070707</td>
+                        <td class="col">37 quai de Grenelle</td>
+                        <td class="col">2789,65</td>
+                        <td class="col">password</td>
                     </tr>
                     <tr>
-                        <td class="col">Cooke Edoh</td>
-                        <td class="col">33</td>
-                        <td class="col">IT Manager</td>
-                        <td class="col">Canada</td>
+                        <td class="col">0001</td>
+                        <td class="col">Mark</td>
+                        <td class="col">mark@mail</td>
+                        <td class="col">+33707070707</td>
+                        <td class="col">37 quai de Grenelle</td>
+                        <td class="col">2789,65</td>
+                        <td class="col">password</td>
                     </tr>
                     <tr>
-                        <td class="col">Rick Shaw</td>
-                        <td class="col">25</td>
-                        <td class="col">Cloud Architect</td>
-                        <td class="col">Norway</td>
+                        <td class="col">0001</td>
+                        <td class="col">Mark</td>
+                        <td class="col">mark@mail</td>
+                        <td class="col">+33707070707</td>
+                        <td class="col">37 quai de Grenelle</td>
+                        <td class="col">2789,65</td>
+                        <td class="col">password</td>
                     </tr>
                     <tr>
-                        <td class="col">Rick Shaw</td>
-                        <td class="col">25</td>
-                        <td class="col">Cloud Architect</td>
-                        <td class="col">Norway</td>
+                        <td class="col">0001</td>
+                        <td class="col">Mark</td>
+                        <td class="col">mark@mail</td>
+                        <td class="col">+33707070707</td>
+                        <td class="col">37 quai de Grenelle</td>
+                        <td class="col">2789,65</td>
+                        <td class="col">password</td>
                     </tr>
                     <tr>
-                        <td class="col">Cooke Edoh</td>
-                        <td class="col">33</td>
-                        <td class="col">IT Manager</td>
-                        <td class="col">Canada</td>
+                        <td class="col">0001</td>
+                        <td class="col">Mark</td>
+                        <td class="col">mark@mail</td>
+                        <td class="col">+33707070707</td>
+                        <td class="col">37 quai de Grenelle</td>
+                        <td class="col">2789,65</td>
+                        <td class="col">password</td>
                     </tr>
 
                 </tbody>

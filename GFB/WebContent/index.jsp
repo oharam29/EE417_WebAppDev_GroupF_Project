@@ -3,6 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <title>Welcome to GFB bank!</title>
+<link rel="stylesheet" href ="css/accountPage_style.css"/>
+        <link rel="stylesheet" href ="css/general.css"/>
 </head>
 	<body>
 		<a href="./login.jsp">Login</a>

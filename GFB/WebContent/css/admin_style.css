@@ -6,7 +6,7 @@
 
 thead{
 	height: 30px;
-	width: 600px;
+	width: 60%;
 	background-color:gray;
 	
 }
@@ -14,12 +14,12 @@ thead{
 .table-fixed{
 	text-align:center;
 	font-size:15px;
-	width:600px;
+	width:60%;
 	color:black;
 	cellspacing:0px;
 	cellpadding:0px;
-	margin-left: 30%;
-	margin-right: 30%;
+	margin-left: 20%;
+	margin-right: 20%;
     margin-top: 10rem;
     border-width:1px;
     border-color:black;
@@ -27,12 +27,12 @@ thead{
 
 tbody{
 	height:100px;
-	width: 600px;
+	width: 60%;
 	overflow:auto;
 	overflow-x:hidden;
 	background-color:white;
 }
 
 .table-fixed .col {
-    width: 25%;
+    width: 14%;
 }

@@ -48,7 +48,7 @@
                 <div class = "line2"></div>
                 <div class = "line3"></div>
             </div>
-		<div class = "logoDiv"><img class="logo" src = "images/tempLogo.png"/></div>
+		<div class = "logoDiv"><img class="logo" src = "images/logo.jpg"/></div>
 		<h1 class = "title">Group F Bank</h1>
 		<div id = "profil"><a href="signup_page.jsp ">Welcome User </a></div><div id = "getId"></div>	<!--  replace Mr. Mark by ${name} -->
 	</nav>
@@ -107,6 +107,8 @@
     	        	<input class = "inputbox" type = "text" placeholder = "Amount">
     	        	<input class = "inputbox" type = "text" placeholder = "Account Number">
     	        	</br>
+    	        	<input class = "note" type="text" name = "note"  placeholder="Add a note (Optionnal)"/>
+        	        	<br>
     	            <input type="submit" value ="Send"/>
     	        </br>
     		</form>`;
