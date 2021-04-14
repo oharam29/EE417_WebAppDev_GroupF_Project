@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1:3306
--- Généré le : sam. 03 avr. 2021 à 09:21
+-- Généré le : mer. 14 avr. 2021 à 13:05
 -- Version du serveur :  5.7.31
 -- Version de PHP : 7.3.21
 
@@ -44,6 +44,8 @@ CREATE TABLE IF NOT EXISTS `customer` (
   `password` varchar(45) DEFAULT NULL,
   `balance` double DEFAULT NULL,
   `status` tinyint(4) DEFAULT NULL,
+  `overdraftLimit` double DEFAULT NULL,
+  `withdrawalLimit` double DEFAULT NULL,
   PRIMARY KEY (`id`),
   UNIQUE KEY `mail` (`mail`),
   UNIQUE KEY `phone` (`phone`)
@@ -53,12 +55,12 @@ CREATE TABLE IF NOT EXISTS `customer` (
 -- Déchargement des données de la table `customer`
 --
 
-INSERT INTO `customer` (`id`, `lname`, `mail`, `dateBirth`, `phone`, `address`, `addInfo`, `nationality`, `cityBirth`, `countryBirth`, `gender`, `employmentStatus`, `password`, `balance`, `status`) VALUES
-(1, 'Dupont', 'a@mail.dcu.ie', '01-01-1980', '0102030405', '75006 Paris France', '.', 'French', 'Lyon', 'France', 'male', 'Self-employed or freelance', 'test1', 1000, 1),
-(2, 'Jones', 'b@mail.dcu.ie', '02-02-1985', '0203040506', '85000 New-York USA', '..', 'American', 'Washington', 'USA', 'female', 'Student', 'test2', 2000, 2),
-(3, 'Adams', 'c@mail.dcu.ie', '03-03-1990', '0304050607', '95003 Dublin Ireland', '...', 'Irish', 'Cork', 'Ireland', 'male', 'Retired or homemaker', 'test3', 10000, 2),
-(4, 'Smith', 'd@mail.dcu.ie', '04-04-1995', '0101010101', '62230 Shanghai China', '....', 'Chinese', 'Shenzhen', 'China', 'female', 'Unemployed', 'test4', 20000, 1),
-(5, 'Brown', 'e@mail.dcu.ie', '05-05-2000', '0202020202', '55089 Jakarta Indonesia', '......', 'Indonesian', 'Denpasar', 'Indonesia', 'male', 'Student', 'test5', 100000, 1);
+INSERT INTO `customer` (`id`, `lname`, `mail`, `dateBirth`, `phone`, `address`, `addInfo`, `nationality`, `cityBirth`, `countryBirth`, `gender`, `employmentStatus`, `password`, `balance`, `status`, `overdraftLimit`, `withdrawalLimit`) VALUES
+(1, 'Dupont', 'a@mail.dcu.ie', '01-01-1980', '0102030405', '75006 Paris France', '.', 'French', 'Lyon', 'France', 'male', 'Self-employed or freelance', 'test1', 1000, 1, -1000, 1000),
+(2, 'Jones', 'b@mail.dcu.ie', '02-02-1985', '0203040506', '85000 New-York USA', '..', 'American', 'Washington', 'USA', 'female', 'Student', 'test2', 2000, 2, -2000, 2000),
+(3, 'Adams', 'c@mail.dcu.ie', '03-03-1990', '0304050607', '95003 Dublin Ireland', '...', 'Irish', 'Cork', 'Ireland', 'male', 'Retired or homemaker', 'test3', 10000, 2, -3000, 4000),
+(4, 'Smith', 'd@mail.dcu.ie', '04-04-1995', '0101010101', '62230 Shanghai China', '....', 'Chinese', 'Shenzhen', 'China', 'female', 'Unemployed', 'test4', 20000, 1, -4000, 5000),
+(5, 'Brown', 'e@mail.dcu.ie', '05-05-2000', '0202020202', '55089 Jakarta Indonesia', '......', 'Indonesian', 'Denpasar', 'Indonesia', 'male', 'Student', 'test5', 100000, 1, -6000, 6000);
 
 -- --------------------------------------------------------
 
