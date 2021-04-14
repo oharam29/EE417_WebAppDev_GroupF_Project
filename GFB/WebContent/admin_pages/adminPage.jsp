@@ -10,11 +10,11 @@
     <head>
         <title>GFB: Admin Page</title>
         <meta charset="utf-8"/>
+           <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     	<link rel="stylesheet" href="/GFB/css/admin_style.css">
     	<link rel="stylesheet" href ="/GFB/css/navbar.css"/>
         <link rel="stylesheet" href ="/GFB/css/general.css"/>
-                <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-        
+          <link rel="stylesheet" href="../css/modal.css">      
     </head>
 <body>
 
@@ -73,7 +73,7 @@
                 </thead>
                 <tbody>
 					<%
-        			String dbURL = "jdbc:mysql://localhost/gfb_database";
+        			String dbURL = "jdbc:mysql://localhost/mydb";
         			String dbUsername = "root";
         			String dbPassword = "1234";
     				Connection connection; 
@@ -119,8 +119,6 @@
                 </tbody>
             </table>
         </div>
-	
-	<p>Hello</p>
 	
 	
 	</div>

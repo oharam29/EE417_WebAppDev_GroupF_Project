@@ -5,12 +5,12 @@
     <head>
         <title>GFB: Admin User Page</title>
         <meta charset="utf-8"/>
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+       
     	<link rel="stylesheet" href="../css/adminUser_style.css">
     	<link rel="stylesheet" href ="../css/navbar.css"/>
         <link rel="stylesheet" href ="../css/general.css"/>
         <link rel="stylesheet" href="../css/modal.css">
-    	
+    	 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     </head>
 <body>
 

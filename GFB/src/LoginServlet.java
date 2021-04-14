@@ -35,7 +35,7 @@ public class LoginServlet extends HttpServlet
         System.out.println("LoginServlet doPost served, path=" + contextPath);
         
         // Setup the database parameters
-        String sURL = "jdbc:mysql://localhost/gfb_database";
+        String sURL = "jdbc:mysql://localhost/mydb";
         String sUsername = "root";
         String sPassword = "1234";
 
@@ -85,7 +85,7 @@ public class LoginServlet extends HttpServlet
                 request.getSession().setAttribute("id", lId);                               // Set the id
                 request.getSession().setAttribute("credentials", 2);                        // Set the credentials
                 request.getSession().setAttribute("balance", lBalance);                     // Set the balance
-                request.getRequestDispatcher("/admin_pages/adminPage.jsp").include(request, response);   // Jump to the admin page
+                request.getRequestDispatcher("/admin_pages/adminPage.jsp").forward(request, response);   // Jump to the admin page
             }
         } catch (Exception e) { e.printStackTrace(); }
     }

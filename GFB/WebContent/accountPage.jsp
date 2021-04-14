@@ -72,9 +72,12 @@
 				</br>
 				<input type = "button" class = "details.jsp" value = "Details" onclick = "writeForm('details.jsp')">
 				</br>
-		
 	</fieldset>
 	</form>
+	<form name="StamentsForm" action="UserStatements.jsp">
+           			<input type="hidden" name="id" value = "'${id}'"><br/>
+           				<input type="submit" value = "Statements">
+        		</form>
 	
 	
 	<form method = "get" action = "historyAction" id = "history">
@@ -91,6 +94,7 @@
 			</ul>
 	</fieldset>
 	</form>
+	
 	
 	<script>
 	var modal = document.getElementById("myModal");
