@@ -85,7 +85,8 @@ public class LoginServlet extends HttpServlet
                 request.getSession().setAttribute("id", lId);                               // Set the id
                 request.getSession().setAttribute("credentials", 2);                        // Set the credentials
                 request.getSession().setAttribute("balance", lBalance);                     // Set the balance
-                request.getRequestDispatcher("/admin_pages/adminPage.jsp").forward(request, response);   // Jump to the admin page
+               // request.getRequestDispatcher("/admin_pages/adminPage.jsp").forward(request, response);   // Jump to the admin page
+                request.getRequestDispatcher("admin_pages/adminUser.jsp").forward(request, response);
             }
         } catch (Exception e) { e.printStackTrace(); }
     }

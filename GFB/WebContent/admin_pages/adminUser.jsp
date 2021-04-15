@@ -5,12 +5,12 @@
     <head>
         <title>GFB: Admin User Page</title>
         <meta charset="utf-8"/>
-       
-    	<link rel="stylesheet" href="../css/adminUser_style.css">
-    	<link rel="stylesheet" href ="../css/navbar.css"/>
-        <link rel="stylesheet" href ="../css/general.css"/>
-        <link rel="stylesheet" href="../css/modal.css">
-    	 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    	<link rel="stylesheet" href="<%= request.getContextPath() %>/css/adminUser_style.css">
+    	<link rel="stylesheet" href ="<%= request.getContextPath() %>/css/navbar.css"/>
+        <link rel="stylesheet" href ="<%= request.getContextPath() %>/css/general.css"/>
+        <link rel="stylesheet" href="<%= request.getContextPath() %>./css/modal.css">
+    	 
     </head>
 <body>
 
@@ -18,21 +18,21 @@
 	<nav>
 	<ul class = "navlinks">
                 <li>
-                    <a href="../admin_pages/adminPage.jsp">Home</a>
+                    <a href="./index.html">Home</a>
                 </li>
                 <li>
                     <a href="#none">News</a>
                 </li>
                     
                 <li>
-                    <a href="../accountPage.jsp">Leave Admin</a>
+                    <a href="./accountPage.jsp">Account Page</a>
                 </li>
                 <li>
-                    <a href="../admin_pages/adminUser.jsp">Admin User</a>
+                    <a href="./admin_pages/adminPage.jsp">Admin Page</a>
                 </li>
                     
                 <li>
-                    <a href="../login.jsp">Disconnect</a>
+                    <a href="LogoutServlet">Disconnect</a>
                 </li>
             </ul>
             <div class = "burger">
@@ -40,20 +40,20 @@
                 <div class = "line2"></div>
                 <div class = "line3"></div>
             </div>
-		<div class = "logoDiv"><img class="logo" src = "../images/logo.jpg"/></div>
+		<div class = "logoDiv"><img class="logo" src = "./images/logo.jpg"/></div>
 		<h1 class = "title">Group F Bank</h1>
-		<div id = "profil"><a href="signup_page.jsp ">Welcome Admin</a></div>	<!--  replace Mr. Mark by ${name} -->
+		<div id = "profil"><a href="signup_page.jsp ">Welcome Admin</a></div>	
 	</nav>
 	</div>
 	<div class = "content">
-		<h2>Now modifying Mr. Mark</h2>			<!-- replace Mark with the name of the person -->
+		<h2>Modifying</h2>			<!-- replace Mark with the name of the person -->
 		<form class = "buttons">
 		<input type = "button" class = "delete" value = "Delete User" onclick = "writeForm('delete')">
 		<input type = "button" class = "deposit" value = "Simulate Deposit" onclick = "writeForm('deposit')" >
 		<input type = "button" class = "withdraw" value = "Simulate Withdraw" onclick = "writeForm('withdraw')">
 		<input type = "button" class = "overdraft" value = "Set Overdraft" onclick = "writeForm('overdraft')">
 		<input type = "button" class = "limits" value = "Set Withdraw limit" onclick = "writeForm('limits')">
-		<input type = "button" class = "user" value = "Back to User" onclick = "writeForm('user')">
+		<input type = "button" class = "user" value = "Back to Users" onclick="document.location='./admin_pages/adminPage.jsp'">
 		</form>
 		</div>
 	
@@ -67,10 +67,10 @@
     	{
     	case "delete":
     		document.getElementById("modal-title").innerHTML = `Deleting User`;
-    		document.getElementById("outputmodal").innerHTML = `<form name = "deleteForm" method="post" action = "deleteConfirm">
+    		document.getElementById("outputmodal").innerHTML = `<form name = "deleteForm" method="post" onsubmit="return checks()" action = "deleteConfirm">
     			<label>Are you sure you want to delete this user ?</label>
     	        </br>
-    	        	<input class = "inputbox" type="text" name = "ID"  placeholder="User ID"/>
+    	        	<input class = "inputbox" type="text" name = "ID" id = "ID" placeholder="User ID"/>
     	        	<br>
     	            <input type="submit" value ="Yes"/>
     	            <input type="button" value = "No"/>
@@ -79,14 +79,14 @@
     		break;
     	case "deposit":
     		document.getElementById("modal-title").innerHTML = `Deposit Simulation`;
-    		document.getElementById("outputmodal").innerHTML = `<form name = "depositForm" method="post" action = "simulateDeposit">
+    		document.getElementById("outputmodal").innerHTML = `<form name = "depositForm" method="post" onsubmit="return checks1()"action = "simulateDeposit">
     			<label for="amount">Enter the amount to deposit: </label>
     	        </br>
-    	        <input class = "inputbox" type="text" name = "ID"  placeholder="User ID"/>
+    	        <input class = "inputbox" type="text" name = "ID"  id = "ID1" placeholder="User ID"/>
     	        	<br>
-    	            <input class = "inputbox" type="text" name = "amount"  placeholder="Amount"/>
+    	            <input class = "inputbox" type="text" name = "amount" id = "amount1" placeholder="Amount"/>
     	            	<br>
-    	            	<input class = "note" type="text" name = "note"  placeholder="Add a note (Optionnal)"/>
+    	            	<input class = "note" type="text" name = "note"  id = "note1" placeholder="Add a note (Optionnal)"/>
             	        	<br>
     	            <input type="submit" value ="Deposit"/>
     	        </br>
@@ -94,14 +94,14 @@
     		break;
     	case "withdraw":
     		document.getElementById("modal-title").innerHTML = `Withdraw Simulation`;
-    		document.getElementById("outputmodal").innerHTML = `<form name = "withdrawForm" method="post" action = "simulateWithdraw">
+    		document.getElementById("outputmodal").innerHTML = `<form name = "withdrawForm" method="post" onsubmit="return checks2()" action = "simulateWithdraw">
     			<label for="amount">Enter the amount to withdraw: </label>
     	        </br>
-    	        <input class = "inputbox" type="text" name = "ID"  placeholder="User ID"/>
+    	        <input class = "inputbox" type="text" name = "ID"  id = "ID2" placeholder="User ID"/>
     	        	<br>
-    	            <input class = "inputbox" type="text" name = "amount"  placeholder="Amount"/>
+    	            <input class = "inputbox" type="text" name = "amount" id = "amount2" placeholder="Amount"/>
     	            	<br>
-    	            	<input class = "note" type="text" name = "note"  placeholder="Add a note (Optionnal)"/>
+    	            	<input class = "note" type="text" name = "note" id = "note2" placeholder="Add a note (Optionnal)"/>
             	        	<br>
     	            <input type="submit" value ="Withdraw"/>
     	        </br>
@@ -109,12 +109,12 @@
     		break;
     	case "overdraft":
     		document.getElementById("modal-title").innerHTML = `Setting Overdraft`;
-    		document.getElementById("outputmodal").innerHTML = `<form name = "overdraftForm" method="post" action = "setOverdraft">
+    		document.getElementById("outputmodal").innerHTML = `<form name = "overdraftForm" method="post" onsubmit="return checks3()"action = "setOverdraft">
 			<label>Enter the new max Overdraft: </label>
 	        </br>
-	        <input class = "inputbox" type="text" name = "ID"  placeholder="User ID"/>
+	        <input class = "inputbox" type="text" name = "ID"  id = "ID3" placeholder="User ID"/>
 	        	<br>
-	            <input class = "inputbox" type="text" name = "amount"  placeholder="Overdraft"/>
+	            <input class = "inputbox" type="text" name = "amount" id = "amount3" placeholder="Overdraft"/>
 	            <br>
 	            <input type="submit" value ="Set"/>
 	        </br>
@@ -122,12 +122,12 @@
     		break;
     	case "limits":
     		document.getElementById("modal-title").innerHTML = `Setting Limits`;
-    		document.getElementById("outputmodal").innerHTML = `<form name = "limitsForm" method="post" action = "setLimits">
+    		document.getElementById("outputmodal").innerHTML = `<form name = "limitsForm" method="post" onsubmit="return checks4()"action = "setLimits">
 			<label>Enter the new monthly payement limit: </label>
 	        </br>
-	        <input class = "inputbox" type="text" name = "ID"  placeholder="User ID"/>
+	        <input class = "inputbox" type="text" name = "ID"  id = "ID4" placeholder="User ID"/>
 	        	<br>
-	            <input class = "inputbox" type="text" name = "amount"  placeholder="Amount"/>
+	            <input class = "inputbox" type="text" name = "amount"  id = "amount4" placeholder="Withdraw Limit"/>
 	            	<br>
 	            <input type="submit" value ="Set"/>
 	        </br>
@@ -171,7 +171,112 @@
 	
 	
 	</div>
-	<script src = "../app.js"></script>
+	<script src = "./app.js"></script>
+	<script>
+	function checks()
+	{
+		var ID = document.getElementById("ID").value;
+		var digits =  /^\d+$/;
+		if(ID == " " || ID == ""|| digits.test(ID) == false)
+		{
+			alert('ID must be a specified number with NO letters.');
+			return false;
+		}
+		return true;
+	}
+	</script>
+	<script>
+	function checks1()
+	{
+		var ID = document.getElementById("ID1").value;
+		var amount = document.getElementById("amount1").value;
+		var note = document.getElementById("note1").value;
+		var digits =  /^\d+$/;
+		
+		if(ID == " " || ID == ""|| digits.test(ID) == false)
+		{
+			alert('ID must be a specified number with NO letters.');
+			return false;
+		}
+		if(amount == " " || amount == ""|| digits.test(amount) == false)
+		{
+			alert('Amount must be a specified number with NO letters.');
+			return false;
+		}
+		if(note == " " || note == "")
+		{
+			alert('Note must be filled out. Type N/A if no note is attached.');
+			return false;
+		}
+		return true;
+	}
+	</script>
+	<script>
+	function checks2()
+	{
+		var ID = document.getElementById("ID2").value;
+		var amount = document.getElementById("amount2").value;
+		var note = document.getElementById("note2").value;
+		var digits =  /^\d+$/;
+		
+		if(ID == " " || ID == ""|| digits.test(ID) == false)
+		{
+			alert('ID must be a specified number with NO letters.');
+			return false;
+		}
+		if(amount == " " || amount == ""|| digits.test(amount) == false)
+		{
+			alert('Amount must be a specified number with NO letters.');
+			return false;
+		}
+		if(note == " " || note == "")
+		{
+			alert('Note must be filled out. Type N/A if no note is attached.');
+			return false;
+		}
+		return true;
+	}
+	</script>
+	<script>
+	function checks3()
+	{
+		var ID = document.getElementById("ID3").value;
+		var amount = document.getElementById("amount3").value;
+		var digits =  /^\d+$/;
+		
+		if(ID == " " || ID == ""|| digits.test(ID) == false)
+		{
+			alert('ID must be a specified number with NO letters.');
+			return false;
+		}
+		if(amount == " " || amount == ""|| digits.test(amount) == false)
+		{
+			alert('Overdraft must be a specified number with NO letters.');
+			return false;
+		}
+		return true;
+	}
+	</script>
+	<script>
+	function checks4()
+	{
+		var ID = document.getElementById("ID4").value;
+		var amount = document.getElementById("amount4").value;
+		var digits =  /^\d+$/;
+		
+		if(ID == " " || ID == ""|| digits.test(ID) == false)
+		{
+			alert('ID must be a specified number with NO letters.');
+			return false;
+		}
+		if(amount == " " || amount == ""|| digits.test(amount) == false)
+		{
+			alert('Withdraw limit must be a specified number with NO letters.');
+			return false;
+		}
+		return true;
+	}
+	</script>
 	
 </body>
 </html>

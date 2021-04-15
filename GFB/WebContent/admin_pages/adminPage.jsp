@@ -11,10 +11,10 @@
         <title>GFB: Admin Page</title>
         <meta charset="utf-8"/>
            <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    	<link rel="stylesheet" href="/GFB/css/admin_style.css">
-    	<link rel="stylesheet" href ="/GFB/css/navbar.css"/>
-        <link rel="stylesheet" href ="/GFB/css/general.css"/>
-          <link rel="stylesheet" href="../css/modal.css">      
+    	<link rel="stylesheet" href="<%= request.getContextPath() %>/css/admin_style.css">
+    	<link rel="stylesheet" href ="<%= request.getContextPath() %>/css/navbar.css"/>
+        <link rel="stylesheet" href ="<%= request.getContextPath() %>/css/general.css"/>
+          <link rel="stylesheet" href="<%= request.getContextPath() %>./css/modal.css">      
     </head>
 <body>
 
@@ -22,21 +22,21 @@
 	<nav>
 	<ul class = "navlinks">
                 <li>
-                    <a href="#top">Home</a>
+                    <a href="./index.html">Home</a>
                 </li>
                 <li>
                     <a href="#none">News</a>
                 </li>
                     
                 <li>
-                    <a href="../accountPage.jsp">Leave admin</a>
+                    <a href="./accountPage.jsp">Account Page</a>
                 </li>
                 <li>
-                    <a href="../admin_pages/adminUser.jsp">Admin User</a>
+                    <a href="./adminUser.jsp">Admin User</a>
                 </li>
                     
                 <li>
-                    <a href="../login.jsp">Disconnect</a>
+                    <a href="LogoutServlet">Disconnect</a>
                 </li>
             </ul>
             <div class = "burger">
@@ -46,7 +46,7 @@
             </div>
 		<div class = "logoDiv"><img class="logo" src = "/GFB/images/logo.jpg"/></div>
 		<h1 class = "title">Group F Bank</h1><p id='txt'>Welcome Admin</p>
-		<div id = "profil"><form method="post" action='LogoutServlet'>Logout</form></div>	<!--  replace Mr. Mark by ${name} -->
+		<div id = "profil"><form method="post" action="LogoutServlet">Logout</form></div>	<!--  replace Mr. Mark by ${name} -->
 	</nav>
 	</div>
 	<div class = "container">
