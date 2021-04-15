@@ -19,9 +19,9 @@
 <title>Guest and Users tables </title>
 
 <style>
-	table {border: 3px solid black; padding: 12px; box-shadow: 9px 9px 10px gray; border-radius:6px; margin-left: auto;  margin-right: auto}
+	table {border: 3px double black; padding: 12px; border-radius:6px; margin-left: auto;  margin-right: auto; width: 100%;}
 th {border: 3px solid black; padding: 12px; background-color: #ffffff;}
- td {border: 3px solid black; padding: 12px;  background-color: #669999;}
+ td {border: 3px solid black; padding: 12px;  background-color: #99ff99;}
 </style>
 </head>
 <body>
