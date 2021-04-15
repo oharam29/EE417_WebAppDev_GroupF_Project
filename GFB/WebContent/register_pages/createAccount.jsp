@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
+<%@ page import="java.sql.*" %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -61,8 +62,61 @@
         <label>
     		<input type="checkbox" id = "MP">Marketing Partners
     	</label><br/>
-    	<input id = "btnContinue" type="submit" value="Submit">
+    	<input id = "btnContinue" type="submit" value="Submit" onclick ="window.location='displayID.jsp'">
     	</form>
+    	
+    	<%
+		String mailsess =(String) session.getAttribute("mail");
+		
+		String dbName = "gfb_database";
+		  String userName = "root";
+		  String password = "19991217Clsl31A";
+		  String hostname = "localhost";
+		  String port = "3306";
+		  String jdbcUrl = "jdbc:mysql://" + hostname + ":" +
+		    port + "/" + dbName + "?user=" + userName + "&password=" + password;
+		  
+		  // Load the JDBC driver
+		  try {
+		    System.out.println("Loading driver...");
+		    Class.forName("com.mysql.jdbc.Driver");
+		    System.out.println("Driver loaded!");
+		  } catch (ClassNotFoundException e) {
+		    throw new RuntimeException("Cannot find the driver in the classpath!", e);
+		  }
+
+		  Connection conn = null;
+		  Statement setupStatement = null;
+		  Statement readStatement = null;
+		  ResultSet resultSet = null;
+		  String results = "";
+		  int numresults = 0;
+		  String statement = null;
+
+		  //String q = "SELECT id FROM gfb_database.customer where mail=" + mailsess + ";";
+		  //out.println(q);
+		  try {
+		    conn = DriverManager.getConnection(jdbcUrl);
+		    
+		    readStatement = conn.createStatement(ResultSet.TYPE_SCROLL_SENSITIVE,ResultSet.CONCUR_READ_ONLY);
+		    resultSet = readStatement.executeQuery("SELECT id FROM gfb_database.customer where mail=\""+ mailsess +"\";");
+		    resultSet.first();
+		    results = resultSet.getString("id");
+		    out.println("Your id is: " + results);
+		    resultSet.close();
+		    readStatement.close();
+		    conn.close();
+
+		  } catch (SQLException ex) {
+		    // Handle any errors
+		    System.out.println("SQLException: " + ex.getMessage());
+		    System.out.println("SQLState: " + ex.getSQLState());
+		    System.out.println("VendorError: " + ex.getErrorCode());
+		  } finally {
+		       System.out.println("Closing the connection.");
+		      if (conn != null) try { conn.close(); } catch (SQLException ignore) {}
+		  }
+		%>
     </div>
     
 	<input id = "btnBack" type = "button" value = "Back" onclick ="window.location='createPassword.jsp'">
