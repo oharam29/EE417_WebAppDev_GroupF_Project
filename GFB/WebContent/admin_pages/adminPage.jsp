@@ -22,17 +22,17 @@
 	<nav>
 	<ul class = "navlinks">
                 <li>
-                    <a href="./index.html">Home</a>
+                    <a href="../index.html">Home</a>
                 </li>
                 <li>
                     <a href="#none">News</a>
                 </li>
                     
                 <li>
-                    <a href="./accountPage.jsp">Account Page</a>
+                    <a href="../../accountPage.jsp">Account Page</a>
                 </li>
                 <li>
-                    <a href="./adminUser.jsp">Admin User</a>
+                    <a href="adminUser.jsp">Admin User</a>
                 </li>
                     
                 <li>
@@ -75,16 +75,16 @@
                 </thead>
                 <tbody>
 					<%
-        			String dbURL = "jdbc:mysql://localhost/mydb";
-        			String dbUsername = "root";
-        			String dbPassword = "1234";
+			        String dbURL = "jdbc:mysql://localhost:3306/gfb_database";
+			        String dbUsername = "root";
+			        String dbPassword = "Stan231065$";
     				Connection connection; 
     				Statement statement; 
     				ResultSet query_res;
     	
         			try
         			{
-    					Class.forName("com.mysql.cj.jdbc.Driver");                               // Load up the driver
+    					Class.forName("com.mysql.jdbc.Driver");                               // Load up the driver
     					connection = DriverManager.getConnection(dbURL, dbUsername, dbPassword); // Connect
     					statement  = connection.createStatement(ResultSet.TYPE_SCROLL_SENSITIVE, ResultSet.CONCUR_READ_ONLY);
     					String query = "SELECT * FROM customer";

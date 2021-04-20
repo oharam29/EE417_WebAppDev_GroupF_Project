@@ -9,7 +9,7 @@
     	<link rel="stylesheet" href="<%= request.getContextPath() %>/css/adminUser_style.css">
     	<link rel="stylesheet" href ="<%= request.getContextPath() %>/css/navbar.css"/>
         <link rel="stylesheet" href ="<%= request.getContextPath() %>/css/general.css"/>
-        <link rel="stylesheet" href="<%= request.getContextPath() %>./css/modal.css">
+        <link rel="stylesheet" href="<%= request.getContextPath() %>/css/modal.css">
     	 
     </head>
 <body>
@@ -18,17 +18,17 @@
 	<nav>
 	<ul class = "navlinks">
                 <li>
-                    <a href="./index.html">Home</a>
+                    <a href="../index.html">Home</a>
                 </li>
                 <li>
                     <a href="#none">News</a>
                 </li>
                     
                 <li>
-                    <a href="./accountPage.jsp">Account Page</a>
+                    <a href="../accountPage.jsp">Account Page</a>
                 </li>
                 <li>
-                    <a href="./admin_pages/adminPage.jsp">Admin Page</a>
+                    <a href="../admin_pages/adminPage.jsp">Admin Page</a>
                 </li>
                     
                 <li>
@@ -40,9 +40,9 @@
                 <div class = "line2"></div>
                 <div class = "line3"></div>
             </div>
-		<div class = "logoDiv"><img class="logo" src = "./images/logo.jpg"/></div>
+		<div class = "logoDiv"><img class="logo" src = "../images/logo.jpg"/></div>
 		<h1 class = "title">Group F Bank</h1>
-		<div id = "profil"><a href="signup_page.jsp ">Welcome Admin</a></div>	
+		<div id = "profil"><a>Welcome Admin</a></div>	
 	</nav>
 	</div>
 	<div class = "content">
@@ -53,7 +53,7 @@
 		<input type = "button" class = "withdraw" value = "Simulate Withdraw" onclick = "writeForm('withdraw')">
 		<input type = "button" class = "overdraft" value = "Set Overdraft" onclick = "writeForm('overdraft')">
 		<input type = "button" class = "limits" value = "Set Withdraw limit" onclick = "writeForm('limits')">
-		<input type = "button" class = "user" value = "Back to Users" onclick="document.location='./admin_pages/adminPage.jsp'">
+		<!-- <input type = "button" class = "user" value = "Back to Users" onclick="document.location='./admin_pages/adminPage.jsp'"> -->
 		</form>
 		</div>
 	

@@ -53,9 +53,9 @@ th {border: 3px solid black; padding: 12px; background-color: #ffffff;}
 		Connection con = null;
         Statement stmt = null;
         ResultSet rs = null;
-        String JDBCUrl = "jdbc:mysql://localhost:3306/mydb";
+        String JDBCUrl = "jdbc:mysql://localhost:3306/gfb_database";
         String username = "root";
-        String password = "1234";
+        String password = "Stan231065$";
         PrintWriter sys = response.getWriter();
         try {
             System.out.println("\nConnecting to the SSD Database......");
@@ -71,7 +71,7 @@ th {border: 3px solid black; padding: 12px; background-color: #ffffff;}
         try {
          stmt = con.createStatement();
          System.out.println("ID is " + val); 
-   	     rs = stmt.executeQuery("SELECT * FROM mydb.transaction WHERE id = " + result);
+   	     rs = stmt.executeQuery("SELECT * FROM gfb_database.transaction WHERE id = " + result);
    	     
    	     response.setContentType("text/html");
    	  sys.println("<br />");
