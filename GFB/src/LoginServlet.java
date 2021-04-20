@@ -63,6 +63,7 @@ public class LoginServlet extends HttpServlet
                 return;
             }
 
+            
             // Read balance for immediate availability for display
             String sqlStatement1 = "SELECT * FROM customer WHERE id = \"" + lId + "\"";
             System.out.println("sqlStatement : " + sqlStatement1);
