@@ -119,11 +119,17 @@
     		break;
     	case "bills":
     		document.getElementById("modal-title").innerHTML = `Manage Bills`;
-    		document.getElementById("outputmodal").innerHTML = `Manage your bills here`;
-    		break;
-    	case "standingOrders":
-    		document.getElementById("modal-title").innerHTML = `Standing Orders`;
-    		document.getElementById("outputmodal").innerHTML = `Here are the standing orders`;
+    		document.getElementById("outputmodal").innerHTML = `<form name = "transferForm" method="post" onsubmit="return checks()" action = "transfer">
+    			<label>Entert the amount you want to transfer and the account number:</label>
+    	        </br>
+    	        <input class = "inputbox" type = "text" placeholder = "Amount" id = "Amount" >
+	        	<input class = "inputbox" type = "text" placeholder = "IBAN" id = "ACN">
+    	        	</br>
+    	        	<input class = "note" type="text" name = "note"  placeholder="Add a note (Optionnal)"/>
+        	        	<br>
+    	            <input type="submit" value ="Send"/>
+    	        </br>
+    		</form>`;
     		break;
     	case "overdraft":
     		document.getElementById("modal-title").innerHTML = `See Overdraft`;
