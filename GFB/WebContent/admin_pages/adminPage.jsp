@@ -14,7 +14,7 @@
     	<link rel="stylesheet" href="<%= request.getContextPath() %>/css/admin_style.css">
     	<link rel="stylesheet" href ="<%= request.getContextPath() %>/css/navbar.css"/>
         <link rel="stylesheet" href ="<%= request.getContextPath() %>/css/general.css"/>
-          <link rel="stylesheet" href="<%= request.getContextPath() %>./css/modal.css">      
+          <link rel="stylesheet" href="<%= request.getContextPath() %>/css/modal.css">      
     </head>
 <body>
 
@@ -69,6 +69,8 @@
 						<th class="col">Password</th>
 						<th class="col">Balance</th>
 						<th class="col">Account Level</th>
+						<th class="col">overdraft Limit</th>
+						<th class="col">withdrawalLimit</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -105,6 +107,10 @@
 							<td><%=query_res.getString("password") %></td>
 							<td><%=query_res.getString("balance") %></td>
 							<td><%=query_res.getString("status") %></td>
+							<td><%=query_res.getString("overdraftLimit") %></td>
+							<td><%=query_res.getString("withdrawalLimit") %></td>
+
+							
 						</tr>
 					<%
 						}
