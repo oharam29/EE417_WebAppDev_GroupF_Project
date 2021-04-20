@@ -13,45 +13,8 @@
 			<attribute name="owner.project.facets" value="jst.web"/>
 		</attributes>
 	</classpathentry>
-	<classpathentry kind="lib" path="C:/Users/Cooney/Desktop/mysql/jstl-1.2.jar">
-		<attributes>
-			<attribute name="org.eclipse.jst.component.dependency" value="/WEB-INF/lib"/>
-		</attributes>
-	</classpathentry>
-	<classpathentry kind="lib" path="C:/Users/Cooney/Desktop/mysql/mysql-connector-java-8.0.23.jar">
-		<attributes>
-			<attribute name="org.eclipse.jst.component.dependency" value="/WEB-INF/lib"/>
-		</attributes>
-	</classpathentry>
-	<classpathentry kind="lib" path="C:/Users/Cooney/Desktop/mysql/taglibs-standard-impl-1.2.5.jar">
-		<attributes>
-			<attribute name="org.eclipse.jst.component.dependency" value="/WEB-INF/lib"/>
-		</attributes>
-	</classpathentry>
-	<classpathentry kind="lib" path="C:/Java/apache-tomcat-9.0.14/lib/jasper.jar">
-		<attributes>
-			<attribute name="org.eclipse.jst.component.dependency" value="/WEB-INF/lib"/>
-		</attributes>
-	</classpathentry>
-	<classpathentry kind="lib" path="C:/Java/apache-tomcat-9.0.14/lib/jasper-el.jar">
-		<attributes>
-			<attribute name="org.eclipse.jst.component.dependency" value="/WEB-INF/lib"/>
-		</attributes>
-	</classpathentry>
-	<classpathentry kind="lib" path="C:/Java/apache-tomcat-9.0.14/lib/jaspic-api.jar">
-		<attributes>
-			<attribute name="org.eclipse.jst.component.dependency" value="/WEB-INF/lib"/>
-		</attributes>
-	</classpathentry>
-	<classpathentry kind="lib" path="C:/Java/apache-tomcat-9.0.14/lib/jsp-api.jar">
-		<attributes>
-			<attribute name="org.eclipse.jst.component.dependency" value="/WEB-INF/lib"/>
-		</attributes>
-	</classpathentry>
-	<classpathentry kind="lib" path="C:/Java/apache-tomcat-9.0.14/lib/servlet-api.jar">
-		<attributes>
-			<attribute name="org.eclipse.jst.component.dependency" value="/WEB-INF/lib"/>
-		</attributes>
-	</classpathentry>
+	<classpathentry kind="lib" path="C:/Users/Nova6/git/EE417_WebAppDev_GroupF_Project/GFB/jars/jstl-1.2.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Nova6/git/EE417_WebAppDev_GroupF_Project/GFB/jars/mysql-connector-java-8.0.23.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Nova6/git/EE417_WebAppDev_GroupF_Project/GFB/jars/taglibs-standard-impl-1.2.5.jar"/>
 	<classpathentry kind="output" path="build/classes"/>
 </classpath>
