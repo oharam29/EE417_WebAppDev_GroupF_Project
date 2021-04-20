@@ -31,7 +31,7 @@ public class DeleteUserServlet extends HttpServlet
         // Setup the database parameters
         String sURL = "jdbc:mysql://localhost:3306/gfb_database";
         String sUsername = "root";
-        String sPassword = "3525";
+        String sPassword = "Stan231065$";
 
         // Retrieve the form data
         String id = request.getParameter("id");
