@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1:3306
--- Généré le : mer. 14 avr. 2021 à 13:05
+-- Généré le : mer. 21 avr. 2021 à 09:30
 -- Version du serveur :  5.7.31
 -- Version de PHP : 7.3.21
 
@@ -70,20 +70,20 @@ INSERT INTO `customer` (`id`, `lname`, `mail`, `dateBirth`, `phone`, `address`, 
 
 DROP TABLE IF EXISTS `transaction`;
 CREATE TABLE IF NOT EXISTS `transaction` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
-  `customerID` int(11) DEFAULT NULL,
+  `transactionID` int(11) NOT NULL AUTO_INCREMENT,
+  `id` int(11) DEFAULT NULL,
   `amount` double DEFAULT NULL,
   `date` varchar(45) DEFAULT NULL,
   `comment` varchar(45) DEFAULT NULL,
-  PRIMARY KEY (`id`) USING BTREE,
-  KEY `fk_transaction_customerid_idx` (`customerID`)
+  PRIMARY KEY (`transactionID`) USING BTREE,
+  KEY `fk_transaction_id_idx` (`id`)
 ) ENGINE=MyISAM AUTO_INCREMENT=6 DEFAULT CHARSET=latin1;
 
 --
 -- Déchargement des données de la table `transaction`
 --
 
-INSERT INTO `transaction` (`id`, `customerID`, `amount`, `date`, `comment`) VALUES
+INSERT INTO `transaction` (`transactionID`, `id`, `amount`, `date`, `comment`) VALUES
 (1, 2, 100, '03-04-2021', 'Food'),
 (2, 4, -200, '02-04-2021', 'Movie'),
 (3, 5, 300, '01-04-2021', 'Bar'),
