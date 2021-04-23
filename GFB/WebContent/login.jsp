@@ -13,7 +13,7 @@
 <body>
 
     <h1>Group F Bank</h1>
-    <p class = "para1"> GFB: Fluent in Finance. Need more information about us? <a href="./index.jsp">Click Here!</a></p>
+    <p class = "para1"> GFB: Fluent in Finance. The Biggest, the Best, the Brightest </p>
     
       <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
 

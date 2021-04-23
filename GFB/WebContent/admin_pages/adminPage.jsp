@@ -14,7 +14,7 @@
     	<link rel="stylesheet" href="<%= request.getContextPath() %>/css/admin_style.css">
     	<link rel="stylesheet" href ="<%= request.getContextPath() %>/css/navbar.css"/>
         <link rel="stylesheet" href ="<%= request.getContextPath() %>/css/general.css"/>
-          <link rel="stylesheet" href="<%= request.getContextPath() %>./css/modal.css"> 
+          <link rel="stylesheet" href="<%= request.getContextPath() %>/css/modal.css"> 
           
           <style>
           table {border: 3px double black; padding: 12px; border-radius:6px; margin-left: auto;  margin-right: auto; width: 100%;}

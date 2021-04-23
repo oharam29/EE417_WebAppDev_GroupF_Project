@@ -80,7 +80,7 @@ th {border: 3px solid black; padding: 12px; background-color: #ffffff;}
    	  sys.println("\n <html><body><table border='1'>");
    	sys.println("<tr>\n"
    	   		+ "            <th>id</th>\n"
-   	   		+ "            <th>customerID</th>\n"
+   	   		+ "            <th>transactionID</th>\n"
    	   		+ "            <th>amount</th>\n"
    	   		+ "            <th>date</th>\n"
    	   		+ "            <th>comment</th>\n"
@@ -88,7 +88,7 @@ th {border: 3px solid black; padding: 12px; background-color: #ffffff;}
    	     while (rs.next())
    	     {   sys.println("\n <tr>");
    	  sys.println("<td>" + rs.getString("id") + "</td>"); //gets column value at each position
-   	sys.println("<td>" + rs.getString("customerID") + "</td>");
+   	sys.println("<td>" + rs.getString("transactionID") + "</td>");
    	sys.println("<td>" + rs.getString("amount") + "</td>");
    	sys.println("<td>" + rs.getString("date") + "</td>");
    	sys.println("<td>" + rs.getString("comment") + "</td>");

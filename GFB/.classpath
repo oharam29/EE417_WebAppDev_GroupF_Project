@@ -13,8 +13,20 @@
 			<attribute name="owner.project.facets" value="jst.web"/>
 		</attributes>
 	</classpathentry>
-	<classpathentry kind="lib" path="C:/Users/Nova6/git/EE417_WebAppDev_GroupF_Project/GFB/jars/jstl-1.2.jar"/>
-	<classpathentry kind="lib" path="C:/Users/Nova6/git/EE417_WebAppDev_GroupF_Project/GFB/jars/mysql-connector-java-8.0.23.jar"/>
-	<classpathentry kind="lib" path="C:/Users/Nova6/git/EE417_WebAppDev_GroupF_Project/GFB/jars/taglibs-standard-impl-1.2.5.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Mark/git/EE417_WebAppDev_GroupF_Project/GFB/jars/jstl-1.2.jar">
+		<attributes>
+			<attribute name="org.eclipse.jst.component.dependency" value="/WEB-INF/lib"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="C:/Users/Mark/git/EE417_WebAppDev_GroupF_Project/GFB/jars/mysql-connector-java-8.0.23.jar">
+		<attributes>
+			<attribute name="org.eclipse.jst.component.dependency" value="/WEB-INF/lib"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="C:/Users/Mark/git/EE417_WebAppDev_GroupF_Project/GFB/jars/taglibs-standard-impl-1.2.5.jar">
+		<attributes>
+			<attribute name="org.eclipse.jst.component.dependency" value="/WEB-INF/lib"/>
+		</attributes>
+	</classpathentry>
 	<classpathentry kind="output" path="build/classes"/>
 </classpath>
