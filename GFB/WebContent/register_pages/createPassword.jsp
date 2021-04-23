@@ -60,7 +60,7 @@
 	<script>
     	function checks()
     	{
-    		var pwd = document.forms["form"]["pwd"].value;
+    		var pwd = document.getElementById("pwd").value;
     		var pwd2 = String(pwd);
        	 	var m = pwd.includes("!");
         	var o = pwd.includes("#");
@@ -82,15 +82,10 @@
         		alert("Invalid Password. Please makse sure its longer than 6 characters and conatins one of: !, #, $, % or &");
         		return false;
         	}    
+    	 	return true;
     	}
-    	return true;
+    	
     	</script>
-	
-	<script>
-	function keydownFunction() {
-		  document.getElementById("pwd").style.backgroundColor = "red";
-		}
-	</script>
 	
 </body>
 </html>

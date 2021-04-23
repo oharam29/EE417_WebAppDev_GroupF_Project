@@ -28,7 +28,7 @@
                     <a href="../accountPage.jsp">Account Page</a>
                 </li>
                 <li>
-                    <a href="../admin_pages/adminPage.jsp">Admin Page</a>
+                    <a href="./admin_pages/adminPage.jsp">Admin Page</a>
                 </li>
                     
                 <li>
@@ -40,7 +40,7 @@
                 <div class = "line2"></div>
                 <div class = "line3"></div>
             </div>
-		<div class = "logoDiv"><img class="logo" src = "../images/logo.jpg"/></div>
+		<div class = "logoDiv"><img class="logo" src = "/GFB/images/logo.jpg"/></div>
 		<h1 class = "title">Group F Bank</h1>
 		<div id = "profil"><a>Welcome Admin</a></div>	
 	</nav>
