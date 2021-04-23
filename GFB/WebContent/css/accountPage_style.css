@@ -5,14 +5,65 @@
 
 }
 
-.historyValue{
-	text-align: justify;
-	
-}
-
 .content{
 	padding-top: 15vh;
 	display: flex;
 	align-items: flex-start;
 	justify-content: space-evenly;
+}
+
+.optionBox{
+	
+    border-width: 0px;
+    border-style: solid;
+    border-radius: 10px;
+    padding: 10px;
+    box-shadow: 0px 0px 5px 3px #848484;
+    background-color: white;
+    text-align: center;
+    height: auto;
+    width : 35%;
+    position:relative;
+    
+    font-size: 30px;
+
+}
+
+form{
+	box-shadow: 0px 0px 0px 0px #848484;
+	font-size: 40px;
+}
+
+.amount{
+	border-width: 0px;
+}
+
+input[type="button"] {
+    height: auto;
+    width: auto;
+    min-width: 140px;
+    text-align: center; 
+    border-width: 0px;
+    
+    border-radius: 10px;
+
+    padding: 6px;
+    padding-left: 20px;
+    padding-right: 20px;
+    
+    position :relative;
+    color:black;
+    margin: auto;
+    margin-bottom:6px;
+    font-weight: bold;
+
+    font-size: 20px;
+}
+
+input[type="submit"] {
+    height: auto;
+    width: auto;
+    min-width: 140px;
+    font-size: 20px;
+
 }

@@ -6,10 +6,10 @@
         <title>GFB: Account Page</title>
         <meta charset="utf-8"/>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-        <link rel="stylesheet" href ="css/accountPage_style.css"/>
         <link rel="stylesheet" href ="css/navbar.css"/>
         <link rel="stylesheet" href ="css/general.css"/>
         <link rel="stylesheet" href="css/modal.css">
+        <link rel="stylesheet" href ="css/accountPage_style.css"/>
         
         <style>
         .AnimationHeader {text-align: center;font-size: 50px;font-weight: 500;font-color: #003300;}
@@ -26,21 +26,13 @@
 	<nav>
 	<ul class = "navlinks">
                 <li>
-                    <a href="#top">Home</a>
+                    <a href="index.html">To main page</a>
                 </li>
                 <li>
-                    <a href="#none">News</a>
-                </li>
-                    
+                    <a href="contact.html">Contact</a>
+                </li> 
                 <li>
-                    <a href="#none">Messages</a>
-                </li>
-                <li>
-                    <a href="./admin_pages/adminPage.jsp">Go Admin</a>
-                </li>
-                    
-                <li>
-                    <a href="../login.jsp">Disconnect</a>
+                    <a href="login.jsp">Disconnect</a>
                 </li>
             </ul>
             <div class = "burger">
@@ -50,52 +42,30 @@
             </div>
 		<div class = "logoDiv"><img class="logo" src = "images/logo.jpg"/></div>
 		<h1 class = "title">Group F Bank</h1>
-		<div id = "profil"><a href="signup_page.jsp ">Welcome ID</a><div id = "getId"></div></div><!--  replace Mr. Mark by ${name} -->
+		<div id = "profil">Welcome ID<div id = "getId"></div></div><!--  replace Mr. Mark by ${name} -->
 	</nav>
 	</div>
 	<div class = "content">
-	<form method = "get" action = "balanceAction" id = "balance">
+	<div class = "optionBox">
+	
 	<fieldset>
 		<legend>Balance</legend>
 			
-				<div class="amount"><div id = "getBalance"></div>euro</div>			<!-- Replace with ${balance} -->
-		
+				<div class="amount"><div id = "getBalance"></div>€</div>			<!-- Replace with ${balance} -->
+		</fieldset>
 				<input type = "button" class = "transfer" value = "Transfer" onclick = "writeForm('transfer')">
 				</br>
 				<input type = "button" class = "bills" value = "Bills" onclick = "writeForm('bills')" >
 				</br>
-				<input type = "button" class = "standingOrders" value = "Standing Orders" onclick = "writeForm('standingOrders')">
+				<input type = "button" class = "details.jsp" value = "Details" onclick = "writeForm('details')">
 				</br>
-				<input type = "button" class = "overdraft" value = "Overdraft" onclick = "writeForm('overdraft')">
-				</br>
-				<input type = "button" class = "loans" value = "Loans" onclick = "writeForm('loans')">
-				</br>
-				<input type = "button" class = "details.jsp" value = "Details" onclick = "writeForm('details.jsp')">
-				</br>
-	</fieldset>
-	</form>
-	<form name="StamentsForm" action="UserStatements.jsp">
-           			<input type="hidden" name="id" value = "'${id}'"><br/>
-           				<input type="submit" value = "Statements">
-        		</form>
-	
-	
-	<form method = "get" action = "historyAction" id = "history">
-	<fieldset>
-		<legend>History</legend>
-			<ul class = "historyValue">
-				<li>test -47</li>
-				<li>bonjour +35</li>
-				<li>pub -140</li>
-				<li>market -26</li>
-				<li>rent -650</li>
-				<li>salary + 850</li>
-				<li>VIR +120</li>
-			</ul>
-	</fieldset>
-	</form>
-	
-	
+				
+	<form name="StamentsForm" action="UserStatements.jsp" id = "statement">
+		<input type="submit" value = "Statements">
+        <input type="hidden" name="id" value = "'${id}'">
+           			
+    </form>
+	</div>
 	<script>
 	var modal = document.getElementById("myModal");
 	function writeForm(action){
@@ -135,18 +105,24 @@
     		document.getElementById("modal-title").innerHTML = `See Overdraft`;
     		document.getElementById("outputmodal").innerHTML = `your overdraft max is :`;
     		break;
-    	case "loans":
-    		document.getElementById("modal-title").innerHTML = `Setting Loans`;
-    		document.getElementById("outputmodal").innerHTML = `so you want a loan uh ?`;
-    		break;
     	case "details":
-    		document.getElementById("modal-title").innerHTML = `Seing details`;
-    		document.getElementById("outputmodal").innerHTML = `you see details`;
+   			document.getElementById("modal-title").innerHTML = `Seing details`;
+    		document.getElementById("outputmodal").innerHTML =
+    			`<p>Overdraft limit: <div id = "ol"></div>
+    			</br>
+    			Withdrawal limit: <div id = "wl"></div>`;
+    			
+    			var ol = '${overdraftLimit}';
+        		localStorage.setItem("overdraftLimit", ol);
+        		document.getElementById("ol").innerHTML = ol;
+        		
+        		var wl = '${withdrawalLimit}';
+        		localStorage.setItem("withdrawalLimit", wl);
+        		document.getElementById("wl").innerHTML = wl;
     		break;
-    		
     	default:
-    		document.getElementById("modal-title").innerHTML = `That is the default sir	`;
-    		document.getElementById("outputmodal").innerHTML = `hello`;
+    		document.getElementById("modal-title").innerHTML = `Somehow yu are seing this...?`;
+    		document.getElementById("outputmodal").innerHTML = `Default: check the action name and its place in the switch`;
     		break;
     	}
 	
