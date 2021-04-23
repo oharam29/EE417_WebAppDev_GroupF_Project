@@ -84,7 +84,8 @@ public class LoginServlet extends HttpServlet
                 request.getSession().setAttribute("id", lId);                               // Set the id
                 request.getSession().setAttribute("credentials", 1);                        // Set the credentials
                 request.getSession().setAttribute("balance", lBalance);                     // Set the balance
-                request.getRequestDispatcher("accountPage.jsp").forward(request, response); // Jump to the account page
+              //request.getRequestDispatcher("accountPage.jsp").forward(request, response); // Jump to the account page
+                response.sendRedirect("accountPage.jsp");  
             }
             else                                                                            // Admin user
             {
@@ -92,8 +93,9 @@ public class LoginServlet extends HttpServlet
                 request.getSession().setAttribute("id", lId);                               // Set the id
                 request.getSession().setAttribute("credentials", 2);                        // Set the credentials
                 request.getSession().setAttribute("balance", lBalance);                     // Set the balance
-               // request.getRequestDispatcher("/admin_pages/adminPage.jsp").forward(request, response);   // Jump to the admin page
-                request.getRequestDispatcher("admin_pages/adminUser.jsp").forward(request, response);
+              //request.getRequestDispatcher("/admin_pages/adminPage.jsp").forward(request, response);   // Jump to the admin page
+              //request.getRequestDispatcher("admin_pages/adminUser.jsp").forward(request, response);
+                response.sendRedirect("admin_pages/adminUser.jsp");  
             }
         } catch (Exception e) { e.printStackTrace(); }
     }
