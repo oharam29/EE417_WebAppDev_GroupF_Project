@@ -68,7 +68,7 @@ public class RegistrationServlet extends HttpServlet {
         String employmentStatus = request.getParameter("employmentStatus");
         String spassword = request.getParameter("password");
         double balance =  0.0;
-        int status = 2;
+        int status = 1; //user status by default
         
 	     if  (phone == null && address1 == null && nationality == null && spassword == null && employmentStatus == null) {
 	    	 try {/*CREATION OF THE DATABASE*/
