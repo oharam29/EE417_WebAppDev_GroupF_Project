@@ -32,7 +32,7 @@
             <li id='signupbtn' class ="button2"><a href="register_pages/registerPage.jsp ">Sign-up</a></li>
         </ul>
             <!-- <li class ="button1"><a href="main_page.jsp">Connect</a></li> -->
-        	<a href="passwordForget.jsp">Forgot password ?</a>
+        	<!-- <a href="passwordForget.jsp">Forgot password ?</a> -->
     </form>
     
     

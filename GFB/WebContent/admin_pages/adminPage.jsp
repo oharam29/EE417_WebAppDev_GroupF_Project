@@ -28,19 +28,12 @@
 	<nav>
 	<ul class = "navlinks">
                 <li>
-                    <a href="./index.html">Home</a>
-                </li>
+                    <a href="../index.html">To main page</a>
+                </li>  
+                
                 <li>
-                    <a href="#none">News</a>
+                    <a href="adminUser.jsp">Admin Actions</a>
                 </li>
-                    
-                <li>
-                    <a href="./accountPage.jsp">Account Page</a>
-                </li>
-                <li>
-                    <a href="./adminUser.jsp">Admin User page</a>
-                </li>
-                    
                 <li>
                     <a href="LogoutServlet">Disconnect</a>
                 </li>

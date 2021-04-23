@@ -18,19 +18,12 @@
 	<nav>
 	<ul class = "navlinks">
                 <li>
-                    <a href="../index.html">Home</a>
+                    <a href="../index.html">To main page</a>
                 </li>
                 <li>
-                    <a href="#none">News</a>
+                    <a href="adminPage.jsp">See all Users</a>
                 </li>
-                    
-                <li>
-                    <a href="../accountPage.jsp">Account Page</a>
-                </li>
-                <li>
-                    <a href="./admin_pages/adminPage.jsp">Admin Page</a>
-                </li>
-                    
+                   
                 <li>
                     <a href="LogoutServlet">Disconnect</a>
                 </li>
@@ -46,7 +39,7 @@
 	</nav>
 	</div>
 	<div class = "content">
-		<h2>Modifying</h2>			<!-- replace Mark with the name of the person -->
+					<!-- replace Mark with the name of the person -->
 		<form class = "buttons">
 		<input type = "button" class = "delete" value = "Delete User" onclick = "writeForm('delete')">
 		<input type = "button" class = "deposit" value = "Simulate Deposit" onclick = "writeForm('deposit')" >
@@ -172,6 +165,7 @@
 	
 	</div>
 	<script src = "./app.js"></script>
+	<script src = "../app.js"></script>
 	<script>
 	function checks()
 	{
