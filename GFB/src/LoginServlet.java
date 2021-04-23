@@ -60,11 +60,17 @@ public class LoginServlet extends HttpServlet
             String sqlStatement1 = "SELECT * FROM customer WHERE id = \"" + lId + "\"";
             System.out.println("sqlStatement : " + sqlStatement1);
             double lBalance = 0;
+            double lOverdraftLimit  = 0;
+            double lWithdrawalLimit = 0;
             try
             {
                 ResultSet resultSet1 = databaseConnection.statement.executeQuery(sqlStatement1);
                 if (resultSet1.next() == true)                      // Any query result means valid
-                	lBalance = resultSet1.getDouble("balance");
+                {
+                	lBalance         = resultSet1.getDouble("balance");
+                	lOverdraftLimit  = resultSet1.getDouble("overdraftlimit");
+                	lWithdrawalLimit = resultSet1.getDouble("withdrawallimit");
+                }
             } catch (SQLException e) { e.printStackTrace(); }
 
             if (lCredentials == 1)                                                          // Standard user
@@ -73,6 +79,8 @@ public class LoginServlet extends HttpServlet
                 request.getSession().setAttribute("id", lId);                               // Set the id
                 request.getSession().setAttribute("credentials", 1);                        // Set the credentials
                 request.getSession().setAttribute("balance", lBalance);                     // Set the balance
+                request.getSession().setAttribute("overdraftlimit", lOverdraftLimit);       // Set the overdraftlimit
+                request.getSession().setAttribute("withdrawallimit", lWithdrawalLimit);     // Set the withdrawllimit
                 response.sendRedirect("accountPage.jsp");                                   // Jump to the account page
             }
             else                                                                            // Admin user
@@ -81,6 +89,8 @@ public class LoginServlet extends HttpServlet
                 request.getSession().setAttribute("id", lId);                               // Set the id
                 request.getSession().setAttribute("credentials", 2);                        // Set the credentials
                 request.getSession().setAttribute("balance", lBalance);                     // Set the balance
+                request.getSession().setAttribute("overdraftlimit", lOverdraftLimit);       // Set the overdraftlimit
+                request.getSession().setAttribute("withdrawallimit", lWithdrawalLimit);     // Set the withdrawllimit
                 response.sendRedirect("admin_pages/adminUser.jsp");                         // Jump to the admin page
             }
         } catch (Exception e) { e.printStackTrace(); }
