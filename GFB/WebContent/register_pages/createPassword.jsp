@@ -79,7 +79,7 @@
 
     	 	if(pwd == null || pwd == "" || n == false || pwd2.length < 6)
         	{
-        		alert("Invalid Password. Please makse sure its longer than 6 characters and conatins one of: !, #, $, % or &");
+        		alert("Invalid Password entered. Please makse sure its longer than 6 characters and conatins one of: !, #, $, % or &");
         		return false;
         	}    
     	 	return true;

@@ -38,7 +38,7 @@
                     <a href="./accountPage.jsp">Account Page</a>
                 </li>
                 <li>
-                    <a href="./adminUser.jsp">Admin User</a>
+                    <a href="./adminUser.jsp">Admin User page</a>
                 </li>
                     
                 <li>
