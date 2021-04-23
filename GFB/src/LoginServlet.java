@@ -56,10 +56,9 @@ public class LoginServlet extends HttpServlet
                 System.out.println("Login Failure");
                 request.getSession().setAttribute("id", 0);                                 // Blank the userId
                 request.getSession().setAttribute("credentials", 0);                        // Blank the credentials
-                request.getRequestDispatcher("login.jsp").forward(request, response);       // Back to login page
+                response.sendRedirect("login.jsp");                                         // Back to login page
                 return;
             }
-
             
             // Read balance for immediate availability for display
             String sqlStatement1 = "SELECT * FROM customer WHERE id = \"" + lId + "\"";
