@@ -88,7 +88,7 @@ INSERT INTO `transaction` (`transactionID`, `id`, `amount`, `date`, `comment`) V
 (2, 4, -200, '02-04-2021', 'Movie'),
 (3, 5, 300, '01-04-2021', 'Bar'),
 (4, 1, -400, '04-04-2021', 'Bus'),
-(5, 3, 500, '05-04-2021', 'Swimming pool');
+(5, 5, 500, '05-04-2021', 'Swimming pool');
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
