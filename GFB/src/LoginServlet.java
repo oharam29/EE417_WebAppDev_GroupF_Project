@@ -3,10 +3,6 @@
 // Filename    : LoginServlet.java
 // Author      : Ciaran McCormac
 // StudentId   : 87198584 
-// Version     : 1.0  -  30March21  -  Initial version
-//               1.1  -  03April21  -  Changed database field names to match new SQL setup file
-//               1.2  -  06April21  -  Changed form field names to match login.jsp. Added conditional user/admin launch
-//               1.3  -  09April21  -  Added database read of balance on login
 //////////////////////////////////////////////////////////////////////////////////////////////////////
 
 import java.io.IOException;
