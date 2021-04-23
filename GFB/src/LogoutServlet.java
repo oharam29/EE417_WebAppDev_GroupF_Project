@@ -33,8 +33,9 @@ public class LogoutServlet extends HttpServlet
         // Logout request - invalidate the session
         session.invalidate();
 
-        // Back to the login page
-        request.getRequestDispatcher("../index.html").forward(request, response);
+        // Back to the login section
+        response.sendRedirect("../index.html"); // Back to login page
+
     }
     
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException
