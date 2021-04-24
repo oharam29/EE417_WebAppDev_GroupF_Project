@@ -50,11 +50,11 @@
 		<form name="form" id="form" class="form"  onsubmit="return checks()" method="POST"  action="/GFB/RegistrationServlet">
  			<input type="password" id="pwd" name="password" onkeydown="keydownFunction()">
             <input id = "btnContinue" type="submit" value="Submit">
+	    <input id = "btnBack" type = "button" value = "Back" onclick ="window.location='additionalInformationStatus.jsp'">
         </form>
         
 	</div>
 	
-	<input id = "btnBack" type = "button" value = "Back" onclick ="window.location='additionalInformationStatus.jsp'">
 	<!-- <input id = "btnContinue" type = "button" value = "Continue" onclick ="window.location='createAccount.jsp'"> -->
 	
 	<script>
