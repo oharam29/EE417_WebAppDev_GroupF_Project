@@ -52,11 +52,11 @@
 				onblur="if(this.value==''){this.value='DD/MM/YYYY'}" required>	
 			</p>
 			<input id = "btnContinue" type="submit" value="Submit">
+			<input id = "btnBack" type = "button" value = "Back" onclick ="window.location='registerPage.jsp'">
 		</form>
 	</div>
 	
-	<input id = "btnBack" type = "button" value = "Back" onclick ="window.location='registerPage.jsp'">
-	<input id = "btnContinue" type = "button" value = "Continue" onclick ="window.location='mobilePhoneNumber.jsp'">
+	
 <script>
 function checks()
 {
