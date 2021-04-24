@@ -56,10 +56,11 @@
 			<p>
 				<input type="radio" name="gender" id = "gender1" value="Male">Male</p>
 			<input id = "btnContinue" type="submit" value="Submit">
+			<input id = "btnBack" type = "button" value = "Back" onclick ="window.location='homeAddress.jsp'">
 		</form>
 	</div>
 	
-	<input id = "btnBack" type = "button" value = "Back" onclick ="window.location='homeAddress.jsp'">
+	
 	<!-- <input id = "btnContinue" type = "button" value = "Continue" onclick ="window.location='additionalInformationStatus.jsp'"> -->
 	
 	<script>
