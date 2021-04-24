@@ -51,9 +51,10 @@
 	<form name="form" id="form" class="form"  method="POST" onsubmit="return checks()"  action="/GFB/RegistrationServlet">
 		<p>Mobile Number <input type="text" name="phone"  id="phone" required></p>
 		<input id = "btnContinue" type="submit" value="Submit">
+		<input id = "btnBack" type = "button" value = "Back" onclick ="window.location='registerPage.jsp'">
 	</form>
 	</div>
-	<input id = "btnBack" type = "button" value = "Back" onclick ="window.location='registerPage.jsp'">
+	
 	<!-- <input id = "btnContinue" type = "button" value = "Continue" onclick ="window.location='homeAddress.jsp'"> -->
 	
 	<script>
