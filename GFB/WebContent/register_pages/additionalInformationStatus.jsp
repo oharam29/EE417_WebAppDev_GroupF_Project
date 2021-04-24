@@ -54,10 +54,11 @@
 				<option value="five" >Unemployed</option>
 			</select>
 			<input id = "btnContinue" type="submit" value="Submit">
+			<input id = "btnBack" type = "button" value = "Back" onclick ="window.location='additionalInformation.jsp'">
 		</form>
 	</div>
 	
-	<input id = "btnBack" type = "button" value = "Back" onclick ="window.location='additionalInformation.jsp'">
+
 	<!-- <input id = "btnContinue" type = "button" value = "Continue" onclick ="window.location='createPassword.jsp'"> -->
 </body>
 </html>
