@@ -71,10 +71,11 @@
 				onblur="if(this.value==''){this.value='Additional Information'}" required>		
 			</p>
 			<input id = "btnContinue" type="submit" value="Submit">
+			<input id = "btnBack" type = "button" value = "Back" onclick ="window.location='mobilePhoneNumber.jsp'">
 		</form>
 	</div>
 	
-	<input id = "btnBack" type = "button" value = "Back" onclick ="window.location='mobilePhoneNumber.jsp'">
+	
 	<!-- <input id = "btnContinue" type = "button" value = "Continue" onclick ="window.location='additionalInformation.jsp'"> -->
 	
 	
