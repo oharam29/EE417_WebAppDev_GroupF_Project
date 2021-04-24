@@ -25,7 +25,7 @@
                 </li>
                    
                 <li>
-                    <a href="LogoutServlet">Disconnect</a>
+                    <a href="../LogoutServlet">Disconnect</a>
                 </li>
             </ul>
             <div class = "burger">

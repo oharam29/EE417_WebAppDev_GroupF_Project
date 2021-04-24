@@ -16,7 +16,7 @@
 <body>
 	<ul>
 		<li>
-        	<a href="../index.jsp"><img class="logo" src = "images/logo.jpg"/></a>
+        	<a href="../index.jsp"><img class="logo" src = "../images/logo.jpg"/></a>
         </li>
     </ul>
     <div class = "navBar">
@@ -53,6 +53,8 @@
 				<option value="four" >Retired or homemaker</option>	
 				<option value="five" >Unemployed</option>
 			</select>
+			<br>
+			<br>
 			<input id = "btnContinue" type="submit" value="Submit">
 			<input id = "btnBack" type = "button" value = "Back" onclick ="window.location='additionalInformation.jsp'">
 		</form>

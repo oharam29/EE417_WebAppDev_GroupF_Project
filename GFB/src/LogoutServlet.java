@@ -32,7 +32,7 @@ public class LogoutServlet extends HttpServlet
         session.invalidate();
 
         // Back to the login section
-        response.sendRedirect("../index.html"); // Back to login page
+        response.sendRedirect("/GFB/index.html"); // Back to login page
 
     }
     

@@ -18,7 +18,7 @@
 <body>
 	<ul>
 		<li>
-        	<a href="../index.jsp"><img class="logo" src = "images/logo.jpg"/></a>
+        	<a href="../index.jsp"><img class="logo" src = "../images/logo.jpg"/></a>
         </li>
     </ul>
     <div class = "navBar">
@@ -49,6 +49,8 @@
 		
 		<form name="form" id="form" class="form"  onsubmit="return checks()" method="POST"  action="/GFB/RegistrationServlet">
  			<input type="password" id="pwd" name="password" onkeydown="keydownFunction()">
+ 			<br>
+			<br>
             <input id = "btnContinue" type="submit" value="Submit">
 	    <input id = "btnBack" type = "button" value = "Back" onclick ="window.location='additionalInformationStatus.jsp'">
         </form>
