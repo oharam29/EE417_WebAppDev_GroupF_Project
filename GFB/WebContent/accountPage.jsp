@@ -32,7 +32,7 @@
                     <a href="contact.html">Contact</a>
                 </li> 
                 <li>
-                    <a href="login.jsp">Disconnect</a>
+                    <a href="../LogoutServlet">Disconnect</a>
                 </li>
             </ul>
             <div class = "burger">

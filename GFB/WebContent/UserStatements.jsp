@@ -33,7 +33,7 @@ th {border: 3px solid black; padding: 12px; background-color: #ffffff;}
                     <a href="./accountPage.jsp">Go back</a>
                 </li>
                  <li>
-                    <a href="./LogoutServlet">Logout</a>
+                    <a href="../LogoutServlet">Logout</a>
                 </li>
             </ul>
             <div class = "burger">
