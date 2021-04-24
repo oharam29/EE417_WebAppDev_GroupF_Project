@@ -51,7 +51,7 @@
 	<fieldset>
 		<legend>Balance</legend>
 			
-				<div class="amount"><div id = "getBalance"></div>€</div>			<!-- Replace with ${balance} -->
+				<div class="amount"> <div id = "getBalance"></div>euro</div>			<!-- Replace with ${balance} -->
 		</fieldset>
 				<input type = "button" class = "transfer" value = "Transfer" onclick = "writeForm('transfer')">
 				</br>
@@ -108,17 +108,9 @@
     	case "details":
    			document.getElementById("modal-title").innerHTML = `Seing details`;
     		document.getElementById("outputmodal").innerHTML =
-    			`<p>Overdraft limit: <div id = "ol"></div>
+    			`<p>Overdraft limit: ${overdraftlimit}
     			</br>
-    			Withdrawal limit: <div id = "wl"></div>`;
-    			
-    			var ol = '${overdraftLimit}';
-        		localStorage.setItem("overdraftLimit", ol);
-        		document.getElementById("ol").innerHTML = ol;
-        		
-        		var wl = '${withdrawalLimit}';
-        		localStorage.setItem("withdrawalLimit", wl);
-        		document.getElementById("wl").innerHTML = wl;
+    			Withdrawal limit: ${withdrawallimit}`
     		break;
     	default:
     		document.getElementById("modal-title").innerHTML = `Somehow yu are seing this...?`;
@@ -185,13 +177,17 @@
 	
 	<script>
 	var id = '${id}';
+	var balance1 = '${balance}';
+	var ol = '${overdraftlimit}';
+	var wl = '${withdrawallimit}';
 	localStorage.setItem("id", id);
+	localStorage.setItem("balance", balance1);
+	localStorage.setItem("OvL", ol);
+	localStorage.setItem("WdL", wl);
 	document.getElementById("getId").innerHTML = id;
 	</script>
 	
 	<script>
-	var balance1 = '${balance}';
-	localStorage.setItem("balance", balance);
 	document.getElementById("getBalance").innerHTML = balance1;
 	</script>
 	

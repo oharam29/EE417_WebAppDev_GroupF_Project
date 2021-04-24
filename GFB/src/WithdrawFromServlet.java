@@ -69,12 +69,13 @@ public class WithdrawFromServlet extends HttpServlet
         SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss.SSS");
         Date now = new Date();
         String strDate = sdf.format(now);
-        String sqlStatement3 = "INSERT INTO transaction (amount, date, comment) VALUES (" + Integer.parseInt(amount) + ", '" + strDate + "', 'Withdrawl')";
+        String sqlStatement3 = "INSERT INTO transaction (id, amount, date, comment) VALUES ('" + id + "', '" + Integer.parseInt(amount) + "', '" + strDate + "', 'Withdrawl')";
         System.out.println("sqlStatement : " + sqlStatement3);
         try
         {
             databaseConnection.statement.executeUpdate(sqlStatement3);
         } catch (SQLException e) { e.printStackTrace(); }
+        response.sendRedirect("admin_pages/adminUser.jsp");
     }
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException

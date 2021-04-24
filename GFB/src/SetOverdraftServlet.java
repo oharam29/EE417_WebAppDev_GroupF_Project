@@ -44,7 +44,7 @@ public class SetOverdraftServlet extends HttpServlet
         } catch (Exception e) { e.printStackTrace(); }
 
         // SQL statement to set the overdraft field
-        String sqlStatement = "UPDATE transaction SET overdraft = " + Integer.parseInt(overdraft) + " WHERE id = \"" + id + "\"";
+        String sqlStatement = "UPDATE customer SET overdraftLimit = " + Integer.parseInt(overdraft) + " WHERE id = \"" + id + "\"";
         System.out.println("sqlStatement : " + sqlStatement);
 
         // Execute
@@ -52,6 +52,7 @@ public class SetOverdraftServlet extends HttpServlet
         {
             databaseConnection.statement.executeUpdate(sqlStatement);
         } catch (SQLException e) { e.printStackTrace(); }
+        response.sendRedirect("admin_pages/adminUser.jsp");
     }
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException

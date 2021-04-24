@@ -44,7 +44,7 @@ public class SetMaxWithdrawlServlet extends HttpServlet
         } catch (Exception e) { e.printStackTrace(); }
 
         // SQL statement to set the maxwithdrawl field
-        String sqlStatement = "UPDATE transaction SET maxwithdrawl = " + Integer.parseInt(maxwithdrawl) + " WHERE id = \"" + id + "\"";
+        String sqlStatement = "UPDATE customer SET withdrawalLimit = " + Integer.parseInt(maxwithdrawl) + " WHERE id = \"" + id + "\"";
         System.out.println("sqlStatement : " + sqlStatement);
 
         // Execute
@@ -52,6 +52,7 @@ public class SetMaxWithdrawlServlet extends HttpServlet
         {
             databaseConnection.statement.executeUpdate(sqlStatement);
         } catch (SQLException e) { e.printStackTrace(); }
+        response.sendRedirect("admin_pages/adminUser.jsp");
     }
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException

@@ -57,6 +57,7 @@ public class DeleteUserServlet extends HttpServlet
         {
             databaseConnection.statement.executeUpdate(sqlStatement2);
         } catch (SQLException e) { e.printStackTrace(); }
+        response.sendRedirect("admin_pages/adminUser.jsp");
     }
 
     

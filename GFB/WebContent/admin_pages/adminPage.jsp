@@ -75,9 +75,9 @@
                 </thead>
                 <tbody>
 					<%
-        			String dbURL = "jdbc:mysql://localhost/mydb";
+        			String dbURL = "jdbc:mysql://localhost/gfb_database";
         			String dbUsername = "root";
-        			String dbPassword = "1234";
+        			String dbPassword = "Stan231065$";
     				Connection connection; 
     				Statement statement; 
     				ResultSet query_res;

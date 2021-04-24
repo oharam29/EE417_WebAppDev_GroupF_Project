@@ -60,10 +60,10 @@
     	{
     	case "delete":
     		document.getElementById("modal-title").innerHTML = `Deleting User`;
-    		document.getElementById("outputmodal").innerHTML = `<form name = "deleteForm" method="post" onsubmit="return checks()" action = "deleteConfirm">
+    		document.getElementById("outputmodal").innerHTML = `<form name = "deleteForm" method="post" onsubmit="return checks()" action = "../DeleteUserServlet">
     			<label>Are you sure you want to delete this user ?</label>
     	        </br>
-    	        	<input class = "inputbox" type="text" name = "ID" id = "ID" placeholder="User ID"/>
+    	        	<input class = "inputbox" type="text" name = "id" id = "ID" placeholder="User ID"/>
     	        	<br>
     	            <input type="submit" value ="Yes"/>
     	            <input type="button" value = "No"/>
@@ -71,11 +71,11 @@
     		</form>`;
     		break;
     	case "deposit":
-    		document.getElementById("modal-title").innerHTML = `Deposit Simulation`;
-    		document.getElementById("outputmodal").innerHTML = `<form name = "depositForm" method="post" onsubmit="return checks1()"action = "simulateDeposit">
+    		document.getElementById("modal-title").innerHTML = `Deposit`;
+    		document.getElementById("outputmodal").innerHTML = `<form name = "depositForm" method="post" onsubmit="return checks1()"action = "../DepositToServlet">
     			<label for="amount">Enter the amount to deposit: </label>
     	        </br>
-    	        <input class = "inputbox" type="text" name = "ID"  id = "ID1" placeholder="User ID"/>
+    	        <input class = "inputbox" type="text" name = "id"  id = "ID1" placeholder="User ID"/>
     	        	<br>
     	            <input class = "inputbox" type="text" name = "amount" id = "amount1" placeholder="Amount"/>
     	            	<br>
@@ -86,11 +86,11 @@
     		</form>`;
     		break;
     	case "withdraw":
-    		document.getElementById("modal-title").innerHTML = `Withdraw Simulation`;
-    		document.getElementById("outputmodal").innerHTML = `<form name = "withdrawForm" method="post" onsubmit="return checks2()" action = "simulateWithdraw">
+    		document.getElementById("modal-title").innerHTML = `Withdraw`;
+    		document.getElementById("outputmodal").innerHTML = `<form name = "withdrawForm" method="post" onsubmit="return checks2()" action = "../WithdrawFromServlet">
     			<label for="amount">Enter the amount to withdraw: </label>
     	        </br>
-    	        <input class = "inputbox" type="text" name = "ID"  id = "ID2" placeholder="User ID"/>
+    	        <input class = "inputbox" type="text" name = "id"  id = "ID2" placeholder="User ID"/>
     	        	<br>
     	            <input class = "inputbox" type="text" name = "amount" id = "amount2" placeholder="Amount"/>
     	            	<br>
@@ -102,12 +102,12 @@
     		break;
     	case "overdraft":
     		document.getElementById("modal-title").innerHTML = `Setting Overdraft`;
-    		document.getElementById("outputmodal").innerHTML = `<form name = "overdraftForm" method="post" onsubmit="return checks3()"action = "setOverdraft">
+    		document.getElementById("outputmodal").innerHTML = `<form name = "overdraftForm" method="post" onsubmit="return checks3()"action = "../SetOverdraftServlet">
 			<label>Enter the new max Overdraft: </label>
 	        </br>
-	        <input class = "inputbox" type="text" name = "ID"  id = "ID3" placeholder="User ID"/>
+	        <input class = "inputbox" type="text" name = "id"  id = "ID3" placeholder="User ID"/>
 	        	<br>
-	            <input class = "inputbox" type="text" name = "amount" id = "amount3" placeholder="Overdraft"/>
+	            <input class = "inputbox" type="text" name = "overdraft" id = "amount3" placeholder="Overdraft"/>
 	            <br>
 	            <input type="submit" value ="Set"/>
 	        </br>
@@ -115,12 +115,12 @@
     		break;
     	case "limits":
     		document.getElementById("modal-title").innerHTML = `Setting Limits`;
-    		document.getElementById("outputmodal").innerHTML = `<form name = "limitsForm" method="post" onsubmit="return checks4()"action = "setLimits">
+    		document.getElementById("outputmodal").innerHTML = `<form name = "limitsForm" method="post" onsubmit="return checks4()"action = "../SetMaxWithdrawlServlet">
 			<label>Enter the new monthly payement limit: </label>
 	        </br>
-	        <input class = "inputbox" type="text" name = "ID"  id = "ID4" placeholder="User ID"/>
+	        <input class = "inputbox" type="text" name = "id"  id = "ID4" placeholder="User ID"/>
 	        	<br>
-	            <input class = "inputbox" type="text" name = "amount"  id = "amount4" placeholder="Withdraw Limit"/>
+	            <input class = "inputbox" type="text" name = "maxwithdrawl"  id = "amount4" placeholder="Withdraw Limit"/>
 	            	<br>
 	            <input type="submit" value ="Set"/>
 	        </br>
