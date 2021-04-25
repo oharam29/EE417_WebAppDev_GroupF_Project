@@ -1,0 +1,17 @@
+Additional information:
+
+To view the screencast, all three audi/video files will be needed in the same folder. It is a zoom recording and it's the way zoom works I think.
+
+The files are
+
+audio_only
+Group F - Screencast
+zoom_0
+
+The file group F - Screencast is the file your media player should play, I use VLC. The other two files have to be present.
+
+Also, all documentation is included in the github repository including two of the screencast files. The third file, Zoom_0 was too large for Github to load but I have of course sent it separately to you here now.
+
+The link to github is https://github.com/oharam29/EE417_WebAppDev_GroupF_Project
+
+but I have uploaded the github repository anyway as a zip file.
