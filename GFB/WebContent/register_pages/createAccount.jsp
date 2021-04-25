@@ -46,7 +46,7 @@
 	<div class = "content">
 		<h2>Create Account</h2>
 		<p>To create your GFB account, please agree to the Terms & Conditions.</p>
-		<form name="form" id="form" class="form"   onsubmit="return checks()" method="POST" action="../accountPage.jsp">
+		<form name="form" id="form" class="form"   onsubmit="return checks()" method="POST" action="../login.jsp">
     	<label>
     		<input type="checkbox" id = "TC">Terms & Conditions
     	</label><br/>
@@ -62,7 +62,7 @@
         <label>
     		<input type="checkbox" id = "MP">Marketing Partners
     	</label><br/>
-    	<input id = "btnContinue" type="submit" value="Submit" onclick ="window.location='displayID.jsp'">
+    	<input id = "btnContinue" type="submit" value="Submit">
     	</form>
     	
     	<%
@@ -70,7 +70,7 @@
 		
 		String dbName = "gfb_database";
 		  String userName = "root";
-		  String password = "19991217Clsl31A";
+		  String password = "Stan231065$";
 		  String hostname = "localhost";
 		  String port = "3306";
 		  String jdbcUrl = "jdbc:mysql://" + hostname + ":" +

@@ -32,7 +32,7 @@
                     <a href="contact.html">Contact</a>
                 </li> 
                 <li>
-                    <a href="../LogoutServlet">Disconnect</a>
+                    <a href="/GFB/LogoutServlet">Disconnect</a>
                 </li>
             </ul>
             <div class = "burger">
