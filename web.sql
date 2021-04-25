@@ -56,11 +56,11 @@ CREATE TABLE IF NOT EXISTS `customer` (
 --
 
 INSERT INTO `customer` (`id`, `lname`, `mail`, `dateBirth`, `phone`, `address`, `addInfo`, `nationality`, `cityBirth`, `countryBirth`, `gender`, `employmentStatus`, `password`, `balance`, `status`, `overdraftLimit`, `withdrawalLimit`) VALUES
-(1, 'Dupont', 'a@mail.dcu.ie', '01-01-1980', '0102030405', '75006 Paris France', '.', 'French', 'Lyon', 'France', 'male', 'Self-employed or freelance', 'test1', 1000, 1, -1000, 1000),
-(2, 'Jones', 'b@mail.dcu.ie', '02-02-1985', '0203040506', '85000 New-York USA', '..', 'American', 'Washington', 'USA', 'female', 'Student', 'test2', 2000, 2, -2000, 2000),
-(3, 'Adams', 'c@mail.dcu.ie', '03-03-1990', '0304050607', '95003 Dublin Ireland', '...', 'Irish', 'Cork', 'Ireland', 'male', 'Retired or homemaker', 'test3', 10000, 2, -3000, 4000),
-(4, 'Smith', 'd@mail.dcu.ie', '04-04-1995', '0101010101', '62230 Shanghai China', '....', 'Chinese', 'Shenzhen', 'China', 'female', 'Unemployed', 'test4', 20000, 1, -4000, 5000),
-(5, 'Brown', 'e@mail.dcu.ie', '05-05-2000', '0202020202', '55089 Jakarta Indonesia', '......', 'Indonesian', 'Denpasar', 'Indonesia', 'male', 'Student', 'test5', 100000, 1, -6000, 6000);
+(1, 'Dupont', 'a@mail.dcu.ie', '01-01-1980', '0102030405', '75006 Paris France', '.', 'French', 'Lyon', 'France', 'male', 'Self-employed or freelance', 'test1', 1000, 1, 1000, 1000),
+(2, 'Jones', 'b@mail.dcu.ie', '02-02-1985', '0203040506', '85000 New-York USA', '..', 'American', 'Washington', 'USA', 'female', 'Student', 'test2', 2000, 2, 2000, 2000),
+(3, 'Adams', 'c@mail.dcu.ie', '03-03-1990', '0304050607', '95003 Dublin Ireland', '...', 'Irish', 'Cork', 'Ireland', 'male', 'Retired or homemaker', 'test3', 10000, 2, 3000, 4000),
+(4, 'Smith', 'd@mail.dcu.ie', '04-04-1995', '0101010101', '62230 Shanghai China', '....', 'Chinese', 'Shenzhen', 'China', 'female', 'Unemployed', 'test4', 20000, 1, 4000, 5000),
+(5, 'Brown', 'e@mail.dcu.ie', '05-05-2000', '0202020202', '55089 Jakarta Indonesia', '......', 'Indonesian', 'Denpasar', 'Indonesia', 'male', 'Student', 'test5', 100000, 1, 6000, 6000);
 
 -- --------------------------------------------------------
 
@@ -85,9 +85,9 @@ CREATE TABLE IF NOT EXISTS `transaction` (
 
 INSERT INTO `transaction` (`transactionID`, `id`, `amount`, `date`, `comment`) VALUES
 (1, 2, 100, '03-04-2021', 'Food'),
-(2, 4, -200, '02-04-2021', 'Movie'),
+(2, 4, 200, '02-04-2021', 'Movie'),
 (3, 5, 300, '01-04-2021', 'Bar'),
-(4, 1, -400, '04-04-2021', 'Bus'),
+(4, 1, 400, '04-04-2021', 'Bus'),
 (5, 5, 500, '05-04-2021', 'Swimming pool');
 COMMIT;
 
