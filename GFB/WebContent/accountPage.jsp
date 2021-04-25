@@ -26,9 +26,6 @@
 	<nav>
 	<ul class = "navlinks">
                 <li>
-                    <a href="index.html">To main page</a>
-                </li>
-                <li>
                     <a href="contact.html">Contact</a>
                 </li> 
                 <li>

@@ -18,9 +18,6 @@
 	<nav>
 	<ul class = "navlinks">
                 <li>
-                    <a href="../index.html">To main page</a>
-                </li>
-                <li>
                     <a href="adminPage.jsp">See all Users</a>
                 </li>
                    

@@ -28,11 +28,7 @@
 	<nav>
 	<ul class = "navlinks">
                 <li>
-                    <a href="../index.html">To main page</a>
-                </li>  
-                
-                <li>
-                    <a href="adminUser.jsp">Admin Actions</a>
+                    <a href="adminUser.jsp">Admin Features</a>
                 </li>
                 <li>
                     <a href="../LogoutServlet">Disconnect</a>
